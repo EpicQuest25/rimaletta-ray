@@ -232,13 +232,12 @@ export default function GrainsPhilosophy() {
     return (
       <>
         {parts.map((p, idx) => (
-          <Box
+          <span
             key={idx}
-            component="span"
-            sx={p.color ? { color: p.color, fontWeight: p.weight || 'bold' } : undefined}
+            style={p.color ? { color: p.color, fontWeight: p.weight || 'bold' } : undefined}
           >
             {p.text}
-          </Box>
+          </span>
         ))}
       </>
     );
@@ -379,9 +378,8 @@ export default function GrainsPhilosophy() {
                       fontSize: { xs: '1.4rem', md: '1.8rem' },
                       mb: 3,
                       minHeight: '120px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
+                      display: 'block',
+                      textAlign: 'center',
                     }}
                   >
                     {renderColorCodedText(activeQuote.text)}
