@@ -49,7 +49,7 @@ export default function Navbar() {
     <AppBar
       position="fixed"
       sx={{
-        background: 'linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)',
+        background: '#ed668c',
         borderBottom: '4px solid #d97808',
         boxShadow: '0 4px 25px rgba(0, 0, 0, 0.15)',
         color: '#ffffff',
@@ -72,12 +72,10 @@ export default function Navbar() {
               fontSize: '1.45rem',
               letterSpacing: '0.05em',
               textDecoration: 'none',
-              background: 'linear-gradient(45deg, #fbbf24 30%, #f59e0b 90%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
+              color: '#ffffff',
               transition: 'opacity 0.3s',
               '&:hover': {
-                opacity: 0.9,
+                opacity: 0.85,
               },
             }}
           >
@@ -134,7 +132,7 @@ export default function Navbar() {
         PaperProps={{
           sx: {
             width: 280,
-            background: 'linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)',
+            background: '#ed668c',
             borderLeft: '4px solid #d97808',
             p: 3,
           },
