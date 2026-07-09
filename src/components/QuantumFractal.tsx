@@ -115,10 +115,11 @@ export default function QuantumFractal() {
             variant="h2"
             sx={{
               fontFamily: '"Outfit", sans-serif',
-              fontSize: { xs: '2.2rem', md: '3rem' },
+              fontSize: { xs: '1.6rem', sm: '2.2rem', md: '2.5rem', lg: '2.8rem' },
               fontWeight: 900,
               mb: 2,
               color: '#facc15',
+              whiteSpace: { sm: 'nowrap', xs: 'normal' },
             }}
           >
             Our Intellectually Spiritualized Human Fractal In Action
