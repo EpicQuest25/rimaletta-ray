@@ -19,7 +19,7 @@ export default function Hero() {
         alignItems: 'center',
         justifyContent: 'center',
         paddingTop: '80px',
-        background: '#fce4ec',
+        background: '#c999f7',
         overflow: 'hidden',
       }}
     >
@@ -45,9 +45,9 @@ export default function Hero() {
                   boxShadow: '0 4px 12px rgba(2, 132, 199, 0.1)',
                 }}
               >
-                <AutoAwesomeIcon sx={{ color: '#0369a1', fontSize: '1.1rem' }} />
-                <Typography variant="body2" sx={{ color: '#0369a1', fontWeight: 800, letterSpacing: '0.05em' }}>
-                  THE ODYSSEY OF SELF-RESURRECTION
+                <AutoAwesomeIcon sx={{ color: '#000000', fontSize: '1.1rem' }} />
+                <Typography variant="body2" sx={{ color: '#000000', fontWeight: 800, letterSpacing: '0.05em' }}>
+                  THE ODYSSEY OF SELF-RESURRECTION<Box component="span" sx={{ color: '#dc2828' }}>!</Box>
                 </Typography>
               </Box>
 
@@ -91,7 +91,7 @@ export default function Hero() {
                   WebkitTextFillColor: 'transparent',
                 }}
               >
-                <Box component="span" sx={{ color: '#dc2626', WebkitTextFillColor: '#dc2626', fontWeight: 900 }}>Self</Box>-Resurrection
+                <Box component="span" sx={{ color: '#dc2626', WebkitTextFillColor: '#dc2626', fontWeight: 900 }}>Self</Box><Box component="span" sx={{ color: '#1d4ed8', WebkitTextFillColor: '#1d4ed8', fontWeight: 900 }}>-Resurrection</Box>
               </Box>
             </Typography>
 
