@@ -143,7 +143,7 @@ export default function Intro() {
                   flex: 1,
                   p: 4,
                   borderRadius: 4,
-                  background: '#facc15',
+                  backgroundColor: '#facc15',
                   border: '2px solid #eab308',
                   boxShadow: '0 8px 32px rgba(250, 204, 21, 0.35)',
                   display: 'flex',
