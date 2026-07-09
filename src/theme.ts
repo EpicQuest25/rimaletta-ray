@@ -2,29 +2,29 @@ import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
 let theme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
     primary: {
-      main: '#6366f1', // Indigo cosmic
-      light: '#818cf8',
-      dark: '#4f46e5',
+      main: '#4f46e5', // Indigo primary
+      light: '#6366f1',
+      dark: '#3730a3',
       contrastText: '#ffffff',
     },
     secondary: {
-      main: '#06b6d4', // Cyan electric
-      light: '#22d3ee',
-      dark: '#0891b2',
-      contrastText: '#0f172a',
+      main: '#0891b2', // Cyan secondary
+      light: '#06b6d4',
+      dark: '#0e7490',
+      contrastText: '#ffffff',
     },
     background: {
-      default: '#070715', // Midnight cosmos
-      paper: '#0f1026',   // Cosmic glass/paper
+      default: '#fafaf9', // Light warm cream background
+      paper: '#ffffff',   // White panels
     },
     text: {
-      primary: '#f8fafc',
-      secondary: '#94a3b8',
+      primary: '#0f172a', // Dark charcoal/slate
+      secondary: '#475569', // Slate gray
     },
     action: {
-      hover: 'rgba(99, 102, 241, 0.08)',
+      hover: 'rgba(79, 70, 229, 0.04)',
     },
   },
   typography: {
@@ -83,16 +83,16 @@ let theme = createTheme({
           borderRadius: 30,
           padding: '10px 24px',
           transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-          boxShadow: '0 4px 14px 0 rgba(99, 102, 241, 0.2)',
+          boxShadow: '0 4px 14px 0 rgba(79, 70, 229, 0.1)',
           '&:hover': {
             transform: 'translateY(-2px)',
-            boxShadow: '0 6px 20px 0 rgba(99, 102, 241, 0.4)',
+            boxShadow: '0 6px 20px 0 rgba(79, 70, 229, 0.25)',
           },
         },
         containedSecondary: {
-          boxShadow: '0 4px 14px 0 rgba(6, 182, 212, 0.2)',
+          boxShadow: '0 4px 14px 0 rgba(8, 145, 178, 0.1)',
           '&:hover': {
-            boxShadow: '0 6px 20px 0 rgba(6, 182, 212, 0.4)',
+            boxShadow: '0 6px 20px 0 rgba(8, 145, 178, 0.25)',
           },
         },
       },
@@ -100,16 +100,16 @@ let theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          backgroundColor: '#0f1026',
+          backgroundColor: '#ffffff',
           borderRadius: 16,
-          border: '1px solid rgba(255, 255, 255, 0.05)',
-          backgroundImage: 'linear-gradient(to bottom right, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0))',
-          boxShadow: '0 10px 30px -15px rgba(0,0,0,0.7)',
+          border: '1px solid rgba(0, 0, 0, 0.05)',
+          backgroundImage: 'linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0))',
+          boxShadow: '0 10px 30px -15px rgba(0,0,0,0.06)',
           transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
           '&:hover': {
             transform: 'translateY(-6px)',
-            border: '1px solid rgba(99, 102, 241, 0.25)',
-            boxShadow: '0 20px 40px -15px rgba(99, 102, 241, 0.15)',
+            border: '1px solid rgba(79, 70, 229, 0.15)',
+            boxShadow: '0 20px 40px -15px rgba(79, 70, 229, 0.12)',
           },
         },
       },

@@ -44,10 +44,11 @@ export default function Navbar() {
     <AppBar
       position="fixed"
       sx={{
-        background: 'rgba(7, 7, 21, 0.75)',
+        background: 'rgba(255, 255, 255, 0.85)',
         backdropFilter: 'blur(16px)',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
+        borderBottom: '1px solid rgba(0, 0, 0, 0.08)',
         boxShadow: 'none',
+        color: '#0f172a',
       }}
     >
       <Container maxWidth="xl">
@@ -66,9 +67,8 @@ export default function Navbar() {
               fontWeight: 800,
               fontSize: '1.4rem',
               letterSpacing: '0.05em',
-              color: '#ffffff',
               textDecoration: 'none',
-              background: 'linear-gradient(45deg, #818cf8 30%, #22d3ee 90%)',
+              background: 'linear-gradient(45deg, #4f46e5 30%, #0891b2 90%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
             }}
@@ -83,16 +83,16 @@ export default function Navbar() {
                 key={item.label}
                 onClick={() => handleScroll(item.id)}
                 sx={{
-                  color: 'rgba(255, 255, 255, 0.8)',
+                  color: 'rgba(15, 23, 42, 0.75)',
                   fontSize: '0.95rem',
-                  fontWeight: 500,
+                  fontWeight: 600,
                   px: 2,
                   py: 1,
                   borderRadius: 2,
                   transition: 'all 0.3s',
                   '&:hover': {
-                    color: '#ffffff',
-                    background: 'rgba(255, 255, 255, 0.05)',
+                    color: '#4f46e5',
+                    background: 'rgba(79, 70, 229, 0.05)',
                     transform: 'translateY(-1px)',
                   },
                 }}
@@ -108,7 +108,7 @@ export default function Navbar() {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ display: { md: 'none' } }}
+            sx={{ display: { md: 'none' }, color: '#0f172a' }}
           >
             <MenuIcon />
           </IconButton>
@@ -124,14 +124,14 @@ export default function Navbar() {
         PaperProps={{
           sx: {
             width: 280,
-            background: '#0a0a1a',
-            borderLeft: '1px solid rgba(255, 255, 255, 0.08)',
+            background: '#fafaf9',
+            borderLeft: '1px solid rgba(0, 0, 0, 0.08)',
             p: 3,
           },
         }}
       >
         <Box sx={{ display: 'flex', justifyContent: 'flex-end', mb: 4 }}>
-          <IconButton onClick={handleDrawerToggle} sx={{ color: 'white' }}>
+          <IconButton onClick={handleDrawerToggle} sx={{ color: '#0f172a' }}>
             <CloseIcon />
           </IconButton>
         </Box>
@@ -145,7 +145,7 @@ export default function Navbar() {
                 borderRadius: 2,
                 overflow: 'hidden',
                 '&:hover': {
-                  background: 'rgba(255, 255, 255, 0.03)',
+                  background: 'rgba(79, 70, 229, 0.05)',
                 },
               }}
             >
@@ -156,7 +156,7 @@ export default function Navbar() {
                     fontFamily: '"Outfit", sans-serif',
                     fontSize: '1.2rem',
                     fontWeight: 600,
-                    color: 'rgba(255, 255, 255, 0.9)',
+                    color: '#0f172a',
                     textAlign: 'center',
                     py: 1,
                   },

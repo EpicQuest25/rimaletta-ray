@@ -8,8 +8,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #070715;
-  color: #f8fafc;
+  background-color: #fafaf9;
+  color: #0f172a;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
 }
@@ -20,25 +20,25 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #070715;
+  background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e1b4b;
+  background: #cbd5e1;
   border-radius: 5px;
-  border: 2px solid #070715;
+  border: 2px solid #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #312e81;
+  background: #94a3b8;
 }
 
 /* Glassmorphism utility */
 .glass-panel {
-  background: rgba(15, 16, 38, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 /* Cosmic background elements */

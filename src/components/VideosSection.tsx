@@ -165,13 +165,14 @@ export default function VideosSection() {
       id="videos"
       sx={{
         py: { xs: 8, md: 12 },
-        background: '#0a0a20',
+        background: 'linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%)',
         position: 'relative',
         overflow: 'hidden',
+        borderTop: '1px solid rgba(0, 0, 0, 0.05)',
       }}
     >
-      <Box className="cosmic-glow-violet" sx={{ top: '20%', right: '-15%' }} />
-      <Box className="cosmic-glow-cyan" sx={{ bottom: '10%', left: '-15%' }} />
+      <Box className="cosmic-glow-violet" sx={{ top: '20%', right: '-15%', opacity: 0.3 }} />
+      <Box className="cosmic-glow-cyan" sx={{ bottom: '10%', left: '-15%', opacity: 0.3 }} />
 
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
         {/* Videos Header */}
@@ -182,7 +183,7 @@ export default function VideosSection() {
             fontSize: { xs: '2.2rem', md: '3rem' },
             fontWeight: 800,
             mb: 2,
-            background: 'linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%)',
+            background: 'linear-gradient(135deg, #0f172a 0%, #334155 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
           }}
@@ -192,7 +193,7 @@ export default function VideosSection() {
         <Typography
           variant="body1"
           align="center"
-          sx={{ color: '#94a3b8', maxWidth: '600px', mx: 'auto', mb: 8 }}
+          sx={{ color: '#334155', maxWidth: '600px', mx: 'auto', mb: 8 }}
         >
           Watch Dr. Rimaletta Ray introduce the key pillars of the Holistic System of Self-Resurrection.
         </Typography>
@@ -208,8 +209,8 @@ export default function VideosSection() {
                 borderRadius: 4,
                 overflow: 'hidden',
                 background: '#04040c',
-                border: '1px solid rgba(255, 255, 255, 0.05)',
-                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.7)',
+                border: '1px solid rgba(0, 0, 0, 0.05)',
+                boxShadow: '0 20px 45px rgba(0, 0, 0, 0.08)',
               }}
             >
               {/* Responsive Video Container */}
@@ -267,17 +268,17 @@ export default function VideosSection() {
               </Box>
 
               {/* Video Info Overlay */}
-              <Box sx={{ p: 4, background: 'linear-gradient(to bottom, #0d0d26 0%, #070715 100%)' }}>
+              <Box sx={{ p: 4, background: '#ffffff' }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1.5 }}>
-                  <SmartDisplayIcon sx={{ color: '#22d3ee' }} />
-                  <Typography variant="subtitle2" sx={{ color: '#22d3ee', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                  <SmartDisplayIcon sx={{ color: '#0891b2' }} />
+                  <Typography variant="subtitle2" sx={{ color: '#0891b2', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                     Now Playing
                   </Typography>
                 </Box>
-                <Typography variant="h4" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, mb: 2, color: '#ffffff' }}>
+                <Typography variant="h4" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, mb: 2, color: '#0f172a' }}>
                   {activeVideo.title}
                 </Typography>
-                <Typography variant="body1" sx={{ color: '#94a3b8', lineHeight: 1.7 }}>
+                <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.7 }}>
                   {activeVideo.description}
                 </Typography>
                 <Button
@@ -288,12 +289,12 @@ export default function VideosSection() {
                   rel="noopener noreferrer"
                   sx={{
                     mt: 3,
-                    borderColor: 'rgba(255, 255, 255, 0.1)',
-                    color: 'rgba(255, 255, 255, 0.8)',
+                    borderColor: 'rgba(0, 0, 0, 0.15)',
+                    color: '#0f172a',
                     '&:hover': {
-                      borderColor: '#ffffff',
-                      color: '#ffffff',
-                      background: 'rgba(255, 255, 255, 0.03)',
+                      borderColor: '#000000',
+                      color: '#000000',
+                      background: 'rgba(0, 0, 0, 0.02)',
                     },
                   }}
                 >
@@ -307,15 +308,16 @@ export default function VideosSection() {
           <Grid item xs={12} lg={4}>
             <Box
               sx={{
-                background: '#0f1026',
+                background: '#ffffff',
                 borderRadius: 4,
-                border: '1px solid rgba(255, 255, 255, 0.05)',
+                border: '1px solid rgba(0, 0, 0, 0.06)',
                 p: 3,
                 maxHeight: { lg: '740px' },
                 overflowY: 'auto',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.03)',
               }}
             >
-              <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#ffffff', mb: 3 }}>
+              <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#0f172a', mb: 3 }}>
                 Promo Playlist
               </Typography>
 
@@ -333,10 +335,10 @@ export default function VideosSection() {
                         borderRadius: 3,
                         cursor: 'pointer',
                         transition: 'all 0.3s',
-                        background: isActive ? 'rgba(99, 102, 241, 0.1)' : 'transparent',
-                        border: isActive ? '1px solid rgba(99, 102, 241, 0.2)' : '1px solid transparent',
+                        background: isActive ? 'rgba(79, 70, 229, 0.08)' : 'transparent',
+                        border: isActive ? '1px solid rgba(79, 70, 229, 0.15)' : '1px solid transparent',
                         '&:hover': {
-                          background: isActive ? 'rgba(99, 102, 241, 0.15)' : 'rgba(255, 255, 255, 0.02)',
+                          background: isActive ? 'rgba(79, 70, 229, 0.12)' : 'rgba(0, 0, 0, 0.03)',
                         },
                       }}
                     >
@@ -344,12 +346,13 @@ export default function VideosSection() {
                       <Box
                         sx={{
                           position: 'relative',
-                          width: '100px',
+                          width: '100%',
+                          maxWidth: '100px',
                           height: '70px',
                           borderRadius: 2,
                           overflow: 'hidden',
                           flexShrink: 0,
-                          boxShadow: '0 4px 10px rgba(0,0,0,0.3)',
+                          boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
                         }}
                       >
                         <img
@@ -380,7 +383,7 @@ export default function VideosSection() {
                           variant="subtitle2"
                           noWrap
                           sx={{
-                            color: isActive ? '#818cf8' : '#ffffff',
+                            color: isActive ? '#4f46e5' : '#0f172a',
                             fontWeight: 700,
                             mb: 0.5,
                           }}
@@ -390,12 +393,13 @@ export default function VideosSection() {
                         <Typography
                           variant="body2"
                           sx={{
-                            color: '#94a3b8',
+                            color: '#475569',
                             fontSize: '0.8rem',
                             display: '-webkit-box',
                             WebkitLineClamp: 2,
                             WebkitBoxOrient: 'vertical',
                             overflow: 'hidden',
+                            lineHeight: 1.4,
                           }}
                         >
                           {video.description}
