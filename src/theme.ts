@@ -2,58 +2,58 @@ import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
 let theme = createTheme({
   palette: {
-    mode: 'light',
+    mode: 'dark',
     primary: {
-      main: '#4f46e5', // Indigo primary
-      light: '#6366f1',
-      dark: '#3730a3',
+      main: '#6366f1', // Indigo primary
+      light: '#818cf8',
+      dark: '#4f46e5',
       contrastText: '#ffffff',
     },
     secondary: {
-      main: '#0891b2', // Cyan secondary
-      light: '#06b6d4',
-      dark: '#0e7490',
-      contrastText: '#ffffff',
+      main: '#06b6d4', // Cyan secondary
+      light: '#22d3ee',
+      dark: '#0891b2',
+      contrastText: '#0f172a',
     },
     background: {
-      default: '#fafaf9', // Light warm cream background
-      paper: '#ffffff',   // White panels
+      default: '#070715', // Deep space black background
+      paper: '#0c0c22',   // Cosmic dark panels
     },
     text: {
-      primary: '#0f172a', // Dark charcoal/slate
-      secondary: '#475569', // Slate gray
+      primary: '#f8fafc', // Light slate
+      secondary: '#94a3b8', // Gray slate
     },
     action: {
-      hover: 'rgba(79, 70, 229, 0.04)',
+      hover: 'rgba(99, 102, 241, 0.08)',
     },
   },
   typography: {
     fontFamily: '"Inter", "Outfit", "Helvetica", "Arial", sans-serif',
     h1: {
       fontFamily: '"Outfit", "Inter", sans-serif',
-      fontWeight: 800,
+      fontWeight: 900,
       letterSpacing: '-0.02em',
     },
     h2: {
       fontFamily: '"Outfit", "Inter", sans-serif',
-      fontWeight: 700,
+      fontWeight: 800,
       letterSpacing: '-0.01em',
     },
     h3: {
       fontFamily: '"Outfit", "Inter", sans-serif',
-      fontWeight: 700,
+      fontWeight: 800,
     },
     h4: {
       fontFamily: '"Outfit", "Inter", sans-serif',
-      fontWeight: 600,
+      fontWeight: 700,
     },
     h5: {
       fontFamily: '"Outfit", "Inter", sans-serif',
-      fontWeight: 600,
+      fontWeight: 700,
     },
     h6: {
       fontFamily: '"Outfit", "Inter", sans-serif',
-      fontWeight: 500,
+      fontWeight: 600,
     },
     subtitle1: {
       fontFamily: '"Inter", sans-serif',
@@ -71,7 +71,7 @@ let theme = createTheme({
     },
     button: {
       fontFamily: '"Outfit", sans-serif',
-      fontWeight: 600,
+      fontWeight: 650,
       textTransform: 'none',
       letterSpacing: '0.02em',
     },
@@ -83,16 +83,16 @@ let theme = createTheme({
           borderRadius: 30,
           padding: '10px 24px',
           transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-          boxShadow: '0 4px 14px 0 rgba(79, 70, 229, 0.1)',
+          boxShadow: '0 4px 14px 0 rgba(99, 102, 241, 0.15)',
           '&:hover': {
             transform: 'translateY(-2px)',
-            boxShadow: '0 6px 20px 0 rgba(79, 70, 229, 0.25)',
+            boxShadow: '0 6px 20px 0 rgba(99, 102, 241, 0.3)',
           },
         },
         containedSecondary: {
-          boxShadow: '0 4px 14px 0 rgba(8, 145, 178, 0.1)',
+          boxShadow: '0 4px 14px 0 rgba(6, 182, 212, 0.15)',
           '&:hover': {
-            boxShadow: '0 6px 20px 0 rgba(8, 145, 178, 0.25)',
+            boxShadow: '0 6px 20px 0 rgba(6, 182, 212, 0.3)',
           },
         },
       },
@@ -100,16 +100,16 @@ let theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          backgroundColor: '#ffffff',
+          backgroundColor: '#0c0c22',
           borderRadius: 16,
-          border: '1px solid rgba(0, 0, 0, 0.05)',
-          backgroundImage: 'linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0))',
-          boxShadow: '0 10px 30px -15px rgba(0,0,0,0.06)',
+          border: '1px solid rgba(255, 255, 255, 0.05)',
+          backgroundImage: 'linear-gradient(to bottom right, rgba(15, 16, 38, 0.8), rgba(7, 7, 21, 0))',
+          boxShadow: '0 10px 30px -15px rgba(0,0,0,0.3)',
           transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
           '&:hover': {
             transform: 'translateY(-6px)',
-            border: '1px solid rgba(79, 70, 229, 0.15)',
-            boxShadow: '0 20px 40px -15px rgba(79, 70, 229, 0.12)',
+            border: '1px solid rgba(99, 102, 241, 0.3)',
+            boxShadow: '0 20px 40px -15px rgba(99, 102, 241, 0.2)',
           },
         },
       },

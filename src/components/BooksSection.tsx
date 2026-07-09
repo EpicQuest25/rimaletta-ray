@@ -333,35 +333,10 @@ export default function BooksSection() {
     }
   };
 
-  const getBgGradient = (cycle: string) => {
-    switch (cycle) {
-      case 'auto':
-        return 'linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%)';
-      case 'digital':
-        return 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)';
-      case 'quantum':
-        return 'linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%)'; // Light Violet for Spirituality
-      case 'other':
-        return 'linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%)';
-      default:
-        return 'linear-gradient(135deg, #ffffff 0%, #fafafa 100%)';
-    }
+  const getBgGradient = (_cycle: string) => {
+    return '#070715';
   };
 
-  const getCycleTextColor = (cycle: string) => {
-    switch (cycle) {
-      case 'auto':
-        return '#78350f';
-      case 'digital':
-        return '#083344';
-      case 'quantum':
-        return '#3b0764';
-      case 'other':
-        return '#4c0519';
-      default:
-        return '#1e1b4b';
-    }
-  };
 
   // Render a beautiful book cover fallback
   const renderFallbackCover = (book: Book) => {
@@ -369,76 +344,47 @@ export default function BooksSection() {
     return (
       <Box
         sx={{
-          height: 320,
-          background: `linear-gradient(145deg, #ffffff 0%, #f1f5f9 100%)`,
+          width: 120,
+          height: 180,
+          background: `linear-gradient(145deg, #1e1b4b 0%, #070712 100%)`,
           position: 'relative',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
-          p: 3,
-          borderLeft: `6px solid ${color}`,
-          borderTop: '1px solid rgba(0, 0, 0, 0.05)',
-          borderRight: '1px solid rgba(0, 0, 0, 0.05)',
-          borderBottom: '1px solid rgba(0, 0, 0, 0.05)',
-          boxShadow: `inset 0 0 20px rgba(0,0,0,0.03), 0 10px 25px rgba(0,0,0,0.05)`,
+          p: 2,
+          borderLeft: `5px solid ${color}`,
+          borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+          borderRight: '1px solid rgba(255, 255, 255, 0.08)',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+          boxShadow: `inset 0 0 20px rgba(0,0,0,0.5), 0 8px 20px rgba(0,0,0,0.3)`,
           overflow: 'hidden',
-          borderRadius: '4px 12px 12px 4px',
-          '&::before': {
-            content: '""',
-            position: 'absolute',
-            top: 0,
-            left: 5,
-            width: 1,
-            height: '100%',
-            backgroundColor: 'rgba(0, 0, 0, 0.05)',
-          }
+          borderRadius: '4px 10px 10px 4px',
         }}
       >
-        <Box
-          sx={{
-            position: 'absolute',
-            top: -50,
-            right: -50,
-            width: 150,
-            height: 150,
-            borderRadius: '50%',
-            background: color,
-            opacity: 0.05,
-            filter: 'blur(30px)',
-          }}
-        />
-
         <Box>
-          <Chip
-            label={book.dimension}
-            size="small"
-            sx={{
-              backgroundColor: 'rgba(0, 0, 0, 0.03)',
-              color: color,
-              border: `1px solid ${color}40`,
-              fontWeight: 600,
-              fontSize: '0.7rem',
-              mb: 2,
-            }}
-          />
           <Typography
             variant="h6"
             sx={{
               fontFamily: '"Outfit", sans-serif',
-              fontWeight: 800,
-              color: '#0f172a',
-              fontSize: '1.2rem',
-              lineHeight: 1.3,
+              fontWeight: 900,
+              color: '#ffffff',
+              fontSize: '0.8rem',
+              lineHeight: 1.2,
+              mb: 1,
+              display: '-webkit-box',
+              WebkitLineClamp: 3,
+              WebkitBoxOrient: 'vertical',
+              overflow: 'hidden',
             }}
           >
             {book.title}
           </Typography>
         </Box>
 
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-          <MenuBookIcon sx={{ color: color, fontSize: '1.2rem' }} />
-          <Typography variant="caption" sx={{ color: '#475569', fontWeight: 600 }}>
-            {book.cycle === 'auto' ? 'Auto-Suggestive' : book.cycle === 'digital' ? 'Digital Cycle' : book.cycle === 'quantum' ? 'Quantum Cycle' : 'Other Publications'}
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+          <MenuBookIcon sx={{ color: color, fontSize: '0.9rem' }} />
+          <Typography variant="caption" sx={{ color: '#94a3b8', fontWeight: 700, fontSize: '0.6rem' }}>
+            {book.cycle === 'auto' ? 'Auto-Suggestive' : book.cycle === 'digital' ? 'Digital Cycle' : book.cycle === 'quantum' ? 'Quantum Cycle' : 'Other'}
           </Typography>
         </Box>
       </Box>
@@ -450,13 +396,17 @@ export default function BooksSection() {
       id="books"
       sx={{
         py: { xs: 10, md: 14 },
-        background: getBgGradient(cycles[activeTab]),
-        transition: 'background 0.5s ease',
+        background: '#070715',
         position: 'relative',
-        borderTop: '1px solid rgba(0,0,0,0.05)',
+        overflow: 'hidden',
+        borderTop: '1px solid rgba(255, 255, 255, 0.05)',
       }}
     >
-      <Container maxWidth="lg">
+      {/* Background Glows */}
+      <Box className="cosmic-glow-indigo" sx={{ top: '5%', right: '10%', opacity: 0.5 }} />
+      <Box className="cosmic-glow-violet" sx={{ bottom: '10%', left: '-5%', opacity: 0.5 }} />
+
+      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
         {/* Books Section Header */}
         <Typography
           variant="h2"
@@ -465,8 +415,7 @@ export default function BooksSection() {
             fontSize: { xs: '2.2rem', md: '3rem' },
             fontWeight: 800,
             mb: 1,
-            color: getCycleTextColor(cycles[activeTab]),
-            transition: 'color 0.4s ease',
+            color: '#ffffff',
           }}
         >
           Inspirational psychology for self-ecology
@@ -477,10 +426,9 @@ export default function BooksSection() {
           sx={{
             fontSize: { xs: '1.1rem', md: '1.3rem' },
             fontWeight: 700,
-            color: getCycleTextColor(cycles[activeTab]),
+            color: '#cbd5e1',
             mb: 4,
             fontFamily: '"Outfit", sans-serif',
-            transition: 'color 0.4s ease',
           }}
         >
           (auto suggestive, digital, quantum cycles)
@@ -488,7 +436,7 @@ export default function BooksSection() {
         <Typography
           variant="body1"
           align="center"
-          sx={{ color: getCycleTextColor(cycles[activeTab]), fontWeight: 600, maxWidth: '700px', mx: 'auto', mb: 8, transition: 'color 0.4s ease' }}
+          sx={{ color: '#cbd5e1', fontWeight: 600, maxWidth: '700px', mx: 'auto', mb: 8 }}
         >
           The system starts with <strong>“I Am Free to Be the Best of Me!”</strong> and culminates with{' '}
           <strong>“Self-Ascension!”</strong>. Pick the realm of life you need to refine in any of the cycles.
@@ -501,7 +449,7 @@ export default function BooksSection() {
             sx={{
               fontFamily: '"Outfit", sans-serif',
               fontWeight: 700,
-              color: '#7c3aed',
+              color: '#818cf8',
               mb: 3,
               display: 'flex',
               alignItems: 'center',
@@ -510,7 +458,7 @@ export default function BooksSection() {
               letterSpacing: '0.05em',
             }}
           >
-            <MenuBookIcon /> FEATURED CONCLUDING SYSTEM BOOK
+            <MenuBookIcon sx={{ color: '#818cf8' }} /> FEATURED CONCLUDING SYSTEM BOOK
           </Typography>
 
           <Grid
@@ -520,9 +468,9 @@ export default function BooksSection() {
             sx={{
               p: { xs: 3, sm: 5 },
               borderRadius: 6,
-              background: '#ffffff',
-              border: '1px solid rgba(124, 58, 237, 0.25)',
-              boxShadow: '0 20px 50px rgba(124, 58, 237, 0.06)',
+              background: 'rgba(15, 16, 38, 0.75)',
+              border: '2px solid #7c3aed',
+              boxShadow: '0 20px 50px rgba(124, 58, 237, 0.15)',
             }}
           >
             <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -545,7 +493,7 @@ export default function BooksSection() {
             <Grid item xs={12} md={8}>
               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 2 }}>
                 <Chip label="Quantum Cycle" color="secondary" sx={{ fontWeight: 700, background: '#7c3aed', color: '#ffffff' }} />
-                <Chip label="Universal Dimension" variant="outlined" sx={{ color: '#7c3aed', borderColor: 'rgba(124, 58, 237, 0.4)' }} />
+                <Chip label="Universal Dimension" variant="outlined" sx={{ color: '#818cf8', borderColor: 'rgba(124, 58, 237, 0.4)' }} />
               </Box>
               <Typography
                 variant="h3"
@@ -553,13 +501,13 @@ export default function BooksSection() {
                   fontFamily: '"Outfit", sans-serif',
                   fontWeight: 950,
                   mb: 2,
-                  color: '#0f172a',
+                  color: '#ffffff',
                   fontSize: { xs: '2rem', md: '2.5rem' },
                 }}
               >
                 Self-Ascension
               </Typography>
-              <Typography variant="body1" sx={{ color: '#334155', mb: 4, fontSize: '1.05rem', lineHeight: 1.7 }}>
+              <Typography variant="body1" sx={{ color: '#cbd5e1', mb: 4, fontSize: '1.05rem', lineHeight: 1.7 }}>
                 Serving as the culminating volume of the Quantum Cycle and the overview of the entire Holistic System,
                 <strong> Self-Ascension</strong> presenting the final stage of self-actualization. It integrates
                 Auto-Suggestive, Digital, and Quantum Psychology to align body, spirit, mind, self-consciousness, and
@@ -585,7 +533,7 @@ export default function BooksSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   variant="outlined"
-                  sx={{ borderColor: '#7c3aed', color: '#7c3aed', '&:hover': { borderColor: '#6d28d9', background: 'rgba(124, 58, 237, 0.05)' } }}
+                  sx={{ borderColor: '#818cf8', color: '#818cf8', '&:hover': { borderColor: '#7c3aed', background: 'rgba(124, 58, 237, 0.05)' } }}
                 >
                   Buy Hardcover
                 </Button>
@@ -658,71 +606,90 @@ export default function BooksSection() {
             const cycleColor = getCycleColor(book.cycle);
 
             return (
-              <Grid item xs={12} sm={6} md={4} key={`${book.title}-${idx}`}>
+              <Grid item xs={12} md={6} key={`${book.title}-${idx}`}>
                 <Card
                   sx={{
                     height: '100%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                    backgroundColor: '#ffffff',
-                    border: '1px solid rgba(0, 0, 0, 0.05)',
+                    backgroundColor: 'rgba(15, 16, 38, 0.75)',
+                    border: '1px solid rgba(255, 255, 255, 0.05)',
                     '&:hover': {
                       borderColor: `${cycleColor}70`,
-                      boxShadow: `0 15px 35px rgba(0,0,0,0.06)`,
+                      boxShadow: `0 15px 35px rgba(0,0,0,0.3)`,
                     },
                   }}
                 >
-                  <Box>
-                    {book.cover ? (
-                      <Box
-                        sx={{
-                          height: 320,
-                          position: 'relative',
-                          overflow: 'hidden',
-                          background: '#f8fafc',
-                          display: 'flex',
-                          justifyContent: 'center',
-                          alignItems: 'center',
-                          pt: 2,
-                          borderBottom: '1px solid rgba(0,0,0,0.05)',
-                        }}
-                      >
-                        <Box sx={{ width: 190, height: 280, boxShadow: '0 8px 20px rgba(0,0,0,0.15)', transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.03)' } }}>
+                  <Grid container sx={{ height: '100%' }}>
+                    {/* Left side: Book Cover / Fallback */}
+                    <Grid
+                      item
+                      xs={12}
+                      sm={4.5}
+                      sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        p: 2.5,
+                        background: 'rgba(0, 0, 0, 0.2)',
+                        minHeight: { xs: 200, sm: 'auto' },
+                      }}
+                    >
+                      {book.cover ? (
+                        <Box
+                          sx={{
+                            width: 120,
+                            height: 180,
+                            boxShadow: '0 8px 20px rgba(0,0,0,0.5)',
+                            transition: 'transform 0.3s',
+                            position: 'relative',
+                            '&:hover': { transform: 'scale(1.03)' },
+                          }}
+                        >
                           <img
                             src={book.cover}
                             alt={book.title}
                             style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '4px' }}
                           />
+                          {book.award && (
+                            <Chip
+                              label="Award"
+                              size="small"
+                              sx={{
+                                position: 'absolute',
+                                top: -8,
+                                right: -8,
+                                backgroundColor: '#fbbf24',
+                                color: '#0f172a',
+                                fontWeight: 800,
+                                fontSize: '0.6rem',
+                                height: 18,
+                              }}
+                            />
+                          )}
                         </Box>
-                        {book.award && (
-                          <Chip
-                            label="Award Winner"
-                            size="small"
-                            sx={{
-                              position: 'absolute',
-                              top: 12,
-                              right: 12,
-                              backgroundColor: '#fbbf24',
-                              color: '#0f172a',
-                              fontWeight: 700,
-                              fontSize: '0.7rem',
-                            }}
-                          />
-                        )}
-                      </Box>
-                    ) : (
-                      renderFallbackCover(book)
-                    )}
+                      ) : (
+                        renderFallbackCover(book)
+                      )}
+                    </Grid>
 
-                    <CardContent sx={{ p: 3 }}>
-                      {book.cover && (
+                    {/* Right side: Description & Action */}
+                    <Grid
+                      item
+                      xs={12}
+                      sm={7.5}
+                      sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'space-between',
+                        p: 3,
+                      }}
+                    >
+                      <Box>
                         <Box sx={{ mb: 1 }}>
                           <Chip
                             label={book.dimension}
                             size="small"
                             sx={{
-                              backgroundColor: 'rgba(0,0,0,0.02)',
+                              backgroundColor: 'rgba(255, 255, 255, 0.05)',
                               color: cycleColor,
                               border: `1px solid ${cycleColor}33`,
                               fontWeight: 700,
@@ -730,128 +697,134 @@ export default function BooksSection() {
                             }}
                           />
                         </Box>
-                      )}
-                      {book.cover && (
                         <Typography
                           variant="h6"
                           sx={{
                             fontFamily: '"Outfit", sans-serif',
                             fontWeight: 800,
-                            color: getCycleTextColor(cycles[activeTab]),
+                            color: '#ffffff',
                             lineHeight: 1.3,
                             mb: 1.5,
+                            fontSize: '1.05rem',
                           }}
                         >
                           {book.title}
                         </Typography>
-                      )}
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: getCycleTextColor(cycles[activeTab]),
-                          fontWeight: 550,
-                          display: '-webkit-box',
-                          WebkitLineClamp: 3,
-                          WebkitBoxOrient: 'vertical',
-                          overflow: 'hidden',
-                          lineHeight: 1.6,
-                        }}
-                      >
-                        {book.description}
-                      </Typography>
-                    </CardContent>
-                  </Box>
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            color: '#cbd5e1',
+                            fontWeight: 550,
+                            display: '-webkit-box',
+                            WebkitLineClamp: 3,
+                            WebkitBoxOrient: 'vertical',
+                            overflow: 'hidden',
+                            lineHeight: 1.5,
+                            fontSize: '0.825rem',
+                          }}
+                        >
+                          {book.description}
+                        </Typography>
+                      </Box>
 
-                  <Box sx={{ p: 3, pt: 0, display: 'flex', gap: 1 }}>
-                    <Button
-                      variant="outlined"
-                      size="small"
-                      startIcon={<InfoIcon />}
-                      onClick={() => setSelectedBook(book)}
-                      sx={{
-                        flex: 1,
-                        borderColor: 'rgba(0, 0, 0, 0.1)',
-                        color: 'rgba(15, 23, 42, 0.7)',
-                        '&:hover': {
-                          borderColor: 'rgba(0, 0, 0, 0.25)',
-                          color: '#000000',
-                          background: 'rgba(0, 0, 0, 0.02)',
-                        },
-                      }}
-                    >
-                      Details
-                    </Button>
+                      <Box sx={{ display: 'flex', gap: 1, mt: 2.5 }}>
+                        <Button
+                          variant="outlined"
+                          size="small"
+                          startIcon={<InfoIcon />}
+                          onClick={() => setSelectedBook(book)}
+                          sx={{
+                            flex: 1,
+                            borderColor: 'rgba(255, 255, 255, 0.15)',
+                            color: 'rgba(255, 255, 255, 0.7)',
+                            fontSize: '0.75rem',
+                            py: 0.8,
+                            '&:hover': {
+                              borderColor: '#ffffff',
+                              color: '#ffffff',
+                              background: 'rgba(255, 255, 255, 0.05)',
+                            },
+                          }}
+                        >
+                          Details
+                        </Button>
 
-                    {book.links ? (
-                      <Button
-                        variant="contained"
-                        size="small"
-                        onClick={() => {
-                          const url = book.links?.paperback || book.links?.kindle;
-                          if (url) window.open(url, '_blank');
-                        }}
-                        sx={{
-                          flex: 1.2,
-                          background: cycleColor,
-                          color: '#ffffff',
-                          fontWeight: 700,
-                          '&:hover': {
-                            background: cycleColor,
-                            filter: 'brightness(0.95)',
-                          },
-                        }}
-                      >
-                        Buy Now
-                      </Button>
-                    ) : (
-                      <Button
-                        variant="contained"
-                        size="small"
-                        disabled
-                        sx={{
-                          flex: 1.2,
-                          '&.Mui-disabled': {
-                            backgroundColor: 'rgba(0,0,0,0.05)',
-                            color: 'rgba(0,0,0,0.3)',
-                          },
-                        }}
-                      >
-                        Coming Soon
-                      </Button>
-                    )}
-                  </Box>
+                        {book.links ? (
+                          <Button
+                            variant="contained"
+                            size="small"
+                            onClick={() => {
+                              const url = book.links?.paperback || book.links?.kindle;
+                              if (url) window.open(url, '_blank');
+                            }}
+                            sx={{
+                              flex: 1.2,
+                              background: cycleColor,
+                              color: '#ffffff',
+                              fontWeight: 700,
+                              fontSize: '0.75rem',
+                              py: 0.8,
+                              '&:hover': {
+                                background: cycleColor,
+                                filter: 'brightness(0.95)',
+                              },
+                            }}
+                          >
+                            Buy Now
+                          </Button>
+                        ) : (
+                          <Button
+                            variant="contained"
+                            size="small"
+                            disabled
+                            sx={{
+                              flex: 1.2,
+                              fontSize: '0.75rem',
+                              py: 0.8,
+                              '&.Mui-disabled': {
+                                backgroundColor: 'rgba(255,255,255,0.05)',
+                                color: 'rgba(255,255,255,0.2)',
+                              },
+                            }}
+                          >
+                            Coming Soon
+                          </Button>
+                        )}
+                      </Box>
+                    </Grid>
+                  </Grid>
                 </Card>
               </Grid>
             );
           })}
           {cycles[activeTab] === 'quantum' && (
-            <Grid item xs={12} sm={6} md={4}>
+            <Grid item xs={12} md={6}>
               <Card
                 sx={{
                   height: '100%',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
-                  backgroundColor: '#ffffff',
-                  border: '1px solid rgba(124, 58, 237, 0.25)',
-                  background: 'linear-gradient(135deg, rgba(124,58,237,0.03) 0%, rgba(255,255,255,1) 100%)',
-                  boxShadow: '0 10px 30px rgba(124,58,237,0.04)',
+                  backgroundColor: 'rgba(15, 16, 38, 0.75)',
+                  border: '2px solid #7c3aed',
+                  background: 'linear-gradient(135deg, rgba(124,58,237,0.08) 0%, rgba(15,16,38,0.95) 100%)',
+                  boxShadow: '0 10px 30px rgba(124,58,237,0.15)',
                 }}
               >
-                <CardContent sx={{ p: 4, textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%', minHeight: 380 }}>
-                  <AutoAwesomeIcon sx={{ color: '#7c3aed', fontSize: '3rem', mb: 2, mx: 'auto' }} />
-                  <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#3b0764', mb: 2 }}>
+                <CardContent sx={{ p: 4, textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%', minHeight: 230 }}>
+                  <AutoAwesomeIcon sx={{ color: '#c084fc', fontSize: '2.5rem', mb: 1.5, mx: 'auto' }} />
+                  <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#ffffff', mb: 1.5 }}>
                     Tesla Frequency Alignment
                   </Typography>
-                  <Typography variant="body2" sx={{ color: '#3b0764', fontWeight: 550, lineHeight: 1.7, mb: 3 }}>
+                  <Typography variant="body2" sx={{ color: '#cbd5e1', fontWeight: 550, lineHeight: 1.7, mb: 2 }}>
                     “If you want to find the secrets of the universe, think in terms of energy, frequency and vibration.” 
                     <br />— Nikola Tesla
                   </Typography>
-                  <Divider sx={{ my: 2, borderColor: 'rgba(124, 58, 237, 0.15)' }} />
-                  <Typography variant="caption" sx={{ color: '#7c3aed', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  <Divider sx={{ my: 1.5, borderColor: 'rgba(255, 255, 255, 0.08)' }} />
+                  <Typography variant="caption" sx={{ color: '#a855f7', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     Quantum Cycle Philosophy
                   </Typography>
-                  <Typography variant="body2" sx={{ color: '#3b0764', fontWeight: 550, mt: 1, fontSize: '0.85rem' }}>
+                  <Typography variant="body2" sx={{ color: '#cbd5e1', fontWeight: 550, mt: 1, fontSize: '0.85rem' }}>
                     Dr. Ray’s award-winning masterpiece <strong>“Light is me, Light is my philosophy”</strong> is dedicated to Tesla's principles of physical and spiritual energy resonance.
                   </Typography>
                 </CardContent>
@@ -866,19 +839,19 @@ export default function BooksSection() {
             mt: 12,
             p: { xs: 4, md: 6 },
             borderRadius: 6,
-            background: '#ffffff',
-            border: '2px solid rgba(8, 145, 178, 0.15)',
-            boxShadow: '0 20px 45px rgba(0, 0, 0, 0.03)',
+            background: 'rgba(15, 16, 38, 0.75)',
+            border: '2px solid rgba(8, 145, 178, 0.3)',
+            boxShadow: '0 20px 45px rgba(0, 0, 0, 0.3)',
           }}
         >
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 3 }}>
-            <Box sx={{ width: 4, height: 28, backgroundColor: '#0891b2', borderRadius: 2 }} />
+            <Box sx={{ width: 4, height: 28, backgroundColor: '#22d3ee', borderRadius: 2 }} />
             <Typography
               variant="h4"
               sx={{
                 fontFamily: '"Outfit", sans-serif',
                 fontWeight: 900,
-                color: '#083344',
+                color: '#ffffff',
                 fontSize: { xs: '1.6rem', md: '2rem' }
               }}
             >
@@ -886,40 +859,40 @@ export default function BooksSection() {
             </Typography>
           </Box>
           
-          <Typography variant="body1" sx={{ color: '#083344', fontWeight: 550, mb: 4, fontSize: '1.05rem', lineHeight: 1.7 }}>
+          <Typography variant="body1" sx={{ color: '#cbd5e1', fontWeight: 550, mb: 4, fontSize: '1.05rem', lineHeight: 1.7 }}>
             Dr. Ray’s works represent a pre-assembled, commercially powerful literary ecosystem designed to address the deep cognitive and spiritual challenges of the digital Renaissance. 
             Traditional publishers are not just acquiring single books; they are acquiring a lifetime curriculum with immense backend value and multi-format appeal.
           </Typography>
 
           <Grid container spacing={4}>
             <Grid item xs={12} md={4}>
-              <Box sx={{ p: 3, borderRadius: 4, background: 'rgba(79, 70, 229, 0.04)', border: '1px solid rgba(79, 70, 229, 0.08)', height: '100%' }}>
-                <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#4f46e5', mb: 1.5 }}>
+              <Box sx={{ p: 3, borderRadius: 4, background: 'rgba(99, 102, 241, 0.08)', border: '1px solid rgba(99, 102, 241, 0.15)', height: '100%' }}>
+                <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#818cf8', mb: 1.5 }}>
                   1. Pre-Assembled Ecosystem
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#1e1b4b', fontWeight: 550, lineHeight: 1.6 }}>
+                <Typography variant="body2" sx={{ color: '#cbd5e1', fontWeight: 550, lineHeight: 1.6 }}>
                   With 20+ structured titles spanning three evolutionary cycles, this offers a complete brand syllabus with immense potential for coursework, workshops, and digital expansions.
                 </Typography>
               </Box>
             </Grid>
             
             <Grid item xs={12} md={4}>
-              <Box sx={{ p: 3, borderRadius: 4, background: 'rgba(8, 145, 178, 0.04)', border: '1px solid rgba(8, 145, 178, 0.08)', height: '100%' }}>
-                <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#0891b2', mb: 1.5 }}>
+              <Box sx={{ p: 3, borderRadius: 4, background: 'rgba(6, 182, 212, 0.08)', border: '1px solid rgba(6, 182, 212, 0.15)', height: '100%' }}>
+                <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#22d3ee', mb: 1.5 }}>
                   2. Academic & Scholarly Rigor
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#083344', fontWeight: 550, lineHeight: 1.6 }}>
+                <Typography variant="body2" sx={{ color: '#cbd5e1', fontWeight: 550, lineHeight: 1.6 }}>
                   Grounded in rigorous scholarship—a Ph.D. from the Moscow Brain Institute and 30 years of university teaching in the USA—delivering immediate academic prestige.
                 </Typography>
               </Box>
             </Grid>
 
             <Grid item xs={12} md={4}>
-              <Box sx={{ p: 3, borderRadius: 4, background: 'rgba(217, 119, 6, 0.04)', border: '1px solid rgba(217, 119, 6, 0.08)', height: '100%' }}>
-                <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#d97706', mb: 1.5 }}>
+              <Box sx={{ p: 3, borderRadius: 4, background: 'rgba(251, 191, 36, 0.08)', border: '1px solid rgba(251, 191, 36, 0.15)', height: '100%' }}>
+                <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#fbbf24', mb: 1.5 }}>
                   3. Highly Consumable Format
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#78350f', fontWeight: 550, lineHeight: 1.6 }}>
+                <Typography variant="body2" sx={{ color: '#cbd5e1', fontWeight: 550, lineHeight: 1.6 }}>
                   Synthesized into a page-by-page, highly visual format optimized for the speed of modern reading, bridging the gap between deep science and self-ecology.
                 </Typography>
               </Box>
@@ -937,19 +910,19 @@ export default function BooksSection() {
           fullWidth
           PaperProps={{
             sx: {
-              background: '#ffffff',
+              background: '#0c0c22',
               border: `1px solid ${getCycleColor(selectedBook.cycle)}40`,
               borderRadius: 4,
-              boxShadow: `0 20px 50px rgba(0,0,0,0.1)`,
+              boxShadow: `0 20px 50px rgba(0,0,0,0.5)`,
               p: 1,
             },
           }}
         >
           <DialogTitle sx={{ m: 0, p: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 900, color: '#0f172a' }}>
+            <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 900, color: '#ffffff' }}>
               {selectedBook.title}
             </Typography>
-            <IconButton onClick={() => setSelectedBook(null)} sx={{ color: 'rgba(0,0,0,0.5)' }}>
+            <IconButton onClick={() => setSelectedBook(null)} sx={{ color: 'rgba(255,255,255,0.6)' }}>
               <CloseIcon />
             </IconButton>
           </DialogTitle>
@@ -957,12 +930,12 @@ export default function BooksSection() {
             {selectedBook.award && (
               <Box
                 sx={{
-                  background: 'rgba(251,191,36,0.08)',
-                  border: '1px solid rgba(251,191,36,0.2)',
+                  background: 'rgba(251,191,36,0.1)',
+                  border: '1px solid rgba(251,191,36,0.3)',
                   p: 1.5,
                   borderRadius: 2,
                   mb: 3,
-                  color: '#b45309',
+                  color: '#fbbf24',
                   fontWeight: 700,
                   fontSize: '0.9rem',
                 }}
@@ -974,20 +947,20 @@ export default function BooksSection() {
               <Chip
                 label={selectedBook.dimension}
                 sx={{
-                  backgroundColor: 'rgba(0, 0, 0, 0.03)',
+                  backgroundColor: 'rgba(255, 255, 255, 0.05)',
                   color: getCycleColor(selectedBook.cycle),
                   fontWeight: 700,
                   border: `1px solid ${getCycleColor(selectedBook.cycle)}30`,
                 }}
               />
             </Box>
-            <Typography variant="body1" sx={{ color: '#334155', lineHeight: 1.8, mb: 3 }}>
+            <Typography variant="body1" sx={{ color: '#cbd5e1', lineHeight: 1.8, mb: 3 }}>
               {selectedBook.description}
             </Typography>
 
             {selectedBook.links && (
               <Box>
-                <Typography variant="subtitle2" sx={{ color: '#0f172a', mb: 1.5, fontWeight: 800 }}>
+                <Typography variant="subtitle2" sx={{ color: '#ffffff', mb: 1.5, fontWeight: 800 }}>
                   Available formats:
                 </Typography>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1.5 }}>
@@ -998,7 +971,7 @@ export default function BooksSection() {
                       component="a"
                       href={selectedBook.links.kindle}
                       target="_blank"
-                      sx={{ borderColor: 'rgba(0,0,0,0.15)', color: '#0f172a', '&:hover': { borderColor: '#000000', background: 'rgba(0,0,0,0.02)' } }}
+                      sx={{ borderColor: 'rgba(255,255,255,0.15)', color: '#ffffff', '&:hover': { borderColor: '#ffffff', background: 'rgba(255,255,255,0.05)' } }}
                     >
                       Kindle
                     </Button>
@@ -1010,7 +983,7 @@ export default function BooksSection() {
                       component="a"
                       href={selectedBook.links.paperback}
                       target="_blank"
-                      sx={{ borderColor: 'rgba(0,0,0,0.15)', color: '#0f172a', '&:hover': { borderColor: '#000000', background: 'rgba(0,0,0,0.02)' } }}
+                      sx={{ borderColor: 'rgba(255,255,255,0.15)', color: '#ffffff', '&:hover': { borderColor: '#ffffff', background: 'rgba(255,255,255,0.05)' } }}
                     >
                       Paperback
                     </Button>
@@ -1022,7 +995,7 @@ export default function BooksSection() {
                       component="a"
                       href={selectedBook.links.hardcover}
                       target="_blank"
-                      sx={{ borderColor: 'rgba(0,0,0,0.15)', color: '#0f172a', '&:hover': { borderColor: '#000000', background: 'rgba(0,0,0,0.02)' } }}
+                      sx={{ borderColor: 'rgba(255,255,255,0.15)', color: '#ffffff', '&:hover': { borderColor: '#ffffff', background: 'rgba(255,255,255,0.05)' } }}
                     >
                       Hardcover
                     </Button>

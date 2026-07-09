@@ -20,7 +20,7 @@ const levelsData: LevelInfo[] = [
     title: 'Self-Salvation',
     dimension: 'Universal Dimension',
     realm: 'Universal Consciousness',
-    color: '#7c3aed', // Purple
+    color: '#a855f7', // Purple
     nvidiaLevel: 'Super Level',
     nvidiaCategory: 'Applications',
     description: 'Syncing with the Super-Consciousness and the cosmos. Moving beyond organic limitations into extra-terrestrial consciousness alignment.',
@@ -31,7 +31,7 @@ const levelsData: LevelInfo[] = [
     title: 'Self-Realization',
     dimension: 'Spiritual Dimension',
     realm: 'Self-Consciousness',
-    color: '#db2777', // Magenta
+    color: '#ec4899', // Magenta
     nvidiaLevel: 'Macro Level',
     nvidiaCategory: 'Creative Models',
     description: 'Unlocking creative spiritual potential and personal destiny, operating through enlightened self-consciousness.',
@@ -42,7 +42,7 @@ const levelsData: LevelInfo[] = [
     title: 'Self-Installation',
     dimension: 'Mental Dimension',
     realm: 'Mind',
-    color: '#2563eb', // Blue
+    color: '#3b82f6', // Blue
     nvidiaLevel: 'Mezzo Level',
     nvidiaCategory: 'Industrial Infrastructure',
     description: 'Establishing mental structures, critical reasoning, and intellectual filters to navigate AI systems without cognitive overload.',
@@ -53,7 +53,7 @@ const levelsData: LevelInfo[] = [
     title: 'Self-Monitoring',
     dimension: 'Emotional Dimension',
     realm: 'Spirit',
-    color: '#dc2626', // Red
+    color: '#ef4444', // Red
     nvidiaLevel: 'Meta Level',
     nvidiaCategory: 'Chips Manufacturing',
     description: 'Continuous emotional monitoring and refinement. Protecting human empathy, feelings, and soul-symmetry against binary standardization.',
@@ -64,7 +64,7 @@ const levelsData: LevelInfo[] = [
     title: 'Self-Awareness',
     dimension: 'Physical Dimension',
     realm: 'Body',
-    color: '#16a34a', // Green
+    color: '#10b981', // Green
     nvidiaLevel: 'Mini Level',
     nvidiaCategory: 'Energy Production',
     description: 'Foundational awareness of the physical body, biological rhythms, and energy levels for self-ecology.',
@@ -80,14 +80,14 @@ export default function QuantumFractal() {
       id="fractal"
       sx={{
         py: { xs: 10, md: 14 },
-        background: 'linear-gradient(135deg, #f3e5f5 0%, #f8bbd0 100%)',
+        background: '#070715',
         position: 'relative',
         overflow: 'hidden',
-        borderTop: '1px solid rgba(0, 0, 0, 0.05)',
+        borderTop: '1px solid rgba(255, 255, 255, 0.05)',
       }}
     >
-      <Box className="cosmic-glow-indigo" sx={{ top: '20%', right: '10%', opacity: 0.5 }} />
-      <Box className="cosmic-glow-cyan" sx={{ bottom: '15%', left: '5%', opacity: 0.5 }} />
+      <Box className="cosmic-glow-indigo" sx={{ top: '20%', right: '10%', opacity: 0.55 }} />
+      <Box className="cosmic-glow-cyan" sx={{ bottom: '15%', left: '5%', opacity: 0.55 }} />
 
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
         {/* Section Header */}
@@ -100,13 +100,13 @@ export default function QuantumFractal() {
               px: 2,
               py: 0.8,
               borderRadius: '30px',
-              background: 'rgba(8, 145, 178, 0.15)',
-              border: '2px solid rgba(8, 145, 178, 0.3)',
+              background: 'rgba(6, 182, 212, 0.08)',
+              border: '1px solid rgba(6, 182, 212, 0.15)',
               mb: 3,
             }}
           >
-            <AutoAwesomeIcon sx={{ color: '#0891b2', fontSize: '1.1rem' }} />
-            <Typography variant="body2" sx={{ color: '#0891b2', fontWeight: 800, letterSpacing: '0.05em' }}>
+            <AutoAwesomeIcon sx={{ color: '#22d3ee', fontSize: '1.1rem' }} />
+            <Typography variant="body2" sx={{ color: '#22d3ee', fontWeight: 800, letterSpacing: '0.05em' }}>
               DIGITIZED SELF-ACCULTURATION
             </Typography>
           </Box>
@@ -118,7 +118,7 @@ export default function QuantumFractal() {
               fontSize: { xs: '2.2rem', md: '3rem' },
               fontWeight: 900,
               mb: 2,
-              background: 'linear-gradient(135deg, #4c1d95 0%, #3b0764 100%)',
+              background: 'linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
             }}
@@ -127,7 +127,7 @@ export default function QuantumFractal() {
           </Typography>
           <Typography
             variant="body1"
-            sx={{ color: '#3b0764', fontWeight: 700, maxWidth: '850px', mx: 'auto', fontSize: '1.15rem', fontFamily: '"Inter", sans-serif', lineHeight: 1.7 }}
+            sx={{ color: '#cbd5e1', fontWeight: 600, maxWidth: '850px', mx: 'auto', fontSize: '1.15rem', fontFamily: '"Inter", sans-serif', lineHeight: 1.7 }}
           >
             A crucial mapping of how the <strong>System of Holistic Self-Resurrection</strong> integrates directly into our AI-generated infrastructure. 
             Dr. Ray aligns the five stages of human multi-dimensional growth with the structural layers of advanced AI industry 
@@ -147,7 +147,7 @@ export default function QuantumFractal() {
                 justifyContent: 'center',
               }}
             >
-              <Typography variant="subtitle2" sx={{ color: '#3b0764', mb: 2, fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+              <Typography variant="subtitle2" sx={{ color: '#ffffff', mb: 2, fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                 Interactive Consciousness Pyramid (Click Levels to Inspect)
               </Typography>
 
@@ -164,18 +164,18 @@ export default function QuantumFractal() {
                       p: 2.5,
                       borderRadius: 3,
                       background: isSelected
-                        ? `linear-gradient(90deg, ${level.color}15 0%, rgba(255, 255, 255, 0.98) 100%)`
-                        : 'rgba(255, 255, 255, 0.7)',
+                        ? `linear-gradient(90deg, ${level.color}15 0%, rgba(15, 16, 38, 0.95) 100%)`
+                        : 'rgba(15, 16, 38, 0.4)',
                       border: isSelected
                         ? `2px solid ${level.color}`
-                        : '2px solid rgba(124, 58, 237, 0.25)',
-                      boxShadow: isSelected ? `0 6px 20px ${level.color}20` : '0 4px 12px rgba(0,0,0,0.02)',
+                        : '1px solid rgba(255, 255, 255, 0.08)',
+                      boxShadow: isSelected ? `0 6px 20px ${level.color}20` : '0 4px 12px rgba(0,0,0,0.1)',
                       transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                       transform: isSelected ? 'translateX(10px)' : 'translateX(0)',
                       '&:hover': {
                         transform: 'translateX(10px)',
                         borderColor: level.color,
-                        background: `linear-gradient(90deg, ${level.color}18 0%, rgba(255, 255, 255, 0.98) 100%)`,
+                        background: `linear-gradient(90deg, ${level.color}20 0%, rgba(15, 16, 38, 0.95) 100%)`,
                       },
                     }}
                   >
@@ -203,13 +203,13 @@ export default function QuantumFractal() {
                         sx={{
                           fontFamily: '"Outfit", sans-serif',
                           fontWeight: 900,
-                          color: '#3b0764',
+                          color: '#ffffff',
                           fontSize: '1.1rem',
                         }}
                       >
                         {level.title}
                       </Typography>
-                      <Typography variant="caption" sx={{ color: '#4c1d95', fontWeight: 800 }}>
+                      <Typography variant="caption" sx={{ color: '#a855f7', fontWeight: 800 }}>
                         {level.dimension} — ({level.realm})
                       </Typography>
                     </Box>
@@ -227,9 +227,9 @@ export default function QuantumFractal() {
               sx={{
                 height: '100%',
                 p: 4,
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(243,232,255,0.98) 100%)',
+                background: 'rgba(15, 16, 38, 0.75)',
                 border: '2px solid #7c3aed',
-                boxShadow: `0 15px 35px rgba(124,58,237,0.1)`,
+                boxShadow: `0 15px 35px rgba(124,58,237,0.15)`,
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
@@ -250,12 +250,12 @@ export default function QuantumFractal() {
                         mb: 1,
                       }}
                     />
-                    <Typography variant="h4" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 950, color: '#3b0764' }}>
+                    <Typography variant="h4" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 950, color: '#ffffff' }}>
                       {selectedLevel.title}
                     </Typography>
                   </Box>
                   <Box sx={{ textAlign: 'right' }}>
-                    <Typography variant="subtitle2" sx={{ color: '#4c1d95', fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.05em' }}>
+                    <Typography variant="subtitle2" sx={{ color: '#a855f7', fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.05em' }}>
                       DIMENSION REALM
                     </Typography>
                     <Typography variant="body1" sx={{ color: selectedLevel.color, fontWeight: 900 }}>
@@ -264,42 +264,41 @@ export default function QuantumFractal() {
                   </Box>
                 </Box>
 
-                <Divider sx={{ my: 2.5, borderColor: 'rgba(124,58,237,0.2)' }} />
+                <Divider sx={{ my: 2.5, borderColor: 'rgba(255,255,255,0.08)' }} />
 
                 {/* Level Description */}
-                <Typography variant="subtitle1" sx={{ color: '#4c1d95', fontWeight: 900, textTransform: 'uppercase', mb: 1, fontSize: '0.8rem', letterSpacing: '0.05em' }}>
+                <Typography variant="subtitle1" sx={{ color: '#a855f7', fontWeight: 900, textTransform: 'uppercase', mb: 1, fontSize: '0.8rem', letterSpacing: '0.05em' }}>
                   Consciousness Description
                 </Typography>
-                <Typography variant="body1" sx={{ color: '#3b0764', fontWeight: 600, mb: 4, lineHeight: 1.7 }}>
+                <Typography variant="body1" sx={{ color: '#cbd5e1', fontWeight: 550, mb: 4, lineHeight: 1.7 }}>
                   {selectedLevel.description}
                 </Typography>
 
                 {/* NVIDIA AI Industry Parallel */}
                 <Box
                   sx={{
-                    background: '#ffffff',
-                    border: '2px solid #16a34a',
+                    background: 'rgba(255, 255, 255, 0.03)',
+                    border: '1px solid rgba(255, 255, 255, 0.08)',
                     borderRadius: 3,
                     p: 3,
                     mb: 4,
-                    boxShadow: '0 4px 12px rgba(22, 163, 74, 0.05)',
                   }}
                 >
-                  <Typography variant="subtitle1" sx={{ color: '#16a34a', fontWeight: 900, textTransform: 'uppercase', mb: 1.5, fontSize: '0.8rem', letterSpacing: '0.05em', display: 'flex', alignItems: 'center', gap: 1 }}>
-                    <Box component="span" sx={{ width: 8, height: 8, borderRadius: '50%', backgroundColor: '#16a34a' }} />
+                  <Typography variant="subtitle1" sx={{ color: '#10b981', fontWeight: 900, textTransform: 'uppercase', mb: 1.5, fontSize: '0.8rem', letterSpacing: '0.05em', display: 'flex', alignItems: 'center', gap: 1 }}>
+                    <Box component="span" sx={{ width: 8, height: 8, borderRadius: '50%', backgroundColor: '#10b981' }} />
                     NVIDIA Industry Parallel (Jensen Huang)
                   </Typography>
                   <Grid container spacing={2}>
                     <Grid item xs={6}>
-                      <Typography variant="caption" sx={{ color: '#4c1d95', fontWeight: 700, display: 'block' }}>
+                      <Typography variant="caption" sx={{ color: '#a855f7', fontWeight: 700, display: 'block' }}>
                         Industry Level
                       </Typography>
-                      <Typography variant="body1" sx={{ color: '#3b0764', fontWeight: 900, fontFamily: '"Outfit", sans-serif' }}>
+                      <Typography variant="body1" sx={{ color: '#ffffff', fontWeight: 900, fontFamily: '"Outfit", sans-serif' }}>
                         {selectedLevel.nvidiaLevel}
                       </Typography>
                     </Grid>
                     <Grid item xs={6}>
-                      <Typography variant="caption" sx={{ color: '#4c1d95', fontWeight: 700, display: 'block' }}>
+                      <Typography variant="caption" sx={{ color: '#a855f7', fontWeight: 700, display: 'block' }}>
                         Structural Segment
                       </Typography>
                       <Typography variant="body1" sx={{ color: selectedLevel.color, fontWeight: 900, fontFamily: '"Outfit", sans-serif' }}>
@@ -310,17 +309,17 @@ export default function QuantumFractal() {
                 </Box>
 
                 {/* The Human Factor */}
-                <Typography variant="subtitle1" sx={{ color: '#4c1d95', fontWeight: 900, textTransform: 'uppercase', mb: 1, fontSize: '0.8rem', letterSpacing: '0.05em' }}>
+                <Typography variant="subtitle1" sx={{ color: '#a855f7', fontWeight: 900, textTransform: 'uppercase', mb: 1, fontSize: '0.8rem', letterSpacing: '0.05em' }}>
                   The Primary Human Factor
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#3b0764', fontWeight: 700, lineHeight: 1.6, fontStyle: 'italic' }}>
+                <Typography variant="body2" sx={{ color: '#cbd5e1', fontWeight: 600, lineHeight: 1.6, fontStyle: 'italic' }}>
                   “{selectedLevel.humanFactor}”
                 </Typography>
               </CardContent>
 
               <Box sx={{ mt: 4 }}>
-                <Divider sx={{ mb: 2, borderColor: 'rgba(124,58,237,0.2)' }} />
-                <Typography variant="caption" sx={{ color: '#4c1d95', fontWeight: 700, display: 'block', textAlign: 'center' }}>
+                <Divider sx={{ mb: 2, borderColor: 'rgba(255,255,255,0.08)' }} />
+                <Typography variant="caption" sx={{ color: '#94a3b8', fontWeight: 700, display: 'block', textAlign: 'center' }}>
                   *The unity of the physical, emotional, mental, spiritual, and universal is not reversible!
                 </Typography>
               </Box>
@@ -334,9 +333,9 @@ export default function QuantumFractal() {
             mt: 8,
             p: 4.5,
             borderRadius: 5,
-            background: 'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(243,224,248,0.98) 100%)',
+            background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(168, 85, 247, 0.08) 100%)',
             border: '2px solid #7c3aed',
-            boxShadow: '0 12px 32px rgba(124, 58, 177, 0.1)',
+            boxShadow: '0 12px 32px rgba(168, 85, 247, 0.15)',
             textAlign: 'center',
             position: 'relative',
           }}
@@ -347,43 +346,43 @@ export default function QuantumFractal() {
               display: 'flex',
               justifyContent: 'center',
               fontSize: '3rem',
-              color: '#2563eb',
+              color: '#6366f1',
               lineHeight: 1,
               mb: 1.5,
               animation: 'pulse 3s ease-in-out infinite',
               '@keyframes pulse': {
                 '0%, 100%': { transform: 'scale(1)', opacity: 0.7 },
-                '50%': { transform: 'scale(1.08)', opacity: 1, color: '#7c3aed' },
+                '50%': { transform: 'scale(1.08)', opacity: 1, color: '#a855f7' },
               }
             }}
           >
             ∞
           </Box>
 
-          <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 900, color: '#3b0764', mb: 2, fontSize: { xs: '1.25rem', sm: '1.5rem' } }}>
+          <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 900, color: '#ffffff', mb: 2, fontSize: { xs: '1.25rem', sm: '1.5rem' } }}>
             Our Intellectually Spiritualized Fractal Equation:
           </Typography>
 
           <Grid container spacing={3} justifyContent="center" alignItems="center" sx={{ mb: 3 }}>
             <Grid item xs={12} sm={5}>
-              <Box sx={{ p: 2, background: 'rgba(255,255,255,0.9)', border: '2px solid #7c3aed', borderRadius: 2 }}>
-                <Typography variant="caption" sx={{ color: '#2563eb', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+              <Box sx={{ p: 2, background: 'rgba(15, 16, 38, 0.75)', border: '1.5px solid rgba(99, 102, 241, 0.3)', borderRadius: 2 }}>
+                <Typography variant="caption" sx={{ color: '#818cf8', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                   Form of Life
                 </Typography>
-                <Typography variant="h6" sx={{ color: '#3b0764', fontWeight: 900, mt: 0.5, fontSize: '1rem', fontFamily: '"Outfit", sans-serif' }}>
+                <Typography variant="h6" sx={{ color: '#ffffff', fontWeight: 900, mt: 0.5, fontSize: '1rem', fontFamily: '"Outfit", sans-serif' }}>
                   Body + Spirit + Mind
                 </Typography>
               </Box>
             </Grid>
             <Grid item xs={12} sm={1}>
-              <Typography variant="h4" sx={{ color: '#4c1d95', fontWeight: 300 }}>+</Typography>
+              <Typography variant="h4" sx={{ color: '#a855f7', fontWeight: 300 }}>+</Typography>
             </Grid>
             <Grid item xs={12} sm={5}>
-              <Box sx={{ p: 2, background: 'rgba(255,255,255,0.9)', border: '2px solid #7c3aed', borderRadius: 2 }}>
-                <Typography variant="caption" sx={{ color: '#db2777', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+              <Box sx={{ p: 2, background: 'rgba(15, 16, 38, 0.75)', border: '1.5px solid rgba(168, 85, 247, 0.3)', borderRadius: 2 }}>
+                <Typography variant="caption" sx={{ color: '#f472b6', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                   Content of Life
                 </Typography>
-                <Typography variant="h6" sx={{ color: '#3b0764', fontWeight: 900, mt: 0.5, fontSize: '1rem', fontFamily: '"Outfit", sans-serif' }}>
+                <Typography variant="h6" sx={{ color: '#ffffff', fontWeight: 900, mt: 0.5, fontSize: '1rem', fontFamily: '"Outfit", sans-serif' }}>
                   Self-Consciousness + Universal Consciousness
                 </Typography>
               </Box>
@@ -391,10 +390,10 @@ export default function QuantumFractal() {
           </Grid>
 
           <Box sx={{ mb: 2.5 }}>
-            <Typography variant="body1" sx={{ color: '#3b0764', fontWeight: 800, display: 'inline' }}>
+            <Typography variant="body1" sx={{ color: '#cbd5e1', fontWeight: 800, display: 'inline' }}>
               Living Intelligence + Enlightened Self-Consciousness ={' '}
             </Typography>
-            <Typography variant="body1" sx={{ color: '#0891b2', fontWeight: 900, display: 'inline' }}>
+            <Typography variant="body1" sx={{ color: '#22d3ee', fontWeight: 900, display: 'inline' }}>
               A Whole Self!
             </Typography>
           </Box>
@@ -405,7 +404,7 @@ export default function QuantumFractal() {
               fontFamily: '"Outfit", sans-serif',
               fontWeight: 950,
               fontSize: { xs: '1.4rem', sm: '1.8rem' },
-              background: 'linear-gradient(45deg, #d97706 0%, #db2777 50%, #2563eb 100%)',
+              background: 'linear-gradient(45deg, #fbbf24 0%, #ec4899 50%, #6366f1 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
             }}

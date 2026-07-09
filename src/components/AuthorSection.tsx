@@ -10,14 +10,14 @@ export default function AuthorSection() {
       id="author"
       sx={{
         py: { xs: 10, md: 14 },
-        background: 'linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%)',
+        background: '#070715',
         position: 'relative',
         overflow: 'hidden',
-        borderTop: '1px solid rgba(0, 0, 0, 0.05)',
+        borderTop: '1px solid rgba(255, 255, 255, 0.05)',
       }}
     >
-      <Box className="cosmic-glow-cyan" sx={{ top: '30%', left: '-15%', opacity: 0.3 }} />
-      <Box className="cosmic-glow-indigo" sx={{ bottom: '15%', right: '-15%', opacity: 0.3 }} />
+      <Box className="cosmic-glow-cyan" sx={{ top: '30%', left: '-15%', opacity: 0.55 }} />
+      <Box className="cosmic-glow-indigo" sx={{ bottom: '15%', right: '-15%', opacity: 0.55 }} />
 
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
         {/* Vygotsky Quote */}
@@ -27,7 +27,7 @@ export default function AuthorSection() {
             sx={{
               fontStyle: 'italic',
               fontWeight: 400,
-              color: '#172554',
+              color: '#ffffff',
               lineHeight: 1.5,
               maxWidth: '800px',
               mx: 'auto',
@@ -39,7 +39,7 @@ export default function AuthorSection() {
                 left: 0,
                 top: -20,
                 fontSize: '5rem',
-                color: '#4f46e5',
+                color: '#6366f1',
                 opacity: 0.25,
                 fontFamily: 'serif',
               },
@@ -49,7 +49,7 @@ export default function AuthorSection() {
                 right: 0,
                 bottom: -40,
                 fontSize: '5rem',
-                color: '#4f46e5',
+                color: '#6366f1',
                 opacity: 0.25,
                 fontFamily: 'serif',
               }
@@ -57,7 +57,7 @@ export default function AuthorSection() {
           >
             Don’t teach just a subject. Teach the whole person!
           </Typography>
-          <Typography variant="subtitle1" sx={{ color: '#4f46e5', fontWeight: 800, mt: 2 }}>
+          <Typography variant="subtitle1" sx={{ color: '#818cf8', fontWeight: 800, mt: 2 }}>
             — LEO VYGOTSKY
           </Typography>
         </Box>
@@ -72,8 +72,8 @@ export default function AuthorSection() {
                 overflow: 'hidden',
                 width: { xs: '280px', sm: '350px' },
                 height: { xs: '380px', sm: '460px' },
-                boxShadow: '0 15px 30px rgba(0,0,0,0.1)',
-                border: '1px solid rgba(0,0,0,0.05)',
+                boxShadow: '0 15px 30px rgba(0,0,0,0.5)',
+                border: '1px solid rgba(255,255,255,0.08)',
                 '&::before': {
                   content: '""',
                   position: 'absolute',
@@ -81,7 +81,7 @@ export default function AuthorSection() {
                   left: 0,
                   right: 0,
                   bottom: 0,
-                  background: 'linear-gradient(to bottom, transparent 60%, #fafaf9 100%)',
+                  background: 'linear-gradient(to bottom, transparent 60%, #070715 100%)',
                   zIndex: 1,
                 }
               }}
@@ -96,9 +96,9 @@ export default function AuthorSection() {
 
           <Grid item xs={12} md={7}>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>
-              <SchoolIcon sx={{ color: '#0891b2' }} />
-              <Typography variant="subtitle2" sx={{ color: '#0891b2', fontWeight: 800, letterSpacing: '0.05em' }}>
-                PROFESSOR OF PSYCHOLINGUISTICS & AUTHOR
+              <SchoolIcon sx={{ color: '#22d3ee' }} />
+              <Typography variant="subtitle2" sx={{ color: '#22d3ee', fontWeight: 800, letterSpacing: '0.05em' }}>
+                PROFESSORIAL BIOGRAPHY & SYSTÈMIC FOCUS
               </Typography>
             </Box>
 
@@ -107,101 +107,52 @@ export default function AuthorSection() {
               sx={{
                 fontFamily: '"Outfit", sans-serif',
                 fontWeight: 900,
-                mb: 4,
-                fontSize: { xs: '2.2rem', sm: '2.8rem' },
-                color: '#1e3a8a',
+                mb: 3,
+                color: '#ffffff',
+                fontSize: { xs: '1.8rem', md: '2.4rem' }
               }}
             >
-              Meet Dr. Rimaletta Ray
+              Meet Ph.D. Rimaletta Ray
             </Typography>
 
-            <Typography variant="body1" sx={{ color: '#172554', fontWeight: 550, mb: 3, lineHeight: 1.8 }}>
-              Originally from Riga, Latvia, <strong>Dr. Rimaletta Ray</strong> earned her doctorate from the prestigious
-              Academy of Sciences, Moscow Brain Institute. Dr. Ray has worked in different colleges and universities in the USA
-              for 30 years, including the University of Connecticut (UCONN) and Norwalk Community College (NCC), and is a member
-              of the Psycholinguistic Association in Berlin.
-            </Typography>
-
-            <Typography variant="body1" sx={{ color: '#172554', fontWeight: 550, mb: 3, lineHeight: 1.8 }}>
-              Dr. Ray believes that education should be inseparable from inspiration and personality-formation as the
-              indispensable skills that need to be developed from birth and that should be the core of any professional training.
-              Her books represent a synthesis of lifetime research, avid reading, and consistent self-refining.
-            </Typography>
-
-            <Typography variant="body1" sx={{ color: '#172554', fontWeight: 550, mb: 4, lineHeight: 1.8 }}>
-              She has tested the validity of her <strong>System of Holistic Self-Resurrection</strong> with her students,
-              who utilize it as a <strong>Manual of Life</strong> that provides a clear-cut plan of action and mind + heart
-              enhancement for their personal and professional <strong>SELF-INSTALLATION</strong>.
-            </Typography>
-
-            {/* Internalize Mindset Slogan */}
-            <Box
-              sx={{
-                p: 3,
-                borderRadius: '16px',
-                background: 'linear-gradient(to right, rgba(79,70,229,0.04), rgba(255,255,255,0.8))',
-                borderLeft: '4px solid #4f46e5',
-                borderTop: '1px solid rgba(0,0,0,0.02)',
-                borderRight: '1px solid rgba(0,0,0,0.02)',
-                borderBottom: '1px solid rgba(0,0,0,0.02)',
-              }}
-            >
-              <Typography variant="subtitle2" sx={{ color: '#4f46e5', fontWeight: 800, mb: 1, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-                Dr. Ray’s Philosophy
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.5, color: '#cbd5e1' }}>
+              <Typography variant="body1" sx={{ lineHeight: 1.8, fontWeight: 500 }}>
+                Dr. Rimaletta Ray is a former professor of Psycholinguistics who has taught at both the{' '}
+                <strong>University of Connecticut (UCONN)</strong> and <strong>Norwalk Community College</strong>.
+                She holds a Ph.D. from the prestigious Moscow Brain Research Institute.
               </Typography>
-              <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontStyle: 'italic', fontWeight: 700, color: '#172554' }}>
-                “Internalize Your Emotions and Externalize the Mind. Be One of a Kind!”
+              <Typography variant="body1" sx={{ lineHeight: 1.8, fontWeight: 500 }}>
+                Driven by an obsessive calling to help humanity retain its evolutionary edge, she has dedicated the last
+                30 years to orchestrating a complete **Literary Ecosystem** for self-resurrection.
+              </Typography>
+              <Typography variant="body1" sx={{ lineHeight: 1.8, fontWeight: 500 }}>
+                Her methods integrate psycholinguistic programming, auto-suggestive structure, and quantum frequencies
+                to help readers "decipher the AI black box," govern technology constructively, and build space-time
+                coherent human fractals.
               </Typography>
             </Box>
           </Grid>
         </Grid>
 
-        {/* Life-Intelligent Banner Slogan */}
-        <Box
-          sx={{
-            py: 4,
-            px: 6,
-            borderRadius: 4,
-            border: '1px solid rgba(8,145,178,0.2)',
-            background: 'linear-gradient(135deg, rgba(8,145,178,0.05) 0%, rgba(255,255,255,0.9) 100%)',
-            textAlign: 'center',
-            mb: 12,
-          }}
-        >
+        {/* Audio/Meditation Player */}
+        <Box sx={{ mb: 6 }}>
           <Typography
-            variant="h4"
-            sx={{
-              fontFamily: '"Outfit", sans-serif',
-              fontWeight: 900,
-              color: '#172554',
-              fontSize: { xs: '1.5rem', sm: '2rem' },
-            }}
-          >
-            Don’t Be Life-Negligent. Be{' '}
-            <Box component="span" sx={{ color: '#0891b2', fontWeight: 900 }}>
-              Life-Intelligent!
-            </Box>
-          </Typography>
-        </Box>
-
-        {/* AUDIO WORK SECTION */}
-        <Box sx={{ mt: 10 }}>
-          <Typography
-            variant="h4"
+            variant="h3"
             align="center"
             sx={{
               fontFamily: '"Outfit", sans-serif',
               fontWeight: 900,
               mb: 2,
-              color: '#1e3a8a',
+              color: '#ffffff',
+              fontSize: { xs: '1.8rem', md: '2.4rem' }
             }}
           >
-            Audio Work & Podcast
+            Spoken Lectures & Audio
           </Typography>
           <Typography
             variant="body1"
             align="center"
-            sx={{ color: '#172554', fontWeight: 550, maxWidth: '650px', mx: 'auto', mb: 6 }}
+            sx={{ color: '#cbd5e1', fontWeight: 550, maxWidth: '650px', mx: 'auto', mb: 6 }}
           >
             Listen to Dr. Rimaletta Ray’s spoken audio programs, meditations, and mental lectures designed to align
             your vibrational frequencies.
@@ -214,8 +165,8 @@ export default function AuthorSection() {
                 sx={{
                   borderRadius: 4,
                   overflow: 'hidden',
-                  background: 'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(232,240,254,0.98) 100%)',
-                  boxShadow: '0 10px 25px rgba(63, 81, 181, 0.08)',
+                  background: 'rgba(15, 16, 38, 0.75)',
+                  boxShadow: '0 10px 25px rgba(0,0,0,0.3)',
                   border: '2px solid #3f51b5',
                   height: '420px',
                 }}
@@ -236,19 +187,19 @@ export default function AuthorSection() {
             <Grid item xs={12} md={5}>
               <Box
                 sx={{
-                  background: 'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(254,243,199,0.98) 100%)',
+                  background: 'rgba(15, 16, 38, 0.75)',
                   border: '2px solid #d97808',
                   p: 5,
                   borderRadius: 4,
                   textAlign: 'center',
-                  boxShadow: '0 10px 25px rgba(217,120,8,0.08)',
+                  boxShadow: '0 10px 25px rgba(217, 120, 8, 0.15)',
                 }}
               >
-                <LibraryMusicIcon sx={{ color: '#d97706', fontSize: '2.8rem', mb: 2 }} />
-                <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#172554', mb: 1.5, fontSize: '1.4rem' }}>
+                <LibraryMusicIcon sx={{ color: '#fbbf24', fontSize: '2.8rem', mb: 2 }} />
+                <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#ffffff', mb: 1.5, fontSize: '1.4rem' }}>
                   Turn on the Sun of Your Soul.
                 </Typography>
-                <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#d97706', fontSize: '1.4rem' }}>
+                <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#fbbf24', fontSize: '1.4rem' }}>
                   Be Happy and Whole!
                 </Typography>
               </Box>
@@ -265,7 +216,7 @@ export default function AuthorSection() {
             background: 'linear-gradient(135deg, #d97808 0%, #fbbf24 100%)',
             border: '3px solid #b45309',
             textAlign: 'center',
-            boxShadow: '0 15px 35px rgba(217, 120, 8, 0.18)',
+            boxShadow: '0 15px 35px rgba(217, 120, 8, 0.3)',
           }}
         >
           <Typography

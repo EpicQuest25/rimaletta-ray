@@ -11,9 +11,6 @@ import loveEcologyImg from '../assets/downloaded/love_ecology.jpg';
 import blessedLifeObsessedImg from '../assets/downloaded/blessed_life_obsessed.jpg';
 import selfRenaissanceImg from '../assets/downloaded/6c30815a-30d3-46ee-939c-2d6a686093ed.png';
 import selfWorthImg from '../assets/downloaded/self_worth.jpg';
-import soulSymmetryImg from '../assets/downloaded/soul_symmetry.jpg';
-import digitalBinaryImg from '../assets/downloaded/digital_binary.jpg';
-import exceptionalityImg from '../assets/downloaded/exceptionality.jpg';
 import transcendentUsAisImg from '../assets/downloaded/transcendent_us_ais.jpg';
 
 interface VideoItem {
@@ -22,7 +19,7 @@ interface VideoItem {
   duration: string;
   thumbnail: string;
   youtubeUrl: string;
-  embedUrl: string; // YouTube embed URL (can be customized by client)
+  embedUrl: string; // YouTube embed URL
 }
 
 const videosData: VideoItem[] = [
@@ -99,54 +96,6 @@ const videosData: VideoItem[] = [
     embedUrl: 'https://www.youtube.com/embed/5JWS7Z54gp8',
   },
   {
-    title: 'Inspirational Psychology for Self Ecology | Part 2',
-    description: 'Part 2 of the foundational lecture on Inspirational Psychology, outlining the core paths to conscious self-elevation.',
-    duration: '7:12',
-    thumbnail: soulSymmetryImg,
-    youtubeUrl: 'https://www.youtube.com/watch?v=xEpctsBUyFk',
-    embedUrl: 'https://www.youtube.com/embed/xEpctsBUyFk',
-  },
-  {
-    title: 'Digital Psychology for Self Ecology',
-    description: 'A presentation on Digital Psychology, explaining the equations and practices for protecting human sovereignty in a technological landscape.',
-    duration: '5:48',
-    thumbnail: digitalBinaryImg,
-    youtubeUrl: 'https://www.youtube.com/watch?v=6_OmaT-VUII',
-    embedUrl: 'https://www.youtube.com/embed/6_OmaT-VUII',
-  },
-  {
-    title: 'Soul-Symmetry',
-    description: 'Promo video for the Soul-Symmetry book and system overview, focusing on establishing inner equilibrium and conscious sovereignty.',
-    duration: '4:20',
-    thumbnail: soulSymmetryImg,
-    youtubeUrl: 'https://www.youtube.com/watch?v=br9hr4qEsM0',
-    embedUrl: 'https://www.youtube.com/embed/br9hr4qEsM0',
-  },
-  {
-    title: 'Exceptionality',
-    description: 'Promo video for the Exceptionality book, exploring how to cultivate emotional uniqueness and safeguard human empathy.',
-    duration: '4:45',
-    thumbnail: exceptionalityImg,
-    youtubeUrl: 'https://www.youtube.com/watch?v=aPcQZ1p_gO0',
-    embedUrl: 'https://www.youtube.com/embed/aPcQZ1p_gO0',
-  },
-  {
-    title: 'Self-Worth',
-    description: 'Inspirational talk on Self-Worth, detailing the path to building self-confidence, self-awareness, and personal sovereignty.',
-    duration: '5:12',
-    thumbnail: selfWorthImg,
-    youtubeUrl: 'https://www.youtube.com/watch?v=W8SU4gVqXJ0',
-    embedUrl: 'https://www.youtube.com/embed/W8SU4gVqXJ0',
-  },
-  {
-    title: 'Self-Renaissance',
-    description: 'Inspirational talk on Self-Renaissance, highlighting the integration of the auto-suggestive cycle to spark personal rebirth.',
-    duration: '4:55',
-    thumbnail: selfRenaissanceImg,
-    youtubeUrl: 'https://www.youtube.com/watch?v=OCuhij7NokY',
-    embedUrl: 'https://www.youtube.com/embed/OCuhij7NokY',
-  },
-  {
     title: 'Transcendent Us and AIs!',
     description: 'Video presentation on the Universal Level of Digital Psychology, illustrating our transcendent partnership with advanced intelligence.',
     duration: '5:02',
@@ -165,14 +114,14 @@ export default function VideosSection() {
       id="videos"
       sx={{
         py: { xs: 8, md: 12 },
-        background: 'linear-gradient(135deg, #e0f7fa 0%, #80deea 100%)',
+        background: '#070715',
         position: 'relative',
         overflow: 'hidden',
-        borderTop: '1px solid rgba(0, 0, 0, 0.05)',
+        borderTop: '1px solid rgba(255, 255, 255, 0.05)',
       }}
     >
-      <Box className="cosmic-glow-violet" sx={{ top: '20%', right: '-15%', opacity: 0.3 }} />
-      <Box className="cosmic-glow-cyan" sx={{ bottom: '10%', left: '-15%', opacity: 0.3 }} />
+      <Box className="cosmic-glow-violet" sx={{ top: '20%', right: '-15%', opacity: 0.55 }} />
+      <Box className="cosmic-glow-cyan" sx={{ bottom: '10%', left: '-15%', opacity: 0.55 }} />
 
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
         {/* Videos Header */}
@@ -181,9 +130,9 @@ export default function VideosSection() {
           align="center"
           sx={{
             fontSize: { xs: '2.2rem', md: '3rem' },
-            fontWeight: 800,
+            fontWeight: 900,
             mb: 2,
-            background: 'linear-gradient(135deg, #0f766e 0%, #042f2e 100%)',
+            background: 'linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
           }}
@@ -193,7 +142,7 @@ export default function VideosSection() {
         <Typography
           variant="body1"
           align="center"
-          sx={{ color: '#042f2e', fontWeight: 600, maxWidth: '600px', mx: 'auto', mb: 8 }}
+          sx={{ color: '#cbd5e1', fontWeight: 600, maxWidth: '600px', mx: 'auto', mb: 8 }}
         >
           Watch Dr. Rimaletta Ray introduce the key pillars of the Holistic System of Self-Resurrection.
         </Typography>
@@ -209,8 +158,8 @@ export default function VideosSection() {
                 borderRadius: 4,
                 overflow: 'hidden',
                 background: '#04040c',
-                border: '1px solid rgba(0, 0, 0, 0.05)',
-                boxShadow: '0 20px 45px rgba(0, 0, 0, 0.08)',
+                border: '1px solid rgba(255, 255, 255, 0.05)',
+                boxShadow: '0 20px 45px rgba(0, 0, 0, 0.3)',
               }}
             >
               {/* Responsive Video Container */}
@@ -268,17 +217,17 @@ export default function VideosSection() {
               </Box>
 
               {/* Video Info Overlay */}
-              <Box sx={{ p: 4, background: 'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(204,251,241,0.98) 100%)', borderTop: '2px solid #0f766e' }}>
+              <Box sx={{ p: 4, background: 'rgba(15, 16, 38, 0.75)', borderTop: '2px solid #0f766e' }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1.5 }}>
-                  <SmartDisplayIcon sx={{ color: '#0f766e' }} />
-                  <Typography variant="subtitle2" sx={{ color: '#0f766e', fontWeight: 800, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                  <SmartDisplayIcon sx={{ color: '#22d3ee' }} />
+                  <Typography variant="subtitle2" sx={{ color: '#22d3ee', fontWeight: 800, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                     Now Playing
                   </Typography>
                 </Box>
-                <Typography variant="h4" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, mb: 2, color: '#042f2e' }}>
+                <Typography variant="h4" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 900, mb: 2, color: '#ffffff' }}>
                   {activeVideo.title}
                 </Typography>
-                <Typography variant="body1" sx={{ color: '#042f2e', fontWeight: 550, lineHeight: 1.7 }}>
+                <Typography variant="body1" sx={{ color: '#cbd5e1', fontWeight: 550, lineHeight: 1.7 }}>
                   {activeVideo.description}
                 </Typography>
                 <Button
@@ -289,13 +238,13 @@ export default function VideosSection() {
                   rel="noopener noreferrer"
                   sx={{
                     mt: 3,
-                    borderColor: 'rgba(4, 47, 46, 0.2)',
-                    color: '#042f2e',
+                    borderColor: 'rgba(255, 255, 255, 0.15)',
+                    color: '#ffffff',
                     fontWeight: 700,
                     '&:hover': {
-                      borderColor: '#042f2e',
-                      color: '#042f2e',
-                      background: 'rgba(4, 47, 46, 0.03)',
+                      borderColor: '#ffffff',
+                      color: '#ffffff',
+                      background: 'rgba(255, 255, 255, 0.05)',
                     },
                   }}
                 >
@@ -309,16 +258,16 @@ export default function VideosSection() {
           <Grid item xs={12} lg={4}>
             <Box
               sx={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(204,251,241,0.98) 100%)',
+                background: 'rgba(15, 16, 38, 0.75)',
                 borderRadius: 4,
                 border: '2px solid #0f766e',
                 p: 3,
                 maxHeight: { lg: '740px' },
                 overflowY: 'auto',
-                boxShadow: '0 10px 30px rgba(15,118,110,0.08)',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
               }}
             >
-              <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#042f2e', mb: 3 }}>
+              <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#ffffff', mb: 3 }}>
                 Promo Playlist
               </Typography>
 
@@ -339,7 +288,7 @@ export default function VideosSection() {
                         background: isActive ? 'rgba(15, 118, 110, 0.15)' : 'transparent',
                         border: isActive ? '2px solid #0f766e' : '1px solid transparent',
                         '&:hover': {
-                          background: isActive ? 'rgba(15, 118, 110, 0.2)' : 'rgba(15, 118, 110, 0.05)',
+                          background: isActive ? 'rgba(15, 118, 110, 0.2)' : 'rgba(255, 255, 255, 0.03)',
                         },
                       }}
                     >
@@ -353,7 +302,7 @@ export default function VideosSection() {
                           borderRadius: 2,
                           overflow: 'hidden',
                           flexShrink: 0,
-                          boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
+                          boxShadow: '0 4px 10px rgba(0,0,0,0.3)',
                         }}
                       >
                         <img
@@ -384,7 +333,7 @@ export default function VideosSection() {
                           variant="subtitle2"
                           noWrap
                           sx={{
-                            color: isActive ? '#4f46e5' : '#042f2e',
+                            color: isActive ? '#22d3ee' : '#ffffff',
                             fontWeight: 750,
                             mb: 0.5,
                           }}
@@ -394,7 +343,7 @@ export default function VideosSection() {
                         <Typography
                           variant="body2"
                           sx={{
-                            color: '#134e5e',
+                            color: '#cbd5e1',
                             fontWeight: 600,
                             fontSize: '0.8rem',
                             display: '-webkit-box',
