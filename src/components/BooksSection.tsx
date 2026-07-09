@@ -542,7 +542,9 @@ export default function BooksSection() {
           <Tabs
             value={activeTab}
             onChange={handleTabChange}
-            centered
+            variant="scrollable"
+            scrollButtons="auto"
+            allowScrollButtonsMobile
             textColor="inherit"
             sx={{
               '& .MuiTabs-indicator': {
@@ -550,16 +552,23 @@ export default function BooksSection() {
                 height: 3,
                 borderRadius: '3px',
               },
+              '& .MuiTabs-flexContainer': {
+                justifyContent: { sm: 'center' },
+              },
+              '& .MuiTabScrollButton-root': {
+                color: '#94a3b8',
+              },
             }}
           >
             <Tab
-              label="Auto-Suggestive Cycle"
+              label="Auto-Suggestive"
               sx={{
                 fontFamily: '"Outfit", sans-serif',
                 fontWeight: 700,
-                fontSize: { xs: '0.9rem', sm: '1.1rem' },
+                fontSize: { xs: '0.8rem', sm: '1rem' },
                 color: activeTab === 0 ? '#d97706' : '#64748b',
-                px: { xs: 2, sm: 4 },
+                px: { xs: 1.5, sm: 3 },
+                minWidth: { xs: 'auto', sm: 120 },
               }}
             />
             <Tab
@@ -567,9 +576,10 @@ export default function BooksSection() {
               sx={{
                 fontFamily: '"Outfit", sans-serif',
                 fontWeight: 700,
-                fontSize: { xs: '0.9rem', sm: '1.1rem' },
+                fontSize: { xs: '0.8rem', sm: '1rem' },
                 color: activeTab === 1 ? '#0891b2' : '#64748b',
-                px: { xs: 2, sm: 4 },
+                px: { xs: 1.5, sm: 3 },
+                minWidth: { xs: 'auto', sm: 120 },
               }}
             />
             <Tab
@@ -577,9 +587,10 @@ export default function BooksSection() {
               sx={{
                 fontFamily: '"Outfit", sans-serif',
                 fontWeight: 700,
-                fontSize: { xs: '0.9rem', sm: '1.1rem' },
+                fontSize: { xs: '0.8rem', sm: '1rem' },
                 color: activeTab === 2 ? '#7c3aed' : '#64748b',
-                px: { xs: 2, sm: 4 },
+                px: { xs: 1.5, sm: 3 },
+                minWidth: { xs: 'auto', sm: 120 },
               }}
             />
             <Tab
@@ -587,9 +598,10 @@ export default function BooksSection() {
               sx={{
                 fontFamily: '"Outfit", sans-serif',
                 fontWeight: 700,
-                fontSize: { xs: '0.9rem', sm: '1.1rem' },
+                fontSize: { xs: '0.8rem', sm: '1rem' },
                 color: activeTab === 3 ? '#db2777' : '#64748b',
-                px: { xs: 2, sm: 4 },
+                px: { xs: 1.5, sm: 3 },
+                minWidth: { xs: 'auto', sm: 120 },
               }}
             />
           </Tabs>
@@ -617,22 +629,22 @@ export default function BooksSection() {
                     {/* Left side: Book Cover / Fallback */}
                     <Grid
                       item
-                      xs={12}
-                      sm={4.5}
+                      xs={4}
+                      sm={4}
                       sx={{
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        p: 2.5,
+                        p: { xs: 1.5, sm: 2.5 },
                         background: 'rgba(0, 0, 0, 0.2)',
-                        minHeight: { xs: 200, sm: 'auto' },
+                        minHeight: { xs: 160, sm: 'auto' },
                       }}
                     >
                       {book.cover ? (
                         <Box
                           sx={{
-                            width: 120,
-                            height: 180,
+                            width: { xs: 80, sm: 110, md: 120 },
+                            height: { xs: 120, sm: 165, md: 180 },
                             boxShadow: '0 8px 20px rgba(0,0,0,0.5)',
                             transition: 'transform 0.3s',
                             position: 'relative',
@@ -669,13 +681,13 @@ export default function BooksSection() {
                     {/* Right side: Description & Action */}
                     <Grid
                       item
-                      xs={12}
-                      sm={7.5}
+                      xs={8}
+                      sm={8}
                       sx={{
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'space-between',
-                        p: 3,
+                        p: { xs: 1.5, sm: 2.5, md: 3 },
                       }}
                     >
                       <Box>
@@ -699,8 +711,8 @@ export default function BooksSection() {
                             fontWeight: 800,
                             color: '#ffffff',
                             lineHeight: 1.3,
-                            mb: 1.5,
-                            fontSize: '1.05rem',
+                            mb: { xs: 0.8, sm: 1.5 },
+                            fontSize: { xs: '0.85rem', sm: '0.95rem', md: '1.05rem' },
                           }}
                         >
                           {book.title}
@@ -710,7 +722,7 @@ export default function BooksSection() {
                           sx={{
                             color: '#cbd5e1',
                             fontWeight: 550,
-                            display: '-webkit-box',
+                            display: { xs: 'none', sm: '-webkit-box' },
                             WebkitLineClamp: 3,
                             WebkitBoxOrient: 'vertical',
                             overflow: 'hidden',
@@ -722,7 +734,7 @@ export default function BooksSection() {
                         </Typography>
                       </Box>
 
-                      <Box sx={{ display: 'flex', gap: 1, mt: 2.5 }}>
+                      <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: { xs: 0.8, sm: 1 }, mt: { xs: 1, sm: 2.5 } }}>
                         <Button
                           variant="outlined"
                           size="small"
