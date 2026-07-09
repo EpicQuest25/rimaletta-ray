@@ -96,17 +96,17 @@ export default function QuantumFractal() {
             sx={{
               display: 'inline-flex',
               alignItems: 'center',
-              gap: 1,
-              px: 2,
-              py: 0.8,
+              gap: 1.5,
+              px: 3,
+              py: 1,
               borderRadius: '30px',
               background: 'rgba(237, 102, 140, 0.08)',
               border: '1px solid rgba(237, 102, 140, 0.25)',
               mb: 3,
             }}
           >
-            <AutoAwesomeIcon sx={{ color: '#ed668c', fontSize: '1.1rem' }} />
-            <Typography variant="body2" sx={{ color: '#ed668c', fontWeight: 800, letterSpacing: '0.05em' }}>
+            <AutoAwesomeIcon sx={{ color: '#ed668c', fontSize: '1.3rem' }} />
+            <Typography variant="subtitle1" sx={{ color: '#ed668c', fontWeight: 950, fontFamily: '"Outfit", sans-serif', letterSpacing: '0.05em' }}>
               DIGITIZED SELF-ACCULTURATION<Box component="span" sx={{ color: '#dc2626' }}>!</Box>
             </Typography>
           </Box>
