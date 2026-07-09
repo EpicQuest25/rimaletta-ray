@@ -209,11 +209,51 @@ export default function Hero() {
             md={5}
             sx={{
               display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
               justifyContent: 'center',
               position: 'relative',
               mt: { xs: 6, md: 0 },
+              pl: { md: 4 },
             }}
           >
+            {/* Soul-Symmetry Formula */}
+            <Box sx={{ textAlign: 'center', mb: 3, width: '100%' }}>
+              <Typography
+                component="div"
+                sx={{
+                  fontWeight: 900,
+                  fontSize: { xs: '0.6rem', sm: '0.75rem', md: '0.82rem' },
+                  letterSpacing: '0.03em',
+                  lineHeight: 1.6,
+                  fontFamily: '"Outfit", sans-serif',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                <Box component="span" sx={{ color: '#16a34a' }}>BODY</Box>
+                {' + '}
+                <Box component="span" sx={{ color: '#dc2626' }}>SPIRIT</Box>
+                {' + '}
+                <Box component="span" sx={{ color: '#1d4ed8' }}>MIND</Box>
+                {' + '}
+                <Box component="span" sx={{ color: '#7c3aed' }}>SELF-CONSCIOUSNESS</Box>
+                {' + '}
+                <Box component="span" sx={{ color: '#3b0764' }}>SUPER-CONSCIOUSNESS</Box>
+              </Typography>
+              <Typography
+                component="div"
+                sx={{
+                  fontWeight: 900,
+                  fontSize: { xs: '1rem', sm: '1.2rem', md: '1.4rem' },
+                  fontFamily: '"Outfit", sans-serif',
+                  color: '#000000',
+                  letterSpacing: '0.03em',
+                }}
+              >
+                = SOUL-SYMMETRY!
+              </Typography>
+            </Box>
+
             <Box
               sx={{
                 position: 'relative',
@@ -259,7 +299,8 @@ export default function Hero() {
                   sx={{
                     fontFamily: '"Outfit", sans-serif',
                     fontWeight: 900,
-                    color: '#ffffff',
+                    color: '#dc2626',
+                    textShadow: '0 0 8px #ffffff, 0 0 16px #ffffff, 1px 1px 0 #ffffff, -1px -1px 0 #ffffff',
                     fontSize: '1.05rem',
                     textAlign: 'center',
                     lineHeight: 1.2,
@@ -400,6 +441,23 @@ export default function Hero() {
                   </Typography>
                 </Box>
               </Box>
+            </Box>
+
+            {/* Dimensions label below orbit */}
+            <Box sx={{ textAlign: 'center', mt: 3, width: '100%' }}>
+              <Typography
+                component="div"
+                sx={{
+                  fontWeight: 900,
+                  fontSize: { xs: '0.6rem', sm: '0.75rem', md: '0.82rem' },
+                  letterSpacing: '0.03em',
+                  color: '#000000',
+                  fontFamily: '"Outfit", sans-serif',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                PHYSICAL + EMOTIONAL + MENTAL + SPIRITUAL + UNIVERSAL
+              </Typography>
             </Box>
           </Grid>
         </Grid>

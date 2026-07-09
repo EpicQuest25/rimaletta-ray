@@ -25,9 +25,7 @@ export default function Intro() {
             fontSize: { xs: '2rem', md: '2.8rem' },
             fontWeight: 900,
             mb: 2,
-            background: 'linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
+            color: '#dc2626',
           }}
         >
           The Quantum Shift of Self-Development
