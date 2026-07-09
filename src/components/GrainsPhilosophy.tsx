@@ -307,9 +307,29 @@ export default function GrainsPhilosophy() {
                   >
                     {activeQuote.text}
                   </Typography>
-                  <Typography variant="body2" sx={{ color: '#64748b', fontWeight: 600 }}>
+                  <Typography variant="body2" sx={{ color: '#64748b', fontWeight: 600, mb: 2 }}>
                     {activeQuoteIndex + 1} / {mindsetsData.length}
                   </Typography>
+                  <Button
+                    variant="text"
+                    size="small"
+                    onClick={() => {
+                      const randomIndex = Math.floor(Math.random() * mindsetsData.length);
+                      setActiveQuoteIndex(randomIndex);
+                    }}
+                    startIcon={<AutoAwesomeIcon sx={{ fontSize: '0.95rem' }} />}
+                    sx={{
+                      color: '#f43f5e',
+                      textTransform: 'none',
+                      fontWeight: 700,
+                      px: 2,
+                      py: 0.5,
+                      borderRadius: '20px',
+                      '&:hover': { background: 'rgba(244, 63, 94, 0.05)' }
+                    }}
+                  >
+                    Generate Random Booster
+                  </Button>
                 </Box>
               </CardContent>
               <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, pb: 4 }}>

@@ -14,8 +14,9 @@ import {
   DialogTitle,
   DialogContent,
   IconButton,
+  Divider,
 } from '@mui/material';
-import { ShoppingCart as ShoppingCartIcon, MenuBook as MenuBookIcon, Info as InfoIcon, Close as CloseIcon } from '@mui/icons-material';
+import { ShoppingCart as ShoppingCartIcon, MenuBook as MenuBookIcon, Info as InfoIcon, Close as CloseIcon, AutoAwesome as AutoAwesomeIcon } from '@mui/icons-material';
 
 // Image imports
 import bestOfMeImg from '../assets/downloaded/best_of_me.jpg';
@@ -805,7 +806,108 @@ export default function BooksSection() {
               </Grid>
             );
           })}
+          {cycles[activeTab] === 'quantum' && (
+            <Grid item xs={12} sm={6} md={4}>
+              <Card
+                sx={{
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  backgroundColor: '#ffffff',
+                  border: '1px solid rgba(124, 58, 237, 0.25)',
+                  background: 'linear-gradient(135deg, rgba(124,58,237,0.03) 0%, rgba(255,255,255,1) 100%)',
+                  boxShadow: '0 10px 30px rgba(124,58,237,0.04)',
+                }}
+              >
+                <CardContent sx={{ p: 4, textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%', minHeight: 380 }}>
+                  <AutoAwesomeIcon sx={{ color: '#7c3aed', fontSize: '3rem', mb: 2, mx: 'auto' }} />
+                  <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#0f172a', mb: 2 }}>
+                    Tesla Frequency Alignment
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: '#475569', lineHeight: 1.7, mb: 3 }}>
+                    “If you want to find the secrets of the universe, think in terms of energy, frequency and vibration.” 
+                    <br />— Nikola Tesla
+                  </Typography>
+                  <Divider sx={{ my: 2, borderColor: 'rgba(124, 58, 237, 0.15)' }} />
+                  <Typography variant="caption" sx={{ color: '#7c3aed', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    Quantum Cycle Philosophy
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: '#334155', mt: 1, fontSize: '0.85rem' }}>
+                    Dr. Ray’s award-winning masterpiece <strong>“Light is me, Light is my philosophy”</strong> is dedicated to Tesla's principles of physical and spiritual energy resonance.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          )}
         </Grid>
+
+        {/* PUBLISHERS & ACQUISITION CORNER */}
+        <Box
+          sx={{
+            mt: 12,
+            p: { xs: 4, md: 6 },
+            borderRadius: 6,
+            background: '#ffffff',
+            border: '2px solid rgba(8, 145, 178, 0.15)',
+            boxShadow: '0 20px 45px rgba(0, 0, 0, 0.03)',
+          }}
+        >
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 3 }}>
+            <Box sx={{ width: 4, height: 28, backgroundColor: '#0891b2', borderRadius: 2 }} />
+            <Typography
+              variant="h4"
+              sx={{
+                fontFamily: '"Outfit", sans-serif',
+                fontWeight: 900,
+                color: '#0f172a',
+                fontSize: { xs: '1.6rem', md: '2rem' }
+              }}
+            >
+              The Acquisition Case for Traditional Publishers
+            </Typography>
+          </Box>
+          
+          <Typography variant="body1" sx={{ color: '#334155', mb: 4, fontSize: '1.05rem', lineHeight: 1.7 }}>
+            Dr. Ray’s works represent a pre-assembled, commercially powerful literary ecosystem designed to address the deep cognitive and spiritual challenges of the digital Renaissance. 
+            Traditional publishers are not just acquiring single books; they are acquiring a lifetime curriculum with immense backend value and multi-format appeal.
+          </Typography>
+
+          <Grid container spacing={4}>
+            <Grid item xs={12} md={4}>
+              <Box sx={{ p: 3, borderRadius: 4, background: 'rgba(79, 70, 229, 0.04)', border: '1px solid rgba(79, 70, 229, 0.08)', height: '100%' }}>
+                <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#4f46e5', mb: 1.5 }}>
+                  1. Pre-Assembled Ecosystem
+                </Typography>
+                <Typography variant="body2" sx={{ color: '#475569', lineHeight: 1.6 }}>
+                  With 20+ structured titles spanning three evolutionary cycles, this offers a complete brand syllabus with immense potential for coursework, workshops, and digital expansions.
+                </Typography>
+              </Box>
+            </Grid>
+            
+            <Grid item xs={12} md={4}>
+              <Box sx={{ p: 3, borderRadius: 4, background: 'rgba(8, 145, 178, 0.04)', border: '1px solid rgba(8, 145, 178, 0.08)', height: '100%' }}>
+                <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#0891b2', mb: 1.5 }}>
+                  2. Academic & Scholarly Rigor
+                </Typography>
+                <Typography variant="body2" sx={{ color: '#475569', lineHeight: 1.6 }}>
+                  Grounded in rigorous scholarship—a Ph.D. from the Moscow Brain Institute and 30 years of university teaching in the USA—delivering immediate academic prestige.
+                </Typography>
+              </Box>
+            </Grid>
+
+            <Grid item xs={12} md={4}>
+              <Box sx={{ p: 3, borderRadius: 4, background: 'rgba(217, 119, 6, 0.04)', border: '1px solid rgba(217, 119, 6, 0.08)', height: '100%' }}>
+                <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#d97706', mb: 1.5 }}>
+                  3. Highly Consumable Format
+                </Typography>
+                <Typography variant="body2" sx={{ color: '#475569', lineHeight: 1.6 }}>
+                  Synthesized into a page-by-page, highly visual format optimized for the speed of modern reading, bridging the gap between deep science and self-ecology.
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
       </Container>
 
       {/* DETAIL DIALOG */}

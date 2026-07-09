@@ -42,37 +42,55 @@ body {
 }
 
 /* Cosmic background elements */
+@keyframes breatheGlow {
+  0%, 100% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0.35;
+  }
+  33% {
+    transform: scale(1.12) translate(15px, -15px);
+    opacity: 0.55;
+  }
+  66% {
+    transform: scale(0.95) translate(-10px, 20px);
+    opacity: 0.42;
+  }
+}
+
 .cosmic-glow-cyan {
   position: absolute;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.18) 0%, rgba(0, 0, 0, 0) 70%);
   border-radius: 50%;
   pointer-events: none;
   filter: blur(40px);
   z-index: 0;
+  animation: breatheGlow 14s ease-in-out infinite;
 }
 
 .cosmic-glow-indigo {
   position: absolute;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
   border-radius: 50%;
   pointer-events: none;
   filter: blur(50px);
   z-index: 0;
+  animation: breatheGlow 18s ease-in-out infinite;
 }
 
 .cosmic-glow-violet {
   position: absolute;
   width: 450px;
   height: 450px;
-  background: radial-gradient(circle, rgba(168, 85, 247, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
   border-radius: 50%;
   pointer-events: none;
   filter: blur(45px);
   z-index: 0;
+  animation: breatheGlow 16s ease-in-out infinite;
 }
 
 /* Glowing text effects */
