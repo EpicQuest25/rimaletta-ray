@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import {
   AppBar,
+  Box,
   Toolbar,
   Typography,
-  Button,
   IconButton,
-  Box,
   Container,
+  Button,
   Drawer,
   List,
   ListItem,
@@ -14,7 +14,12 @@ import {
 } from '@mui/material';
 import { Menu as MenuIcon, Close as CloseIcon } from '@mui/icons-material';
 
-const navItems = [
+interface NavItem {
+  label: string;
+  id: string;
+}
+
+const navItems: NavItem[] = [
   { label: 'Home', id: '#home' },
   { label: 'Intro', id: '#intro' },
   { label: 'Human Fractal', id: '#fractal' },
@@ -22,7 +27,7 @@ const navItems = [
   { label: 'Videos', id: '#videos' },
   { label: 'Philosophy', id: '#philosophy' },
   { label: 'The Author', id: '#author' },
-  { label: 'Contact', id: '#contact' },
+  { label: 'Contact', id: '#footer' },
 ];
 
 export default function Navbar() {
@@ -44,11 +49,12 @@ export default function Navbar() {
     <AppBar
       position="fixed"
       sx={{
-        background: 'rgba(255, 255, 255, 0.85)',
-        backdropFilter: 'blur(16px)',
-        borderBottom: '1px solid rgba(0, 0, 0, 0.08)',
-        boxShadow: 'none',
-        color: '#0f172a',
+        background: 'rgba(240, 249, 255, 0.95)',
+        backdropFilter: 'blur(20px)',
+        borderTop: '5px solid #d97808',
+        borderBottom: '1px solid rgba(217, 120, 8, 0.12)',
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)',
+        color: '#1e1b4b',
       }}
     >
       <Container maxWidth="xl">
@@ -64,36 +70,41 @@ export default function Navbar() {
             }}
             sx={{
               fontFamily: '"Outfit", sans-serif',
-              fontWeight: 800,
-              fontSize: '1.4rem',
+              fontWeight: 900,
+              fontSize: '1.45rem',
               letterSpacing: '0.05em',
               textDecoration: 'none',
-              background: 'linear-gradient(45deg, #4f46e5 30%, #0891b2 90%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
+              color: '#1e1b4b',
+              transition: 'color 0.3s',
+              '&:hover': {
+                color: '#d97808',
+              },
             }}
           >
             DR. RIMALETTA RAY
           </Typography>
 
           {/* Desktop menu */}
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1.5 }}>
             {navItems.map((item) => (
               <Button
                 key={item.label}
                 onClick={() => handleScroll(item.id)}
                 sx={{
-                  color: 'rgba(15, 23, 42, 0.75)',
-                  fontSize: '0.95rem',
-                  fontWeight: 600,
+                  color: '#1e1b4b',
+                  fontSize: '0.92rem',
+                  fontWeight: 750,
                   px: 2,
-                  py: 1,
-                  borderRadius: 2,
-                  transition: 'all 0.3s',
+                  py: 0.8,
+                  borderRadius: '20px',
+                  border: '1px solid transparent',
+                  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                   '&:hover': {
-                    color: '#4f46e5',
-                    background: 'rgba(79, 70, 229, 0.05)',
+                    color: '#d97808',
+                    background: '#ffffff',
+                    borderColor: 'rgba(217, 120, 8, 0.3)',
                     transform: 'translateY(-1px)',
+                    boxShadow: '0 4px 12px rgba(217, 120, 8, 0.08)',
                   },
                 }}
               >
@@ -108,7 +119,7 @@ export default function Navbar() {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ display: { md: 'none' }, color: '#0f172a' }}
+            sx={{ display: { md: 'none' }, color: '#1e1b4b' }}
           >
             <MenuIcon />
           </IconButton>
@@ -131,7 +142,7 @@ export default function Navbar() {
         }}
       >
         <Box sx={{ display: 'flex', justifyContent: 'flex-end', mb: 4 }}>
-          <IconButton onClick={handleDrawerToggle} sx={{ color: '#0f172a' }}>
+          <IconButton onClick={handleDrawerToggle} sx={{ color: '#172554' }}>
             <CloseIcon />
           </IconButton>
         </Box>
@@ -145,7 +156,7 @@ export default function Navbar() {
                 borderRadius: 2,
                 overflow: 'hidden',
                 '&:hover': {
-                  background: 'rgba(79, 70, 229, 0.05)',
+                  background: 'rgba(217, 120, 8, 0.08)',
                 },
               }}
             >
@@ -155,8 +166,8 @@ export default function Navbar() {
                   sx: {
                     fontFamily: '"Outfit", sans-serif',
                     fontSize: '1.2rem',
-                    fontWeight: 600,
-                    color: '#0f172a',
+                    fontWeight: 750,
+                    color: '#172554',
                     textAlign: 'center',
                     py: 1,
                   },

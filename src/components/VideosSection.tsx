@@ -183,7 +183,7 @@ export default function VideosSection() {
             fontSize: { xs: '2.2rem', md: '3rem' },
             fontWeight: 800,
             mb: 2,
-            background: 'linear-gradient(135deg, #0f172a 0%, #334155 100%)',
+            background: 'linear-gradient(135deg, #0f766e 0%, #042f2e 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
           }}
@@ -193,7 +193,7 @@ export default function VideosSection() {
         <Typography
           variant="body1"
           align="center"
-          sx={{ color: '#334155', maxWidth: '600px', mx: 'auto', mb: 8 }}
+          sx={{ color: '#042f2e', fontWeight: 600, maxWidth: '600px', mx: 'auto', mb: 8 }}
         >
           Watch Dr. Rimaletta Ray introduce the key pillars of the Holistic System of Self-Resurrection.
         </Typography>
@@ -275,10 +275,10 @@ export default function VideosSection() {
                     Now Playing
                   </Typography>
                 </Box>
-                <Typography variant="h4" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, mb: 2, color: '#0f172a' }}>
+                <Typography variant="h4" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, mb: 2, color: '#042f2e' }}>
                   {activeVideo.title}
                 </Typography>
-                <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.7 }}>
+                <Typography variant="body1" sx={{ color: '#042f2e', fontWeight: 550, lineHeight: 1.7 }}>
                   {activeVideo.description}
                 </Typography>
                 <Button
@@ -289,12 +289,13 @@ export default function VideosSection() {
                   rel="noopener noreferrer"
                   sx={{
                     mt: 3,
-                    borderColor: 'rgba(0, 0, 0, 0.15)',
-                    color: '#0f172a',
+                    borderColor: 'rgba(4, 47, 46, 0.2)',
+                    color: '#042f2e',
+                    fontWeight: 700,
                     '&:hover': {
-                      borderColor: '#000000',
-                      color: '#000000',
-                      background: 'rgba(0, 0, 0, 0.02)',
+                      borderColor: '#042f2e',
+                      color: '#042f2e',
+                      background: 'rgba(4, 47, 46, 0.03)',
                     },
                   }}
                 >
@@ -317,7 +318,7 @@ export default function VideosSection() {
                 boxShadow: '0 10px 30px rgba(0,0,0,0.03)',
               }}
             >
-              <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#0f172a', mb: 3 }}>
+              <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#042f2e', mb: 3 }}>
                 Promo Playlist
               </Typography>
 
@@ -383,8 +384,8 @@ export default function VideosSection() {
                           variant="subtitle2"
                           noWrap
                           sx={{
-                            color: isActive ? '#4f46e5' : '#0f172a',
-                            fontWeight: 700,
+                            color: isActive ? '#4f46e5' : '#042f2e',
+                            fontWeight: 750,
                             mb: 0.5,
                           }}
                         >
@@ -393,7 +394,8 @@ export default function VideosSection() {
                         <Typography
                           variant="body2"
                           sx={{
-                            color: '#475569',
+                            color: '#134e5e',
+                            fontWeight: 600,
                             fontSize: '0.8rem',
                             display: '-webkit-box',
                             WebkitLineClamp: 2,

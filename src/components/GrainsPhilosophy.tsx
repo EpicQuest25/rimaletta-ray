@@ -8,7 +8,6 @@ import {
   ExpandMore as ExpandMoreIcon,
   ExpandLess as ExpandLessIcon,
   ShoppingCart as ShoppingCartIcon,
-  Info as InfoIcon
 } from '@mui/icons-material';
 
 interface MindsetQuote {
@@ -232,7 +231,7 @@ export default function GrainsPhilosophy() {
               fontSize: { xs: '2.2rem', md: '3rem' },
               fontWeight: 900,
               mb: 2,
-              background: 'linear-gradient(135deg, #0f172a 0%, #334155 100%)',
+              background: 'linear-gradient(135deg, #881337 0%, #5c0620 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
             }}
@@ -241,7 +240,7 @@ export default function GrainsPhilosophy() {
           </Typography>
           <Typography
             variant="body1"
-            sx={{ color: '#334155', maxWidth: '800px', mx: 'auto', fontSize: '1.1rem', fontFamily: '"Inter", sans-serif' }}
+            sx={{ color: '#881337', fontWeight: 600, maxWidth: '800px', mx: 'auto', fontSize: '1.1rem', fontFamily: '"Inter", sans-serif' }}
           >
             Explore Dr. Ray's structured rhyming boosters, take the self-alignment quiz, and interact with the Hand Fractal of Self-Symmetry.
           </Typography>
@@ -255,7 +254,7 @@ export default function GrainsPhilosophy() {
               sx={{
                 height: '100%',
                 background: '#ffffff',
-                border: '1px solid rgba(244, 63, 94, 0.2)',
+                border: '1px solid rgba(244, 63, 94, 0.25)',
                 borderRadius: 5,
                 boxShadow: '0 20px 45px rgba(0,0,0,0.04)',
                 display: 'flex',
@@ -294,8 +293,8 @@ export default function GrainsPhilosophy() {
                     variant="h4"
                     sx={{
                       fontFamily: '"Outfit", sans-serif',
-                      fontWeight: 800,
-                      color: '#0f172a',
+                      fontWeight: 850,
+                      color: '#881337',
                       lineHeight: 1.5,
                       fontSize: { xs: '1.4rem', md: '1.8rem' },
                       mb: 3,
@@ -307,7 +306,7 @@ export default function GrainsPhilosophy() {
                   >
                     {activeQuote.text}
                   </Typography>
-                  <Typography variant="body2" sx={{ color: '#64748b', fontWeight: 600, mb: 2 }}>
+                  <Typography variant="body2" sx={{ color: '#9f1239', fontWeight: 700, mb: 2 }}>
                     {activeQuoteIndex + 1} / {mindsetsData.length}
                   </Typography>
                   <Button
@@ -321,7 +320,7 @@ export default function GrainsPhilosophy() {
                     sx={{
                       color: '#f43f5e',
                       textTransform: 'none',
-                      fontWeight: 700,
+                      fontWeight: 800,
                       px: 2,
                       py: 0.5,
                       borderRadius: '20px',
@@ -337,8 +336,8 @@ export default function GrainsPhilosophy() {
                   onClick={handlePrev}
                   sx={{
                     background: '#ffffff',
-                    border: '1px solid rgba(0,0,0,0.1)',
-                    color: '#0f172a',
+                    border: '1px solid rgba(244, 63, 94, 0.2)',
+                    color: '#881337',
                     '&:hover': { background: 'rgba(244, 63, 94, 0.08)', borderColor: '#f43f5e' },
                     transition: 'all 0.3s',
                   }}
@@ -349,8 +348,8 @@ export default function GrainsPhilosophy() {
                   onClick={handleNext}
                   sx={{
                     background: '#ffffff',
-                    border: '1px solid rgba(0,0,0,0.1)',
-                    color: '#0f172a',
+                    border: '1px solid rgba(244, 63, 94, 0.2)',
+                    color: '#881337',
                     '&:hover': { background: 'rgba(244, 63, 94, 0.08)', borderColor: '#f43f5e' },
                     transition: 'all 0.3s',
                   }}
@@ -367,7 +366,7 @@ export default function GrainsPhilosophy() {
               sx={{
                 height: '100%',
                 background: '#ffffff',
-                border: '1px solid rgba(59, 130, 246, 0.2)',
+                border: '1px solid rgba(59, 130, 246, 0.25)',
                 borderRadius: 5,
                 boxShadow: '0 20px 45px rgba(0,0,0,0.04)',
                 display: 'flex',
@@ -379,10 +378,10 @@ export default function GrainsPhilosophy() {
                 {quizStep === 'intro' && (
                   <Box sx={{ textAlign: 'center' }}>
                     <AutoAwesomeIcon sx={{ color: '#2563eb', fontSize: '3rem', mb: 2 }} />
-                    <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#0f172a', mb: 1.5 }}>
+                    <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#1e3a8a', mb: 1.5 }}>
                       Dimensional Self-Alignment Quiz
                     </Typography>
-                    <Typography variant="body2" sx={{ color: '#475569', mb: 4, lineHeight: 1.6 }}>
+                    <Typography variant="body2" sx={{ color: '#1e3a8a', fontWeight: 550, mb: 4, lineHeight: 1.6 }}>
                       Dr. Ray outlines that balance begins with addressing your most vulnerable life realm. 
                       Answer this 1-step prompt to evaluate where your focus should go first.
                     </Typography>
@@ -392,7 +391,7 @@ export default function GrainsPhilosophy() {
                       sx={{
                         background: 'linear-gradient(95deg, #2563eb 0%, #1d4ed8 100%)',
                         color: '#ffffff',
-                        fontWeight: 700,
+                        fontWeight: 800,
                         px: 4,
                         py: 1.5,
                         borderRadius: '30px',
@@ -411,7 +410,7 @@ export default function GrainsPhilosophy() {
 
                 {quizStep === 'question' && (
                   <Box>
-                    <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#0f172a', mb: 3 }}>
+                    <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#1e3a8a', mb: 3 }}>
                       Which area of your life needs the most attention or balancing right now?
                     </Typography>
                     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
@@ -424,7 +423,7 @@ export default function GrainsPhilosophy() {
                             p: 2,
                             borderRadius: 3,
                             background: 'rgba(0,0,0,0.01)',
-                            border: '1px solid rgba(0,0,0,0.05)',
+                            border: '1px solid rgba(37, 99, 235, 0.15)',
                             transition: 'all 0.2s',
                             '&:hover': {
                               background: 'rgba(37, 99, 235, 0.05)',
@@ -433,7 +432,7 @@ export default function GrainsPhilosophy() {
                             }
                           }}
                         >
-                          <Typography variant="body2" sx={{ color: '#334155', fontWeight: 600 }}>
+                          <Typography variant="body2" sx={{ color: '#1e3a8a', fontWeight: 650 }}>
                             {option.text}
                           </Typography>
                         </Box>
@@ -454,29 +453,29 @@ export default function GrainsPhilosophy() {
                         mb: 2,
                       }}
                     />
-                    <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 900, color: '#0f172a', mb: 1 }}>
+                    <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 900, color: '#1e3a8a', mb: 1 }}>
                       {selectedQuizOption.dimension}
                     </Typography>
-                    <Typography variant="body2" sx={{ color: '#475569', mb: 3, lineHeight: 1.7 }}>
+                    <Typography variant="body2" sx={{ color: '#1e3a8a', fontWeight: 550, mb: 3, lineHeight: 1.7 }}>
                       {selectedQuizOption.advice}
                     </Typography>
 
-                    <Divider sx={{ my: 2, borderColor: 'rgba(0,0,0,0.06)' }} />
+                    <Divider sx={{ my: 2, borderColor: 'rgba(37, 99, 235, 0.15)' }} />
 
                     {/* Book Recommendation block */}
                     <Box
                       sx={{
                         p: 2.5,
                         borderRadius: 3,
-                        background: 'rgba(0,0,0,0.01)',
-                        border: '1px solid rgba(0,0,0,0.05)',
+                        background: 'rgba(37, 99, 235, 0.02)',
+                        border: '1px solid rgba(37, 99, 235, 0.12)',
                         mb: 3
                       }}
                     >
-                      <Typography variant="caption" sx={{ color: '#d97706', fontWeight: 700, textTransform: 'uppercase', display: 'block', mb: 1 }}>
+                      <Typography variant="caption" sx={{ color: '#d97706', fontWeight: 800, textTransform: 'uppercase', display: 'block', mb: 1 }}>
                         Recommended System Guide
                       </Typography>
-                      <Typography variant="subtitle1" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>
+                      <Typography variant="subtitle1" sx={{ color: '#1e3a8a', fontWeight: 800, mb: 1.5 }}>
                         {selectedQuizOption.bookTitle}
                       </Typography>
                       <Button
@@ -489,7 +488,7 @@ export default function GrainsPhilosophy() {
                           borderColor: '#d97706',
                           color: '#d97706',
                           textTransform: 'none',
-                          fontWeight: 700,
+                          fontWeight: 800,
                           borderRadius: '20px',
                           '&:hover': {
                             borderColor: '#b45309',
@@ -503,7 +502,7 @@ export default function GrainsPhilosophy() {
 
                     <Button
                       onClick={handleResetQuiz}
-                      sx={{ color: '#64748b', textTransform: 'none', fontWeight: 600, fontSize: '0.85rem' }}
+                      sx={{ color: '#2563eb', textTransform: 'none', fontWeight: 750, fontSize: '0.85rem' }}
                     >
                       Retake Prompt
                     </Button>
@@ -523,7 +522,7 @@ export default function GrainsPhilosophy() {
                 p: 4.5,
                 borderRadius: 4,
                 background: '#ffffff',
-                border: '1px solid rgba(0,0,0,0.05)',
+                border: '1px solid rgba(244, 63, 94, 0.2)',
                 boxShadow: '0 15px 35px rgba(0,0,0,0.03)',
                 height: '100%',
                 display: 'flex',
@@ -536,8 +535,8 @@ export default function GrainsPhilosophy() {
                   variant="h5"
                   sx={{
                     fontFamily: '"Outfit", sans-serif',
-                    fontWeight: 800,
-                    color: '#0f172a',
+                    fontWeight: 850,
+                    color: '#881337',
                     mb: 2.5,
                     fontSize: '1.4rem',
                     display: 'flex',
@@ -548,21 +547,21 @@ export default function GrainsPhilosophy() {
                   <Box component="span" sx={{ width: 4, height: 24, backgroundColor: '#f43f5e', borderRadius: 2 }} />
                   AI-Human Governance Manifesto
                 </Typography>
-                <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.7, mb: 3 }}>
+                <Typography variant="body1" sx={{ color: '#881337', fontWeight: 550, lineHeight: 1.7, mb: 3 }}>
                   “AI dealings with humans are multifaceted and multi-dimensional, encompassing competition for supremacy in
                   technology and numerous instances of collaboration that must be governed by us. We must reduce depending on AI created Ecosystem.”
                 </Typography>
-                <Typography variant="body1" sx={{ color: '#334155', fontWeight: 550, lineHeight: 1.7, mb: 3 }}>
+                <Typography variant="body1" sx={{ color: '#881337', fontWeight: 650, lineHeight: 1.7, mb: 3 }}>
                   We should integrate AI into our physical, emotional, mental, spiritual, and universal realms of life, while safeguarding human rights against mass surveillance. Mutual respect and bilateral consideration are our obligation!
                 </Typography>
-                <Typography variant="caption" sx={{ color: '#64748b', fontStyle: 'italic', display: 'block', mb: 3 }}>
+                <Typography variant="caption" sx={{ color: '#9f1239', fontWeight: 700, fontStyle: 'italic', display: 'block', mb: 3 }}>
                   — Extract from the Book “Light is me. Light is My Philosophy!”
                 </Typography>
 
                 {/* Interactive Decipherment of AI Black Box Toggle */}
                 <Box
                   sx={{
-                    border: '1px dashed rgba(244, 63, 94, 0.2)',
+                    border: '1px dashed rgba(244, 63, 94, 0.25)',
                     borderRadius: 3,
                     p: 2.5,
                     mb: 3,
@@ -580,15 +579,15 @@ export default function GrainsPhilosophy() {
                     }}
                   >
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                      <InfoIcon sx={{ color: '#f43f5e', fontSize: '1.15rem' }} />
-                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 700, fontSize: '0.9rem' }}>
+                      <AutoAwesomeIcon sx={{ color: '#f43f5e', fontSize: '1.15rem' }} />
+                      <Typography variant="subtitle2" sx={{ color: '#881337', fontWeight: 800, fontSize: '0.9rem' }}>
                         Deciphering the AI "Black Box"
                       </Typography>
                     </Box>
                     {isBlackBoxExpanded ? <ExpandLessIcon sx={{ color: '#f43f5e' }} /> : <ExpandMoreIcon sx={{ color: '#f43f5e' }} />}
                   </Box>
                   <Collapse in={isBlackBoxExpanded}>
-                    <Typography variant="body2" sx={{ color: '#334155', mt: 2, lineHeight: 1.6, fontSize: '0.85rem' }}>
+                    <Typography variant="body2" sx={{ color: '#881337', mt: 2, fontWeight: 550, lineHeight: 1.6, fontSize: '0.85rem' }}>
                       Dr. Ray asserts: <strong>“The ‘black box’ nature of AI’s deep learning must be deciphered and tactfully controlled.”</strong> 
                       We must map consciousness itself to infrastructure to ensure humans hold the architectural reins, directing binary tools toward human evolution rather than submission.
                     </Typography>
@@ -601,11 +600,11 @@ export default function GrainsPhilosophy() {
                   p: 2.5,
                   borderRadius: 3,
                   background: 'rgba(244, 63, 94, 0.04)',
-                  border: '1px solid rgba(244, 63, 94, 0.12)',
+                  border: '1px solid rgba(244, 63, 94, 0.15)',
                   textAlign: 'center',
                 }}
               >
-                <Typography variant="body1" sx={{ color: '#f43f5e', fontWeight: 800, fontSize: '1.05rem', fontFamily: '"Outfit", sans-serif' }}>
+                <Typography variant="body1" sx={{ color: '#f43f5e', fontWeight: 900, fontSize: '1.05rem', fontFamily: '"Outfit", sans-serif' }}>
                   “Let’s Direct the Flow of Constructive Human Energy to Granting Humanity SUPER-HUMAN STATUS!”
                 </Typography>
               </Box>
@@ -628,10 +627,10 @@ export default function GrainsPhilosophy() {
               }}
             >
               <Box sx={{ textAlign: 'center', mb: 2 }}>
-                <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#0f172a', mb: 1.5, fontSize: '1.4rem' }}>
+                <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#881337', mb: 1.5, fontSize: '1.4rem' }}>
                   The Hand Fractal of Self-Symmetry
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#475569', mb: 3, fontSize: '0.9rem' }}>
+                <Typography variant="body2" sx={{ color: '#881337', fontWeight: 600, mb: 3, fontSize: '0.9rem' }}>
                   Our hands serve as a physical model representing the integration of the five life realms. Click any finger to explore.
                 </Typography>
 
@@ -784,7 +783,7 @@ export default function GrainsPhilosophy() {
                 }}
               >
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1.5 }}>
-                  <Typography variant="subtitle2" sx={{ color: activeFinger.color, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  <Typography variant="subtitle2" sx={{ color: activeFinger.color, fontWeight: 850, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     {activeFinger.name} details
                   </Typography>
                   <Chip 
@@ -794,21 +793,21 @@ export default function GrainsPhilosophy() {
                   />
                 </Box>
                 
-                <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', color: '#0f172a', fontWeight: 800, mb: 1 }}>
+                <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', color: '#881337', fontWeight: 800, mb: 1 }}>
                   {activeFinger.realm}
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#475569', fontStyle: 'italic', mb: 2.5, lineHeight: 1.5 }}>
+                <Typography variant="body2" sx={{ color: '#881337', fontWeight: 550, fontStyle: 'italic', mb: 2.5, lineHeight: 1.5 }}>
                   {activeFinger.booster}
                 </Typography>
 
-                <Divider sx={{ my: 1.5, borderColor: 'rgba(0,0,0,0.06)' }} />
+                <Divider sx={{ my: 1.5, borderColor: 'rgba(244, 63, 94, 0.15)' }} />
 
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <Box>
-                    <Typography variant="caption" sx={{ color: '#64748b', display: 'block' }}>
+                    <Typography variant="caption" sx={{ color: '#9f1239', fontWeight: 600, display: 'block' }}>
                       Recommended System Book
                     </Typography>
-                    <Typography variant="body2" sx={{ color: '#0f172a', fontWeight: 700 }}>
+                    <Typography variant="body2" sx={{ color: '#881337', fontWeight: 850 }}>
                       {activeFinger.book}
                     </Typography>
                   </Box>
@@ -823,7 +822,7 @@ export default function GrainsPhilosophy() {
                       borderColor: activeFinger.color,
                       color: activeFinger.color,
                       textTransform: 'none',
-                      fontWeight: 700,
+                      fontWeight: 800,
                       borderRadius: '20px',
                       '&:hover': {
                         borderColor: activeFinger.color,

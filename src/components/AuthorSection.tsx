@@ -26,8 +26,8 @@ export default function AuthorSection() {
             variant="h4"
             sx={{
               fontStyle: 'italic',
-              fontWeight: 350,
-              color: '#0f172a',
+              fontWeight: 400,
+              color: '#172554',
               lineHeight: 1.5,
               maxWidth: '800px',
               mx: 'auto',
@@ -57,7 +57,7 @@ export default function AuthorSection() {
           >
             Don’t teach just a subject. Teach the whole person!
           </Typography>
-          <Typography variant="subtitle1" sx={{ color: '#4f46e5', fontWeight: 700, mt: 2 }}>
+          <Typography variant="subtitle1" sx={{ color: '#4f46e5', fontWeight: 800, mt: 2 }}>
             — LEO VYGOTSKY
           </Typography>
         </Box>
@@ -97,7 +97,7 @@ export default function AuthorSection() {
           <Grid item xs={12} md={7}>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>
               <SchoolIcon sx={{ color: '#0891b2' }} />
-              <Typography variant="subtitle2" sx={{ color: '#0891b2', fontWeight: 700, letterSpacing: '0.05em' }}>
+              <Typography variant="subtitle2" sx={{ color: '#0891b2', fontWeight: 800, letterSpacing: '0.05em' }}>
                 PROFESSOR OF PSYCHOLINGUISTICS & AUTHOR
               </Typography>
             </Box>
@@ -109,26 +109,26 @@ export default function AuthorSection() {
                 fontWeight: 900,
                 mb: 4,
                 fontSize: { xs: '2.2rem', sm: '2.8rem' },
-                color: '#0f172a',
+                color: '#1e3a8a',
               }}
             >
               Meet Dr. Rimaletta Ray
             </Typography>
 
-            <Typography variant="body1" sx={{ color: '#334155', mb: 3, lineHeight: 1.8 }}>
+            <Typography variant="body1" sx={{ color: '#172554', fontWeight: 550, mb: 3, lineHeight: 1.8 }}>
               Originally from Riga, Latvia, <strong>Dr. Rimaletta Ray</strong> earned her doctorate from the prestigious
               Academy of Sciences, Moscow Brain Institute. Dr. Ray has worked in different colleges and universities in the USA
               for 30 years, including the University of Connecticut (UCONN) and Norwalk Community College (NCC), and is a member
               of the Psycholinguistic Association in Berlin.
             </Typography>
 
-            <Typography variant="body1" sx={{ color: '#334155', mb: 3, lineHeight: 1.8 }}>
+            <Typography variant="body1" sx={{ color: '#172554', fontWeight: 550, mb: 3, lineHeight: 1.8 }}>
               Dr. Ray believes that education should be inseparable from inspiration and personality-formation as the
               indispensable skills that need to be developed from birth and that should be the core of any professional training.
               Her books represent a synthesis of lifetime research, avid reading, and consistent self-refining.
             </Typography>
 
-            <Typography variant="body1" sx={{ color: '#334155', mb: 4, lineHeight: 1.8 }}>
+            <Typography variant="body1" sx={{ color: '#172554', fontWeight: 550, mb: 4, lineHeight: 1.8 }}>
               She has tested the validity of her <strong>System of Holistic Self-Resurrection</strong> with her students,
               who utilize it as a <strong>Manual of Life</strong> that provides a clear-cut plan of action and mind + heart
               enhancement for their personal and professional <strong>SELF-INSTALLATION</strong>.
@@ -146,10 +146,10 @@ export default function AuthorSection() {
                 borderBottom: '1px solid rgba(0,0,0,0.02)',
               }}
             >
-              <Typography variant="subtitle2" sx={{ color: '#4f46e5', fontWeight: 700, mb: 1, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+              <Typography variant="subtitle2" sx={{ color: '#4f46e5', fontWeight: 800, mb: 1, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                 Dr. Ray’s Philosophy
               </Typography>
-              <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontStyle: 'italic', fontWeight: 650, color: '#0f172a' }}>
+              <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontStyle: 'italic', fontWeight: 700, color: '#172554' }}>
                 “Internalize Your Emotions and Externalize the Mind. Be One of a Kind!”
               </Typography>
             </Box>
@@ -172,8 +172,8 @@ export default function AuthorSection() {
             variant="h4"
             sx={{
               fontFamily: '"Outfit", sans-serif',
-              fontWeight: 800,
-              color: '#0f172a',
+              fontWeight: 900,
+              color: '#172554',
               fontSize: { xs: '1.5rem', sm: '2rem' },
             }}
           >
@@ -191,9 +191,9 @@ export default function AuthorSection() {
             align="center"
             sx={{
               fontFamily: '"Outfit", sans-serif',
-              fontWeight: 800,
+              fontWeight: 900,
               mb: 2,
-              color: '#0f172a',
+              color: '#1e3a8a',
             }}
           >
             Audio Work & Podcast
@@ -201,7 +201,7 @@ export default function AuthorSection() {
           <Typography
             variant="body1"
             align="center"
-            sx={{ color: '#334155', maxWidth: '650px', mx: 'auto', mb: 6 }}
+            sx={{ color: '#172554', fontWeight: 550, maxWidth: '650px', mx: 'auto', mb: 6 }}
           >
             Listen to Dr. Rimaletta Ray’s spoken audio programs, meditations, and mental lectures designed to align
             your vibrational frequencies.
@@ -245,7 +245,7 @@ export default function AuthorSection() {
                 }}
               >
                 <LibraryMusicIcon sx={{ color: '#d97706', fontSize: '2.8rem', mb: 2 }} />
-                <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#0f172a', mb: 1.5, fontSize: '1.4rem' }}>
+                <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#172554', mb: 1.5, fontSize: '1.4rem' }}>
                   Turn on the Sun of Your Soul.
                 </Typography>
                 <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#d97706', fontSize: '1.4rem' }}>
@@ -273,7 +273,7 @@ export default function AuthorSection() {
             sx={{
               fontFamily: '"Outfit", sans-serif',
               fontWeight: 900,
-              color: '#0f172a',
+              color: '#1e3a8a',
               mb: 2.5,
               fontSize: { xs: '1.8rem', sm: '2.2rem' }
             }}
@@ -283,9 +283,9 @@ export default function AuthorSection() {
           <Typography
             variant="body1"
             sx={{
-              color: '#334155',
+              color: '#172554',
               fontSize: '1.2rem',
-              fontWeight: 650,
+              fontWeight: 700,
               mb: 4,
               maxWidth: '800px',
               mx: 'auto',

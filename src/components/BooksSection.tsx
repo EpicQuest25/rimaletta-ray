@@ -348,6 +348,21 @@ export default function BooksSection() {
     }
   };
 
+  const getCycleTextColor = (cycle: string) => {
+    switch (cycle) {
+      case 'auto':
+        return '#78350f';
+      case 'digital':
+        return '#083344';
+      case 'quantum':
+        return '#3b0764';
+      case 'other':
+        return '#4c0519';
+      default:
+        return '#1e1b4b';
+    }
+  };
+
   // Render a beautiful book cover fallback
   const renderFallbackCover = (book: Book) => {
     const color = getCycleColor(book.cycle);
@@ -450,7 +465,8 @@ export default function BooksSection() {
             fontSize: { xs: '2.2rem', md: '3rem' },
             fontWeight: 800,
             mb: 1,
-            color: '#0f172a',
+            color: getCycleTextColor(cycles[activeTab]),
+            transition: 'color 0.4s ease',
           }}
         >
           Inspirational psychology for self-ecology
@@ -460,10 +476,11 @@ export default function BooksSection() {
           align="center"
           sx={{
             fontSize: { xs: '1.1rem', md: '1.3rem' },
-            fontWeight: 600,
-            color: '#475569',
+            fontWeight: 700,
+            color: getCycleTextColor(cycles[activeTab]),
             mb: 4,
             fontFamily: '"Outfit", sans-serif',
+            transition: 'color 0.4s ease',
           }}
         >
           (auto suggestive, digital, quantum cycles)
@@ -471,7 +488,7 @@ export default function BooksSection() {
         <Typography
           variant="body1"
           align="center"
-          sx={{ color: '#334155', maxWidth: '700px', mx: 'auto', mb: 8 }}
+          sx={{ color: getCycleTextColor(cycles[activeTab]), fontWeight: 600, maxWidth: '700px', mx: 'auto', mb: 8, transition: 'color 0.4s ease' }}
         >
           The system starts with <strong>“I Am Free to Be the Best of Me!”</strong> and culminates with{' '}
           <strong>“Self-Ascension!”</strong>. Pick the realm of life you need to refine in any of the cycles.
@@ -720,7 +737,7 @@ export default function BooksSection() {
                           sx={{
                             fontFamily: '"Outfit", sans-serif',
                             fontWeight: 800,
-                            color: '#0f172a',
+                            color: getCycleTextColor(cycles[activeTab]),
                             lineHeight: 1.3,
                             mb: 1.5,
                           }}
@@ -731,7 +748,8 @@ export default function BooksSection() {
                       <Typography
                         variant="body2"
                         sx={{
-                          color: '#475569',
+                          color: getCycleTextColor(cycles[activeTab]),
+                          fontWeight: 550,
                           display: '-webkit-box',
                           WebkitLineClamp: 3,
                           WebkitBoxOrient: 'vertical',
@@ -822,10 +840,10 @@ export default function BooksSection() {
               >
                 <CardContent sx={{ p: 4, textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%', minHeight: 380 }}>
                   <AutoAwesomeIcon sx={{ color: '#7c3aed', fontSize: '3rem', mb: 2, mx: 'auto' }} />
-                  <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#0f172a', mb: 2 }}>
+                  <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#3b0764', mb: 2 }}>
                     Tesla Frequency Alignment
                   </Typography>
-                  <Typography variant="body2" sx={{ color: '#475569', lineHeight: 1.7, mb: 3 }}>
+                  <Typography variant="body2" sx={{ color: '#3b0764', fontWeight: 550, lineHeight: 1.7, mb: 3 }}>
                     “If you want to find the secrets of the universe, think in terms of energy, frequency and vibration.” 
                     <br />— Nikola Tesla
                   </Typography>
@@ -833,7 +851,7 @@ export default function BooksSection() {
                   <Typography variant="caption" sx={{ color: '#7c3aed', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     Quantum Cycle Philosophy
                   </Typography>
-                  <Typography variant="body2" sx={{ color: '#334155', mt: 1, fontSize: '0.85rem' }}>
+                  <Typography variant="body2" sx={{ color: '#3b0764', fontWeight: 550, mt: 1, fontSize: '0.85rem' }}>
                     Dr. Ray’s award-winning masterpiece <strong>“Light is me, Light is my philosophy”</strong> is dedicated to Tesla's principles of physical and spiritual energy resonance.
                   </Typography>
                 </CardContent>
@@ -860,7 +878,7 @@ export default function BooksSection() {
               sx={{
                 fontFamily: '"Outfit", sans-serif',
                 fontWeight: 900,
-                color: '#0f172a',
+                color: '#083344',
                 fontSize: { xs: '1.6rem', md: '2rem' }
               }}
             >
@@ -868,7 +886,7 @@ export default function BooksSection() {
             </Typography>
           </Box>
           
-          <Typography variant="body1" sx={{ color: '#334155', mb: 4, fontSize: '1.05rem', lineHeight: 1.7 }}>
+          <Typography variant="body1" sx={{ color: '#083344', fontWeight: 550, mb: 4, fontSize: '1.05rem', lineHeight: 1.7 }}>
             Dr. Ray’s works represent a pre-assembled, commercially powerful literary ecosystem designed to address the deep cognitive and spiritual challenges of the digital Renaissance. 
             Traditional publishers are not just acquiring single books; they are acquiring a lifetime curriculum with immense backend value and multi-format appeal.
           </Typography>
@@ -879,7 +897,7 @@ export default function BooksSection() {
                 <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#4f46e5', mb: 1.5 }}>
                   1. Pre-Assembled Ecosystem
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#475569', lineHeight: 1.6 }}>
+                <Typography variant="body2" sx={{ color: '#1e1b4b', fontWeight: 550, lineHeight: 1.6 }}>
                   With 20+ structured titles spanning three evolutionary cycles, this offers a complete brand syllabus with immense potential for coursework, workshops, and digital expansions.
                 </Typography>
               </Box>
@@ -890,7 +908,7 @@ export default function BooksSection() {
                 <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#0891b2', mb: 1.5 }}>
                   2. Academic & Scholarly Rigor
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#475569', lineHeight: 1.6 }}>
+                <Typography variant="body2" sx={{ color: '#083344', fontWeight: 550, lineHeight: 1.6 }}>
                   Grounded in rigorous scholarship—a Ph.D. from the Moscow Brain Institute and 30 years of university teaching in the USA—delivering immediate academic prestige.
                 </Typography>
               </Box>
@@ -901,7 +919,7 @@ export default function BooksSection() {
                 <Typography variant="h6" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#d97706', mb: 1.5 }}>
                   3. Highly Consumable Format
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#475569', lineHeight: 1.6 }}>
+                <Typography variant="body2" sx={{ color: '#78350f', fontWeight: 550, lineHeight: 1.6 }}>
                   Synthesized into a page-by-page, highly visual format optimized for the speed of modern reading, bridging the gap between deep science and self-ecology.
                 </Typography>
               </Box>
