@@ -190,10 +190,10 @@ export default function Intro() {
           <Grid item xs={12} md={4}>
             <Box sx={{ height: '100%', backgroundColor: '#facc15', borderColor: '#eab308', borderStyle: 'solid', borderWidth: '2px', borderRadius: 4, boxShadow: '0 8px 32px rgba(250, 204, 21, 0.35)', p: 4, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
               <Box sx={{ textAlign: 'center' }}>
-                <Box sx={{ width: 60, height: 60, borderRadius: '50%', background: 'rgba(29, 78, 216, 0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 3 }}>
-                  <PsychologyIcon sx={{ color: '#1d4ed8', fontSize: '2.2rem' }} />
+                <Box sx={{ width: 60, height: 60, borderRadius: '50%', background: 'rgba(0, 0, 0, 0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 3 }}>
+                  <PsychologyIcon sx={{ color: '#000000', fontSize: '2.2rem' }} />
                 </Box>
-                <Typography variant="h5" sx={{ color: '#1d4ed8', mb: 2, fontWeight: 900 }}>
+                <Typography variant="h5" sx={{ color: '#000000', mb: 2, fontWeight: 900 }}>
                   A) Total Integration
                 </Typography>
                 <Typography variant="body2" sx={{ color: '#000000', fontWeight: 700, lineHeight: 1.6 }}>
@@ -207,10 +207,10 @@ export default function Intro() {
           <Grid item xs={12} md={4}>
             <Box sx={{ height: '100%', backgroundColor: '#22d3ee', borderColor: '#0891b2', borderStyle: 'solid', borderWidth: '2px', borderRadius: 4, boxShadow: '0 8px 32px rgba(34, 211, 238, 0.35)', p: 4, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
               <Box sx={{ textAlign: 'center' }}>
-                <Box sx={{ width: 60, height: 60, borderRadius: '50%', background: 'rgba(220, 38, 38, 0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 3 }}>
-                  <ShieldIcon sx={{ color: '#dc2626', fontSize: '2.2rem' }} />
+                <Box sx={{ width: 60, height: 60, borderRadius: '50%', background: 'rgba(0, 0, 0, 0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 3 }}>
+                  <ShieldIcon sx={{ color: '#000000', fontSize: '2.2rem' }} />
                 </Box>
-                <Typography variant="h5" sx={{ color: '#dc2626', mb: 2, fontWeight: 900 }}>
+                <Typography variant="h5" sx={{ color: '#000000', mb: 2, fontWeight: 900 }}>
                   B) Sense of Measure
                 </Typography>
                 <Typography variant="body2" sx={{ color: '#000000', fontWeight: 700, lineHeight: 1.6 }}>
