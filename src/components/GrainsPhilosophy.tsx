@@ -193,7 +193,7 @@ export default function GrainsPhilosophy() {
       id="philosophy"
       sx={{
         py: { xs: 10, md: 14 },
-        background: 'linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%)',
+        background: 'linear-gradient(135deg, #ffe0b2 0%, #ffe082 100%)',
         position: 'relative',
         overflow: 'hidden',
         borderTop: '1px solid rgba(0, 0, 0, 0.05)',
@@ -253,8 +253,8 @@ export default function GrainsPhilosophy() {
             <Card
               sx={{
                 height: '100%',
-                background: '#ffffff',
-                border: '1px solid rgba(244, 63, 94, 0.25)',
+                background: 'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(253,242,248,0.98) 100%)',
+                border: '2px solid #f43f5e',
                 borderRadius: 5,
                 boxShadow: '0 20px 45px rgba(0,0,0,0.04)',
                 display: 'flex',
@@ -365,8 +365,8 @@ export default function GrainsPhilosophy() {
             <Card
               sx={{
                 height: '100%',
-                background: '#ffffff',
-                border: '1px solid rgba(59, 130, 246, 0.25)',
+                background: 'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(239,246,255,0.98) 100%)',
+                border: '2px solid #2563eb',
                 borderRadius: 5,
                 boxShadow: '0 20px 45px rgba(0,0,0,0.04)',
                 display: 'flex',
@@ -521,8 +521,8 @@ export default function GrainsPhilosophy() {
               sx={{
                 p: 4.5,
                 borderRadius: 4,
-                background: '#ffffff',
-                border: '1px solid rgba(244, 63, 94, 0.2)',
+                background: 'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(253,242,248,0.98) 100%)',
+                border: '2px solid #f43f5e',
                 boxShadow: '0 15px 35px rgba(0,0,0,0.03)',
                 height: '100%',
                 display: 'flex',
@@ -617,8 +617,8 @@ export default function GrainsPhilosophy() {
               sx={{
                 p: 4.5,
                 borderRadius: 4,
-                background: '#ffffff',
-                border: '1px solid rgba(0,0,0,0.05)',
+                background: 'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(254,243,199,0.98) 100%)',
+                border: '2px solid #d97808',
                 boxShadow: '0 15px 35px rgba(0,0,0,0.03)',
                 height: '100%',
                 display: 'flex',

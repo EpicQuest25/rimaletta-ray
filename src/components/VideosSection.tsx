@@ -165,7 +165,7 @@ export default function VideosSection() {
       id="videos"
       sx={{
         py: { xs: 8, md: 12 },
-        background: 'linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%)',
+        background: 'linear-gradient(135deg, #e0f7fa 0%, #80deea 100%)',
         position: 'relative',
         overflow: 'hidden',
         borderTop: '1px solid rgba(0, 0, 0, 0.05)',
@@ -268,10 +268,10 @@ export default function VideosSection() {
               </Box>
 
               {/* Video Info Overlay */}
-              <Box sx={{ p: 4, background: '#ffffff' }}>
+              <Box sx={{ p: 4, background: 'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(204,251,241,0.98) 100%)', borderTop: '2px solid #0f766e' }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1.5 }}>
-                  <SmartDisplayIcon sx={{ color: '#0891b2' }} />
-                  <Typography variant="subtitle2" sx={{ color: '#0891b2', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                  <SmartDisplayIcon sx={{ color: '#0f766e' }} />
+                  <Typography variant="subtitle2" sx={{ color: '#0f766e', fontWeight: 800, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                     Now Playing
                   </Typography>
                 </Box>
@@ -309,13 +309,13 @@ export default function VideosSection() {
           <Grid item xs={12} lg={4}>
             <Box
               sx={{
-                background: '#ffffff',
+                background: 'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(204,251,241,0.98) 100%)',
                 borderRadius: 4,
-                border: '1px solid rgba(0, 0, 0, 0.06)',
+                border: '2px solid #0f766e',
                 p: 3,
                 maxHeight: { lg: '740px' },
                 overflowY: 'auto',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.03)',
+                boxShadow: '0 10px 30px rgba(15,118,110,0.08)',
               }}
             >
               <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#042f2e', mb: 3 }}>
@@ -336,10 +336,10 @@ export default function VideosSection() {
                         borderRadius: 3,
                         cursor: 'pointer',
                         transition: 'all 0.3s',
-                        background: isActive ? 'rgba(79, 70, 229, 0.08)' : 'transparent',
-                        border: isActive ? '1px solid rgba(79, 70, 229, 0.15)' : '1px solid transparent',
+                        background: isActive ? 'rgba(15, 118, 110, 0.15)' : 'transparent',
+                        border: isActive ? '2px solid #0f766e' : '1px solid transparent',
                         '&:hover': {
-                          background: isActive ? 'rgba(79, 70, 229, 0.12)' : 'rgba(0, 0, 0, 0.03)',
+                          background: isActive ? 'rgba(15, 118, 110, 0.2)' : 'rgba(15, 118, 110, 0.05)',
                         },
                       }}
                     >

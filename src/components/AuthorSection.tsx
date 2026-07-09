@@ -10,7 +10,7 @@ export default function AuthorSection() {
       id="author"
       sx={{
         py: { xs: 10, md: 14 },
-        background: 'linear-gradient(135deg, #fafaf9 0%, #f5f5f4 100%)',
+        background: 'linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%)',
         position: 'relative',
         overflow: 'hidden',
         borderTop: '1px solid rgba(0, 0, 0, 0.05)',
@@ -214,9 +214,9 @@ export default function AuthorSection() {
                 sx={{
                   borderRadius: 4,
                   overflow: 'hidden',
-                  background: '#ffffff',
-                  boxShadow: '0 10px 25px rgba(0,0,0,0.04)',
-                  border: '1px solid rgba(0, 0, 0, 0.06)',
+                  background: 'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(232,240,254,0.98) 100%)',
+                  boxShadow: '0 10px 25px rgba(63, 81, 181, 0.08)',
+                  border: '2px solid #3f51b5',
                   height: '420px',
                 }}
               >
@@ -236,12 +236,12 @@ export default function AuthorSection() {
             <Grid item xs={12} md={5}>
               <Box
                 sx={{
-                  background: '#ffffff',
-                  border: '1px solid rgba(217,119,6,0.2)',
+                  background: 'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(254,243,199,0.98) 100%)',
+                  border: '2px solid #d97808',
                   p: 5,
                   borderRadius: 4,
                   textAlign: 'center',
-                  boxShadow: '0 10px 25px rgba(0,0,0,0.04)',
+                  boxShadow: '0 10px 25px rgba(217,120,8,0.08)',
                 }}
               >
                 <LibraryMusicIcon sx={{ color: '#d97706', fontSize: '2.8rem', mb: 2 }} />
@@ -262,10 +262,10 @@ export default function AuthorSection() {
             mt: 10,
             p: { xs: 4, md: 6 },
             borderRadius: 5,
-            background: 'linear-gradient(135deg, #fffdf5 0%, #fef3c7 100%)',
-            border: '2px solid #d97706',
+            background: 'linear-gradient(135deg, #d97808 0%, #fbbf24 100%)',
+            border: '3px solid #b45309',
             textAlign: 'center',
-            boxShadow: '0 15px 35px rgba(217, 119, 6, 0.08)',
+            boxShadow: '0 15px 35px rgba(217, 120, 8, 0.18)',
           }}
         >
           <Typography
@@ -273,9 +273,10 @@ export default function AuthorSection() {
             sx={{
               fontFamily: '"Outfit", sans-serif',
               fontWeight: 900,
-              color: '#1e3a8a',
+              color: '#ffffff',
               mb: 2.5,
-              fontSize: { xs: '1.8rem', sm: '2.2rem' }
+              fontSize: { xs: '1.8rem', sm: '2.2rem' },
+              textShadow: '0 2px 4px rgba(0,0,0,0.15)',
             }}
           >
             Develop Personal Magnetism
@@ -283,13 +284,14 @@ export default function AuthorSection() {
           <Typography
             variant="body1"
             sx={{
-              color: '#172554',
+              color: '#ffffff',
               fontSize: '1.2rem',
               fontWeight: 700,
               mb: 4,
               maxWidth: '800px',
               mx: 'auto',
               lineHeight: 1.6,
+              textShadow: '0 1px 3px rgba(0,0,0,0.1)',
             }}
           >
             Develop personal magnetism physically, emotionally, mentally, spiritually, and universally in three cycles of our present day life.
@@ -299,9 +301,10 @@ export default function AuthorSection() {
             sx={{
               fontFamily: '"Outfit", sans-serif',
               fontWeight: 950,
-              color: '#d97706',
+              color: '#ffffff',
               fontSize: { xs: '2.2rem', sm: '3.2rem' },
               letterSpacing: '0.02em',
+              textShadow: '0 3px 8px rgba(0,0,0,0.2)',
             }}
           >
             Wow! <Box component="span" sx={{ fontSize: '0.8em', textTransform: 'lowercase', fontWeight: 800 }}>we live</Box> Now!

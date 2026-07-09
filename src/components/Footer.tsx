@@ -26,11 +26,11 @@ export default function Footer() {
       id="contact"
       component="footer"
       sx={{
-        background: '#f5f5f4',
-        borderTop: '1px solid rgba(0, 0, 0, 0.08)',
-        pt: 8,
-        pb: 4,
-        color: '#475569',
+        background: 'linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)',
+        borderTop: '4px solid #d97808',
+        pt: 9,
+        pb: 5,
+        color: '#cbd5e1',
         position: 'relative',
       }}
     >
@@ -42,21 +42,23 @@ export default function Footer() {
               variant="h6"
               sx={{
                 fontFamily: '"Outfit", sans-serif',
-                fontWeight: 800,
+                fontWeight: 900,
                 mb: 2.5,
-                background: 'linear-gradient(45deg, #4f46e5 30%, #0891b2 90%)',
+                fontSize: '1.45rem',
+                letterSpacing: '0.05em',
+                background: 'linear-gradient(45deg, #fbbf24 30%, #f59e0b 90%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
               }}
             >
               DR. RIMALETTA RAY
             </Typography>
-            <Typography variant="body2" sx={{ mb: 3, lineHeight: 1.7, color: '#334155' }}>
+            <Typography variant="body2" sx={{ mb: 3, lineHeight: 1.8, color: '#f1f5f9', fontWeight: 650 }}>
               University of Connecticut / UCONN <br />
               Norwalk Community College <br />
               Professor of Psycholinguistics
             </Typography>
-            <Typography variant="body2" sx={{ mb: 3, lineHeight: 1.7, color: '#64748b' }}>
+            <Typography variant="body2" sx={{ mb: 3, lineHeight: 1.8, color: '#94a3b8', fontWeight: 500 }}>
               Synthesizing science, linguistics, and quantum consciousness to build a coherent path for personal sovereignty in the digital era.
             </Typography>
           </Grid>
@@ -67,30 +69,31 @@ export default function Footer() {
               variant="subtitle1"
               sx={{
                 fontFamily: '"Outfit", sans-serif',
-                fontWeight: 700,
-                color: '#0f172a',
+                fontWeight: 800,
+                color: '#ffffff',
                 mb: 2.5,
+                letterSpacing: '0.02em',
               }}
             >
               Get In Touch
             </Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-                <PhoneIcon sx={{ color: '#0891b2', fontSize: '1.2rem' }} />
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.5 }}>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.8 }}>
+                <PhoneIcon sx={{ color: '#fbbf24', fontSize: '1.3rem' }} />
                 <Link
                   href="tel:2032122673"
                   underline="hover"
-                  sx={{ color: '#334155', '&:hover': { color: '#4f46e5' } }}
+                  sx={{ color: '#cbd5e1', fontWeight: 600, '&:hover': { color: '#fbbf24' }, transition: 'color 0.2s' }}
                 >
                   (203) 212-2673
                 </Link>
               </Box>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-                <EmailIcon sx={{ color: '#0891b2', fontSize: '1.2rem' }} />
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.8 }}>
+                <EmailIcon sx={{ color: '#fbbf24', fontSize: '1.3rem' }} />
                 <Link
                   href="mailto:dr.rimaletta@gmail.com"
                   underline="hover"
-                  sx={{ color: '#334155', '&:hover': { color: '#4f46e5' } }}
+                  sx={{ color: '#cbd5e1', fontWeight: 600, '&:hover': { color: '#fbbf24' }, transition: 'color 0.2s' }}
                 >
                   dr.rimaletta@gmail.com
                 </Link>
@@ -104,34 +107,35 @@ export default function Footer() {
               variant="subtitle1"
               sx={{
                 fontFamily: '"Outfit", sans-serif',
-                fontWeight: 700,
-                color: '#0f172a',
+                fontWeight: 800,
+                color: '#ffffff',
                 mb: 2.5,
+                letterSpacing: '0.02em',
               }}
             >
               Official Resources
             </Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-                <LanguageIcon sx={{ color: '#4f46e5', fontSize: '1.2rem' }} />
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.5 }}>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.8 }}>
+                <LanguageIcon sx={{ color: '#fbbf24', fontSize: '1.3rem' }} />
                 <Link
                   href="http://www.language-fitness.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   underline="hover"
-                  sx={{ color: '#334155', '&:hover': { color: '#4f46e5' } }}
+                  sx={{ color: '#cbd5e1', fontWeight: 600, '&:hover': { color: '#fbbf24' }, transition: 'color 0.2s' }}
                 >
                   Language Fitness
                 </Link>
               </Box>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-                <LanguageIcon sx={{ color: '#4f46e5', fontSize: '1.2rem' }} />
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.8 }}>
+                <LanguageIcon sx={{ color: '#fbbf24', fontSize: '1.3rem' }} />
                 <Link
                   href="http://www.holisticself-resurrection.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   underline="hover"
-                  sx={{ color: '#334155', '&:hover': { color: '#4f46e5' } }}
+                  sx={{ color: '#cbd5e1', fontWeight: 600, '&:hover': { color: '#fbbf24' }, transition: 'color 0.2s' }}
                 >
                   Holistic Self-Resurrection
                 </Link>
@@ -140,16 +144,16 @@ export default function Footer() {
           </Grid>
         </Grid>
 
-        <Divider sx={{ my: 5, borderColor: 'rgba(0, 0, 0, 0.08)' }} />
+        <Divider sx={{ my: 5, borderColor: 'rgba(255, 255, 255, 0.12)' }} />
 
         {/* Social Links & Copyright */}
-        <Grid container alignItems="center" justifyContent="space-between" spacing={2}>
+        <Grid container alignItems="center" justifyContent="space-between" spacing={3}>
           <Grid item xs={12} md={6} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
-            <Typography variant="body2" sx={{ color: '#64748b' }}>
+            <Typography variant="body2" sx={{ color: '#94a3b8', fontWeight: 550 }}>
               &copy; {currentYear} Ph.D. Rimaletta Ray. All rights reserved.
             </Typography>
           </Grid>
-          <Grid item xs={12} md={6} sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' }, gap: 1 }}>
+          <Grid item xs={12} md={6} sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' }, gap: 1.5 }}>
             {socials.map((social) => (
               <IconButton
                 key={social.label}
@@ -159,15 +163,16 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 aria-label={social.label}
                 sx={{
-                  color: '#475569',
-                  border: '1px solid rgba(0, 0, 0, 0.08)',
-                  background: 'rgba(0, 0, 0, 0.01)',
-                  transition: 'all 0.3s',
+                  color: '#ffffff',
+                  border: '1.5px solid rgba(255, 255, 255, 0.15)',
+                  background: 'rgba(255, 255, 255, 0.03)',
+                  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                   '&:hover': {
-                    color: '#4f46e5',
-                    borderColor: 'rgba(79, 70, 229, 0.2)',
-                    background: 'rgba(79, 70, 229, 0.05)',
-                    transform: 'translateY(-2px)',
+                    color: '#1e1b4b',
+                    borderColor: '#fbbf24',
+                    background: '#fbbf24',
+                    transform: 'translateY(-3px)',
+                    boxShadow: '0 4px 12px rgba(251, 191, 36, 0.25)',
                   },
                 }}
               >

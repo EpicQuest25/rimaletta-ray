@@ -49,12 +49,10 @@ export default function Navbar() {
     <AppBar
       position="fixed"
       sx={{
-        background: 'rgba(240, 249, 255, 0.95)',
-        backdropFilter: 'blur(20px)',
-        borderTop: '5px solid #d97808',
-        borderBottom: '1px solid rgba(217, 120, 8, 0.12)',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)',
-        color: '#1e1b4b',
+        background: 'linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)',
+        borderBottom: '4px solid #d97808',
+        boxShadow: '0 4px 25px rgba(0, 0, 0, 0.15)',
+        color: '#ffffff',
       }}
     >
       <Container maxWidth="xl">
@@ -74,10 +72,12 @@ export default function Navbar() {
               fontSize: '1.45rem',
               letterSpacing: '0.05em',
               textDecoration: 'none',
-              color: '#1e1b4b',
-              transition: 'color 0.3s',
+              background: 'linear-gradient(45deg, #fbbf24 30%, #f59e0b 90%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              transition: 'opacity 0.3s',
               '&:hover': {
-                color: '#d97808',
+                opacity: 0.9,
               },
             }}
           >
@@ -91,7 +91,7 @@ export default function Navbar() {
                 key={item.label}
                 onClick={() => handleScroll(item.id)}
                 sx={{
-                  color: '#1e1b4b',
+                  color: '#ffffff',
                   fontSize: '0.92rem',
                   fontWeight: 750,
                   px: 2,
@@ -100,11 +100,10 @@ export default function Navbar() {
                   border: '1px solid transparent',
                   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                   '&:hover': {
-                    color: '#d97808',
-                    background: '#ffffff',
-                    borderColor: 'rgba(217, 120, 8, 0.3)',
+                    color: '#1e1b4b',
+                    background: '#fbbf24',
                     transform: 'translateY(-1px)',
-                    boxShadow: '0 4px 12px rgba(217, 120, 8, 0.08)',
+                    boxShadow: '0 4px 12px rgba(251, 191, 36, 0.25)',
                   },
                 }}
               >
@@ -119,7 +118,7 @@ export default function Navbar() {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ display: { md: 'none' }, color: '#1e1b4b' }}
+            sx={{ display: { md: 'none' }, color: '#ffffff' }}
           >
             <MenuIcon />
           </IconButton>
@@ -135,14 +134,14 @@ export default function Navbar() {
         PaperProps={{
           sx: {
             width: 280,
-            background: '#fafaf9',
-            borderLeft: '1px solid rgba(0, 0, 0, 0.08)',
+            background: 'linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)',
+            borderLeft: '4px solid #d97808',
             p: 3,
           },
         }}
       >
         <Box sx={{ display: 'flex', justifyContent: 'flex-end', mb: 4 }}>
-          <IconButton onClick={handleDrawerToggle} sx={{ color: '#172554' }}>
+          <IconButton onClick={handleDrawerToggle} sx={{ color: '#ffffff' }}>
             <CloseIcon />
           </IconButton>
         </Box>
@@ -156,7 +155,7 @@ export default function Navbar() {
                 borderRadius: 2,
                 overflow: 'hidden',
                 '&:hover': {
-                  background: 'rgba(217, 120, 8, 0.08)',
+                  background: 'rgba(251, 191, 36, 0.15)',
                 },
               }}
             >
@@ -167,9 +166,12 @@ export default function Navbar() {
                     fontFamily: '"Outfit", sans-serif',
                     fontSize: '1.2rem',
                     fontWeight: 750,
-                    color: '#172554',
+                    color: '#ffffff',
                     textAlign: 'center',
                     py: 1,
+                    '&:hover': {
+                      color: '#fbbf24',
+                    },
                   },
                 }}
               />
