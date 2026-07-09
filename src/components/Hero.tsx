@@ -223,7 +223,7 @@ export default function Hero() {
                 component="div"
                 sx={{
                   fontWeight: 900,
-                  fontSize: { xs: '0.6rem', sm: '0.75rem', md: '0.82rem' },
+                  fontSize: { xs: '0.66rem', sm: '0.83rem', md: '0.9rem' },
                   letterSpacing: '0.03em',
                   lineHeight: 1.6,
                   fontFamily: '"Outfit", sans-serif',
@@ -445,12 +445,12 @@ export default function Hero() {
             </Box>
 
             {/* Dimensions label below orbit */}
-            <Box sx={{ textAlign: 'center', mt: 3, width: '100%' }}>
+            <Box sx={{ textAlign: 'center', mt: 1, width: '100%' }}>
               <Typography
                 component="div"
                 sx={{
                   fontWeight: 900,
-                  fontSize: { xs: '0.6rem', sm: '0.75rem', md: '0.82rem' },
+                  fontSize: { xs: '0.66rem', sm: '0.83rem', md: '0.9rem' },
                   letterSpacing: '0.03em',
                   color: '#000000',
                   fontFamily: '"Outfit", sans-serif',
