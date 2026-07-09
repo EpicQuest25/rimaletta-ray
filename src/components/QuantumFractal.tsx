@@ -96,17 +96,17 @@ export default function QuantumFractal() {
             sx={{
               display: 'inline-flex',
               alignItems: 'center',
-              gap: 2,
-              px: 4.5,
-              py: 1.5,
-              borderRadius: '40px',
+              gap: { xs: 2, md: 4 },
+              px: { xs: 4.5, md: 9 },
+              py: { xs: 1.5, md: 3 },
+              borderRadius: '80px',
               background: 'rgba(237, 102, 140, 0.08)',
               border: '1px solid rgba(237, 102, 140, 0.25)',
-              mb: 3,
+              mb: { xs: 3, md: 6 },
             }}
           >
-            <AutoAwesomeIcon sx={{ color: '#ed668c', fontSize: '1.8rem' }} />
-            <Typography variant="subtitle1" sx={{ color: '#ed668c', fontWeight: 950, fontFamily: '"Outfit", sans-serif', fontSize: '1.45rem', letterSpacing: '0.05em' }}>
+            <AutoAwesomeIcon sx={{ color: '#ed668c', fontSize: { xs: '1.8rem', md: '3.6rem' } }} />
+            <Typography variant="subtitle1" sx={{ color: '#ed668c', fontWeight: 950, fontFamily: '"Outfit", sans-serif', fontSize: { xs: '1.45rem', md: '2.9rem' }, letterSpacing: '0.05em' }}>
               DIGITIZED SELF-ACCULTURATION<Box component="span" sx={{ color: '#dc2626' }}>!</Box>
             </Typography>
           </Box>
@@ -118,7 +118,7 @@ export default function QuantumFractal() {
               fontSize: { xs: '1.6rem', sm: '2.2rem', md: '2.5rem', lg: '2.8rem' },
               fontWeight: 900,
               mb: 2,
-              color: '#facc15',
+              color: '#f6c915',
               whiteSpace: { sm: 'nowrap', xs: 'normal' },
             }}
           >
