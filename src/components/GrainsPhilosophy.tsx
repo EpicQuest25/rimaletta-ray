@@ -102,7 +102,7 @@ const fingersData: Record<string, FingerDetails> = {
     booster: 'I AM Free to Be the Best of Me!',
     book: 'Dis-Entanglement!',
     link: 'https://www.amazon.com/Dis-Entangle-ment-Inspiration-Psychology-Self-Ecology-Rimaletta-ebook/dp/B0FPLYRS3Z',
-    color: '#10b981', // green
+    color: '#16a34a', // green
     height: 100,
   },
   ring: {
@@ -112,7 +112,7 @@ const fingersData: Record<string, FingerDetails> = {
     booster: 'Be Happy and Whole!',
     book: 'Exceptionality',
     link: 'https://www.amazon.com/Exceptionality-Digital-Psychology-Self-Ecology-ebook/dp/B0CF7PB1FJ/',
-    color: '#ef4444', // red
+    color: '#dc2626', // red
     height: 130,
   },
   middle: {
@@ -122,7 +122,7 @@ const fingersData: Record<string, FingerDetails> = {
     booster: 'Structure governs System!',
     book: 'Spiritual Diplomacy',
     link: 'https://www.amazon.com/Spiritual-Diplomacy-Self-Restructuring-Psychology-Self-Ecology/dp/B0FN61NDCK/',
-    color: '#3b82f6', // blue
+    color: '#1d4ed8', // blue
     height: 150,
   },
   index: {
@@ -132,7 +132,7 @@ const fingersData: Record<string, FingerDetails> = {
     booster: 'Soul refining is life elevating!',
     book: 'Self-Taming!',
     link: 'https://www.amazon.com/Self-Taming-Inspirational-Psychology-Life-Gaining-Taming/dp/B0F7KG64K6/',
-    color: '#ec4899', // magenta
+    color: '#7c3aed', // violet
     height: 125,
   },
   thumb: {
@@ -142,7 +142,7 @@ const fingersData: Record<string, FingerDetails> = {
     booster: 'Cosmic alignment is self-salvation!',
     book: 'Self-Ascension',
     link: 'https://www.amazon.com/Self-Ascension-Rimaletta-S-Ray-Ph-D-ebook/dp/B0GZS9QQ4C/',
-    color: '#818cf8', // periwinkle
+    color: '#7c3aed', // violet
     height: 80,
   },
 };
@@ -156,6 +156,93 @@ export default function GrainsPhilosophy() {
 
   const activeQuote = mindsetsData[activeQuoteIndex];
   const activeFinger = fingersData[activeFingerKey];
+
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'Universal':
+        return '#7c3aed'; // Violet
+      case 'Auto-Suggestive':
+        return '#dc2626'; // Red
+      case 'Digital':
+        return '#1d4ed8'; // Blue
+      case 'Quantum':
+        return '#7c3aed'; // Violet
+      default:
+        return '#ed668c'; // Pink (General)
+    }
+  };
+  const getLevelColor = (level: number) => {
+    switch (level) {
+      case 1: return '#16a34a'; // green
+      case 2: return '#dc2626'; // red
+      case 3: return '#1d4ed8'; // blue
+      case 4: return '#7c3aed'; // violet
+      case 5: return '#7c3aed'; // violet
+      default: return '#7c3aed';
+    }
+  };
+  const renderColorCodedText = (text: string) => {
+    const keywords = [
+      { pattern: /\b(Auto-Suggestive)\b/gi, color: '#dc2626', weight: 800 },
+      { pattern: /\b(Digital Cycle)\b/gi, color: '#1d4ed8', weight: 800 },
+      { pattern: /\b(Digital)\b/gi, color: '#1d4ed8', weight: 800 },
+      { pattern: /\b(Quantum Psychology)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(Quantum)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(body)\b/gi, color: '#16a34a', weight: 800 },
+      { pattern: /\b(physical)\b/gi, color: '#16a34a', weight: 800 },
+      { pattern: /\b(spirit)\b/gi, color: '#dc2626', weight: 800 },
+      { pattern: /\b(spiritual)\b/gi, color: '#dc2626', weight: 800 },
+      { pattern: /\b(emotional)\b/gi, color: '#dc2626', weight: 800 },
+      { pattern: /\b(mind)\b/gi, color: '#1d4ed8', weight: 800 },
+      { pattern: /\b(mental)\b/gi, color: '#1d4ed8', weight: 800 },
+      { pattern: /\b(self-consciousness)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(super-consciousness)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(universal)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(soul-symmetry)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(Soul-Symmetry)\b/gi, color: '#7c3aed', weight: 900 },
+      { pattern: /\b(Self-Ascension)\b/gi, color: '#7c3aed', weight: 900 },
+      { pattern: /\b(Self-Awareness)\b/gi, color: '#16a34a', weight: 800 },
+      { pattern: /\b(Self-Refining)\b/gi, color: '#dc2626', weight: 800 },
+      { pattern: /\b(Self-Installation)\b/gi, color: '#1d4ed8', weight: 800 },
+      { pattern: /\b(Self-Realization)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(Self-Salvation)\b/gi, color: '#7c3aed', weight: 800 },
+    ];
+
+    let parts: { text: string; color?: string; weight?: number }[] = [{ text }];
+
+    keywords.forEach((kw) => {
+      let newParts: typeof parts = [];
+      parts.forEach((p) => {
+        if (p.color) {
+          newParts.push(p);
+        } else {
+          const splitText = p.text.split(kw.pattern);
+          splitText.forEach((t, i) => {
+            if (i % 2 === 1) {
+              newParts.push({ text: t, color: kw.color, weight: kw.weight });
+            } else if (t) {
+              newParts.push({ text: t });
+            }
+          });
+        }
+      });
+      parts = newParts;
+    });
+
+    return (
+      <>
+        {parts.map((p, idx) => (
+          <Box
+            key={idx}
+            component="span"
+            sx={p.color ? { color: p.color, fontWeight: p.weight || 'bold' } : undefined}
+          >
+            {p.text}
+          </Box>
+        ))}
+      </>
+    );
+  };
 
   // Auto-play quotes slider every 8 seconds
   useEffect(() => {
@@ -208,14 +295,14 @@ export default function GrainsPhilosophy() {
               px: 2,
               py: 0.8,
               borderRadius: '30px',
-              background: 'rgba(244, 63, 94, 0.08)',
-              border: '1px solid rgba(244, 63, 94, 0.15)',
+              background: 'rgba(237, 102, 140, 0.08)',
+              border: '1px solid rgba(237, 102, 140, 0.25)',
               mb: 3,
             }}
           >
-            <AutoAwesomeIcon sx={{ color: '#fb7185', fontSize: '1.1rem' }} />
-            <Typography variant="body2" sx={{ color: '#fb7185', fontWeight: 800, letterSpacing: '0.05em' }}>
-              GRAINS OF PHILOSOPHY
+            <AutoAwesomeIcon sx={{ color: '#ed668c', fontSize: '1.1rem' }} />
+            <Typography variant="body2" sx={{ color: '#ed668c', fontWeight: 800, letterSpacing: '0.05em' }}>
+              GRAINS OF PHILOSOPHY<Box component="span" sx={{ color: '#dc2626' }}>!</Box>
             </Typography>
           </Box>
 
@@ -226,9 +313,7 @@ export default function GrainsPhilosophy() {
               fontSize: { xs: '2.2rem', md: '3rem' },
               fontWeight: 900,
               mb: 2,
-              background: 'linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
+              color: '#ed668c',
             }}
           >
             Core Mindsets & Self-Symmetry
@@ -249,9 +334,9 @@ export default function GrainsPhilosophy() {
               sx={{
                 height: '100%',
                 background: 'rgba(15, 16, 38, 0.75)',
-                border: '2px solid #f43f5e',
+                border: `2px solid ${getCategoryColor(activeQuote.category)}`,
                 borderRadius: 5,
-                boxShadow: '0 20px 45px rgba(0,0,0,0.3)',
+                boxShadow: `0 20px 45px ${getCategoryColor(activeQuote.category)}18`,
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
@@ -261,7 +346,7 @@ export default function GrainsPhilosophy() {
               <CardContent sx={{ p: { xs: 4, md: 5 }, textAlign: 'center', position: 'relative', flexGrow: 1, display: 'flex', flexDirection: 'column', justifycontent: 'center' }}>
                 <FormatQuoteIcon
                   sx={{
-                    color: 'rgba(244, 63, 94, 0.03)',
+                    color: `${getCategoryColor(activeQuote.category)}05`,
                     fontSize: '8rem',
                     position: 'absolute',
                     top: '10px',
@@ -274,7 +359,7 @@ export default function GrainsPhilosophy() {
                   <Typography
                     variant="subtitle2"
                     sx={{
-                      color: '#fb7185',
+                      color: getCategoryColor(activeQuote.category),
                       fontWeight: 800,
                       textTransform: 'uppercase',
                       letterSpacing: '0.15em',
@@ -299,9 +384,9 @@ export default function GrainsPhilosophy() {
                       justifyContent: 'center',
                     }}
                   >
-                    {activeQuote.text}
+                    {renderColorCodedText(activeQuote.text)}
                   </Typography>
-                  <Typography variant="body2" sx={{ color: '#fda4af', fontWeight: 700, mb: 2 }}>
+                  <Typography variant="body2" sx={{ color: getCategoryColor(activeQuote.category), opacity: 0.85, fontWeight: 700, mb: 2 }}>
                     {activeQuoteIndex + 1} / {mindsetsData.length}
                   </Typography>
                   <Button
@@ -313,13 +398,13 @@ export default function GrainsPhilosophy() {
                     }}
                     startIcon={<AutoAwesomeIcon sx={{ fontSize: '0.95rem' }} />}
                     sx={{
-                      color: '#fb7185',
+                      color: getCategoryColor(activeQuote.category),
                       textTransform: 'none',
                       fontWeight: 800,
                       px: 2,
                       py: 0.5,
                       borderRadius: '20px',
-                      '&:hover': { background: 'rgba(244, 63, 94, 0.08)' }
+                      '&:hover': { background: `${getCategoryColor(activeQuote.category)}0d` }
                     }}
                   >
                     Generate Random Booster
@@ -333,7 +418,7 @@ export default function GrainsPhilosophy() {
                     background: 'rgba(15, 16, 38, 0.8)',
                     border: '1px solid rgba(255, 255, 255, 0.1)',
                     color: '#ffffff',
-                    '&:hover': { background: 'rgba(244, 63, 94, 0.15)', borderColor: '#fb7185' },
+                    '&:hover': { background: `${getCategoryColor(activeQuote.category)}22`, borderColor: getCategoryColor(activeQuote.category) },
                     transition: 'all 0.3s',
                   }}
                 >
@@ -345,7 +430,7 @@ export default function GrainsPhilosophy() {
                     background: 'rgba(15, 16, 38, 0.8)',
                     border: '1px solid rgba(255, 255, 255, 0.1)',
                     color: '#ffffff',
-                    '&:hover': { background: 'rgba(244, 63, 94, 0.15)', borderColor: '#fb7185' },
+                    '&:hover': { background: `${getCategoryColor(activeQuote.category)}22`, borderColor: getCategoryColor(activeQuote.category) },
                     transition: 'all 0.3s',
                   }}
                 >
@@ -361,9 +446,9 @@ export default function GrainsPhilosophy() {
               sx={{
                 height: '100%',
                 background: 'rgba(15, 16, 38, 0.75)',
-                border: '2px solid #2563eb',
+                border: '2px solid #ed668c',
                 borderRadius: 5,
-                boxShadow: '0 20px 45px rgba(0,0,0,0.3)',
+                boxShadow: '0 20px 45px rgba(237, 102, 140, 0.15)',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
@@ -372,7 +457,7 @@ export default function GrainsPhilosophy() {
               <CardContent sx={{ p: { xs: 4, md: 5 }, flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 {quizStep === 'intro' && (
                   <Box sx={{ textAlign: 'center' }}>
-                    <AutoAwesomeIcon sx={{ color: '#60a5fa', fontSize: '3rem', mb: 2 }} />
+                    <AutoAwesomeIcon sx={{ color: '#ed668c', fontSize: '3rem', mb: 2 }} />
                     <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#ffffff', mb: 1.5 }}>
                       Dimensional Self-Alignment Quiz
                     </Typography>
@@ -384,7 +469,7 @@ export default function GrainsPhilosophy() {
                       variant="contained"
                       onClick={() => setQuizStep('question')}
                       sx={{
-                        background: 'linear-gradient(95deg, #2563eb 0%, #1d4ed8 100%)',
+                        background: 'linear-gradient(95deg, #ed668c 0%, #db2777 100%)',
                         color: '#ffffff',
                         fontWeight: 800,
                         px: 4,
@@ -392,9 +477,9 @@ export default function GrainsPhilosophy() {
                         borderRadius: '30px',
                         textTransform: 'none',
                         fontSize: '1rem',
-                        boxShadow: '0 4px 15px rgba(37, 99, 235, 0.3)',
+                        boxShadow: '0 4px 15px rgba(237, 102, 140, 0.3)',
                         '&:hover': {
-                          background: 'linear-gradient(95deg, #3b82f6 0%, #2563eb 100%)',
+                          background: 'linear-gradient(95deg, #db2777 0%, #c026d3 100%)',
                         }
                       }}
                     >
@@ -418,11 +503,11 @@ export default function GrainsPhilosophy() {
                             p: 2,
                             borderRadius: 3,
                             background: 'rgba(255, 255, 255, 0.02)',
-                            border: '1px solid rgba(37, 99, 235, 0.3)',
+                            border: `1px solid ${getLevelColor(option.level)}40`,
                             transition: 'all 0.2s',
                             '&:hover': {
-                              background: 'rgba(37, 99, 235, 0.08)',
-                              borderColor: '#60a5fa',
+                              background: `${getLevelColor(option.level)}12`,
+                              borderColor: getLevelColor(option.level),
                               transform: 'translateY(-2px)'
                             }
                           }}
@@ -441,14 +526,14 @@ export default function GrainsPhilosophy() {
                     <Chip
                       label={`SUGGESTED ALIGNMENT: LEVEL ${selectedQuizOption.level}`}
                       sx={{
-                        backgroundColor: 'rgba(37, 99, 235, 0.15)',
-                        color: '#60a5fa',
-                        border: '1px solid rgba(37, 99, 235, 0.3)',
+                        backgroundColor: `${getLevelColor(selectedQuizOption.level)}18`,
+                        color: getLevelColor(selectedQuizOption.level),
+                        border: `1px solid ${getLevelColor(selectedQuizOption.level)}30`,
                         fontWeight: 800,
                         mb: 2,
                       }}
                     />
-                    <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 900, color: '#ffffff', mb: 1 }}>
+                    <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 900, color: getLevelColor(selectedQuizOption.level), mb: 1 }}>
                       {selectedQuizOption.dimension}
                     </Typography>
                     <Typography variant="body2" sx={{ color: '#cbd5e1', fontWeight: 550, mb: 3, lineHeight: 1.7 }}>
@@ -467,7 +552,7 @@ export default function GrainsPhilosophy() {
                         mb: 3
                       }}
                     >
-                      <Typography variant="caption" sx={{ color: '#fbbf24', fontWeight: 800, textTransform: 'uppercase', display: 'block', mb: 1 }}>
+                      <Typography variant="caption" sx={{ color: getLevelColor(selectedQuizOption.level), fontWeight: 800, textTransform: 'uppercase', display: 'block', mb: 1 }}>
                         Recommended System Guide
                       </Typography>
                       <Typography variant="subtitle1" sx={{ color: '#ffffff', fontWeight: 800, mb: 1.5 }}>
@@ -480,14 +565,14 @@ export default function GrainsPhilosophy() {
                         target="_blank"
                         startIcon={<ShoppingCartIcon />}
                         sx={{
-                          borderColor: '#fbbf24',
-                          color: '#fbbf24',
+                          borderColor: getLevelColor(selectedQuizOption.level),
+                          color: getLevelColor(selectedQuizOption.level),
                           textTransform: 'none',
                           fontWeight: 800,
                           borderRadius: '20px',
                           '&:hover': {
-                            borderColor: '#f59e0b',
-                            background: 'rgba(251, 191, 36, 0.08)'
+                            borderColor: getLevelColor(selectedQuizOption.level),
+                            background: `${getLevelColor(selectedQuizOption.level)}12`
                           }
                         }}
                       >
@@ -517,8 +602,8 @@ export default function GrainsPhilosophy() {
                 p: 4.5,
                 borderRadius: 4,
                 background: 'rgba(15, 16, 38, 0.75)',
-                border: '2px solid #f43f5e',
-                boxShadow: '0 15px 35px rgba(0,0,0,0.3)',
+                border: '2px solid #ed668c',
+                boxShadow: '0 15px 35px rgba(237, 102, 140, 0.15)',
                 height: '100%',
                 display: 'flex',
                 flexDirection: 'column',
@@ -539,7 +624,7 @@ export default function GrainsPhilosophy() {
                     gap: 1.5,
                   }}
                 >
-                  <Box component="span" sx={{ width: 4, height: 24, backgroundColor: '#f43f5e', borderRadius: 2 }} />
+                  <Box component="span" sx={{ width: 4, height: 24, backgroundColor: '#ed668c', borderRadius: 2 }} />
                   AI-Human Governance Manifesto
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#cbd5e1', fontWeight: 550, lineHeight: 1.7, mb: 3 }}>
@@ -547,20 +632,25 @@ export default function GrainsPhilosophy() {
                   technology and numerous instances of collaboration that must be governed by us. We must reduce depending on AI created Ecosystem.”
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#cbd5e1', fontWeight: 650, lineHeight: 1.7, mb: 3 }}>
-                  We should integrate AI into our physical, emotional, mental, spiritual, and universal realms of life, while safeguarding human rights against mass surveillance. Mutual respect and bilateral consideration are our obligation!
+                  We should integrate AI into our{' '}
+                  <Box component="span" sx={{ color: '#16a34a', fontWeight: 800 }}>physical</Box>,{' '}
+                  <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>emotional</Box>,{' '}
+                  <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 800 }}>mental</Box>,{' '}
+                  <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>spiritual</Box>, and{' '}
+                  <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>universal</Box> realms of life, while safeguarding human rights against mass surveillance. Mutual respect and bilateral consideration are our obligation!
                 </Typography>
-                <Typography variant="caption" sx={{ color: '#fda4af', fontWeight: 700, fontStyle: 'italic', display: 'block', mb: 3 }}>
+                <Typography variant="caption" sx={{ color: '#ed668c', fontWeight: 700, fontStyle: 'italic', display: 'block', mb: 3 }}>
                   — Extract from the Book “Light is me. Light is My Philosophy!”
                 </Typography>
 
                 {/* Interactive Decipherment of AI Black Box Toggle */}
                 <Box
                   sx={{
-                    border: '1px dashed rgba(244, 63, 94, 0.35)',
+                    border: '1px dashed rgba(237, 102, 140, 0.35)',
                     borderRadius: 3,
                     p: 2.5,
                     mb: 3,
-                    background: 'rgba(244, 63, 94, 0.03)',
+                    background: 'rgba(237, 102, 140, 0.03)',
                   }}
                 >
                   <Box
@@ -574,12 +664,12 @@ export default function GrainsPhilosophy() {
                     }}
                   >
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                      <AutoAwesomeIcon sx={{ color: '#fb7185', fontSize: '1.15rem' }} />
+                      <AutoAwesomeIcon sx={{ color: '#ed668c', fontSize: '1.15rem' }} />
                       <Typography variant="subtitle2" sx={{ color: '#ffffff', fontWeight: 800, fontSize: '0.9rem' }}>
                         Deciphering the AI "Black Box"
                       </Typography>
                     </Box>
-                    {isBlackBoxExpanded ? <ExpandLessIcon sx={{ color: '#fb7185' }} /> : <ExpandMoreIcon sx={{ color: '#fb7185' }} />}
+                    {isBlackBoxExpanded ? <ExpandLessIcon sx={{ color: '#ed668c' }} /> : <ExpandMoreIcon sx={{ color: '#ed668c' }} />}
                   </Box>
                   <Collapse in={isBlackBoxExpanded}>
                     <Typography variant="body2" sx={{ color: '#cbd5e1', mt: 2, fontWeight: 550, lineHeight: 1.6, fontSize: '0.85rem' }}>
@@ -594,12 +684,12 @@ export default function GrainsPhilosophy() {
                 sx={{
                   p: 2.5,
                   borderRadius: 3,
-                  background: 'rgba(244, 63, 94, 0.08)',
-                  border: '1px solid rgba(244, 63, 94, 0.25)',
+                  background: 'rgba(237, 102, 140, 0.08)',
+                  border: '1px solid rgba(237, 102, 140, 0.25)',
                   textAlign: 'center',
                 }}
               >
-                <Typography variant="body1" sx={{ color: '#fb7185', fontWeight: 900, fontSize: '1.05rem', fontFamily: '"Outfit", sans-serif' }}>
+                <Typography variant="body1" sx={{ color: '#ed668c', fontWeight: 900, fontSize: '1.05rem', fontFamily: '"Outfit", sans-serif' }}>
                   “Let’s Direct the Flow of Constructive Human Energy to Granting Humanity SUPER-HUMAN STATUS!”
                 </Typography>
               </Box>
@@ -613,8 +703,8 @@ export default function GrainsPhilosophy() {
                 p: 4.5,
                 borderRadius: 4,
                 background: 'rgba(15, 16, 38, 0.75)',
-                border: '2px solid #d97808',
-                boxShadow: '0 15px 35px rgba(0,0,0,0.3)',
+                border: '2px solid #ed668c',
+                boxShadow: '0 15px 35px rgba(237, 102, 140, 0.15)',
                 height: '100%',
                 display: 'flex',
                 flexDirection: 'column',
@@ -659,21 +749,21 @@ export default function GrainsPhilosophy() {
                     onClick={() => setActiveFingerKey('pinky')}
                     sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: 2, cursor: 'pointer' }}
                   >
-                    <Typography variant="caption" sx={{ color: '#10b981', fontWeight: activeFingerKey === 'pinky' ? 900 : 600, fontSize: '0.65rem', mb: 1, textTransform: 'uppercase', opacity: activeFingerKey === 'pinky' ? 1 : 0.6 }}>
+                    <Typography variant="caption" sx={{ color: '#16a34a', fontWeight: activeFingerKey === 'pinky' ? 900 : 600, fontSize: '0.65rem', mb: 1, textTransform: 'uppercase', opacity: activeFingerKey === 'pinky' ? 1 : 0.6 }}>
                       Body
                     </Typography>
                     <Box 
                       sx={{ 
                         width: 22, 
                         height: 100, 
-                        background: activeFingerKey === 'pinky' ? 'linear-gradient(to top, rgba(16,185,129,0.3), #10b981)' : 'rgba(16,185,129, 0.08)', 
-                        border: activeFingerKey === 'pinky' ? '1px solid #10b981' : '1px solid rgba(16,185,129, 0.15)',
+                        background: activeFingerKey === 'pinky' ? 'linear-gradient(to top, rgba(22,163,74,0.3), #16a34a)' : 'rgba(22,163,74, 0.08)', 
+                        border: activeFingerKey === 'pinky' ? '1px solid #16a34a' : '1px solid rgba(22,163,74, 0.15)',
                         borderRadius: '10px 10px 0 0', 
-                        boxShadow: activeFingerKey === 'pinky' ? '0 0 15px rgba(16,185,129,0.2)' : 'none',
+                        boxShadow: activeFingerKey === 'pinky' ? '0 0 15px rgba(22,163,74,0.2)' : 'none',
                         transition: 'all 0.3s'
                       }} 
                     />
-                    <Typography variant="caption" sx={{ color: activeFingerKey === 'pinky' ? '#10b981' : 'rgba(255,255,255,0.4)', mt: 1, fontSize: '0.6rem', fontWeight: activeFingerKey === 'pinky' ? 700 : 500 }}>Pinky</Typography>
+                    <Typography variant="caption" sx={{ color: activeFingerKey === 'pinky' ? '#16a34a' : 'rgba(255,255,255,0.4)', mt: 1, fontSize: '0.6rem', fontWeight: activeFingerKey === 'pinky' ? 700 : 500 }}>Pinky</Typography>
                   </Box>
 
                   {/* Ring: Spirit */}
@@ -681,21 +771,21 @@ export default function GrainsPhilosophy() {
                     onClick={() => setActiveFingerKey('ring')}
                     sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: 2, cursor: 'pointer' }}
                   >
-                    <Typography variant="caption" sx={{ color: '#ef4444', fontWeight: activeFingerKey === 'ring' ? 900 : 600, fontSize: '0.65rem', mb: 1, textTransform: 'uppercase', opacity: activeFingerKey === 'ring' ? 1 : 0.6 }}>
+                    <Typography variant="caption" sx={{ color: '#dc2626', fontWeight: activeFingerKey === 'ring' ? 900 : 600, fontSize: '0.65rem', mb: 1, textTransform: 'uppercase', opacity: activeFingerKey === 'ring' ? 1 : 0.6 }}>
                       Spirit
                     </Typography>
                     <Box 
                       sx={{ 
                         width: 22, 
                         height: 130, 
-                        background: activeFingerKey === 'ring' ? 'linear-gradient(to top, rgba(239,68,68,0.3), #ef4444)' : 'rgba(239,68,68, 0.08)', 
-                        border: activeFingerKey === 'ring' ? '1px solid #ef4444' : '1px solid rgba(239,68,68, 0.15)',
+                        background: activeFingerKey === 'ring' ? 'linear-gradient(to top, rgba(220,38,38,0.3), #dc2626)' : 'rgba(220,38,38, 0.08)', 
+                        border: activeFingerKey === 'ring' ? '1px solid #dc2626' : '1px solid rgba(220,38,38, 0.15)',
                         borderRadius: '10px 10px 0 0', 
-                        boxShadow: activeFingerKey === 'ring' ? '0 0 15px rgba(239,68,68,0.2)' : 'none',
+                        boxShadow: activeFingerKey === 'ring' ? '0 0 15px rgba(220,38,38,0.2)' : 'none',
                         transition: 'all 0.3s'
                       }} 
                     />
-                    <Typography variant="caption" sx={{ color: activeFingerKey === 'ring' ? '#ef4444' : 'rgba(255,255,255,0.4)', mt: 1, fontSize: '0.6rem', fontWeight: activeFingerKey === 'ring' ? 700 : 500 }}>Ring</Typography>
+                    <Typography variant="caption" sx={{ color: activeFingerKey === 'ring' ? '#dc2626' : 'rgba(255,255,255,0.4)', mt: 1, fontSize: '0.6rem', fontWeight: activeFingerKey === 'ring' ? 700 : 500 }}>Ring</Typography>
                   </Box>
 
                   {/* Middle: Mind */}
@@ -703,21 +793,21 @@ export default function GrainsPhilosophy() {
                     onClick={() => setActiveFingerKey('middle')}
                     sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: 2, cursor: 'pointer' }}
                   >
-                    <Typography variant="caption" sx={{ color: '#3b82f6', fontWeight: activeFingerKey === 'middle' ? 900 : 600, fontSize: '0.65rem', mb: 1, textTransform: 'uppercase', opacity: activeFingerKey === 'middle' ? 1 : 0.6 }}>
+                    <Typography variant="caption" sx={{ color: '#1d4ed8', fontWeight: activeFingerKey === 'middle' ? 900 : 600, fontSize: '0.65rem', mb: 1, textTransform: 'uppercase', opacity: activeFingerKey === 'middle' ? 1 : 0.6 }}>
                       Mind
                     </Typography>
                     <Box 
                       sx={{ 
                         width: 22, 
                         height: 150, 
-                        background: activeFingerKey === 'middle' ? 'linear-gradient(to top, rgba(59,130,246,0.3), #3b82f6)' : 'rgba(59,130,246, 0.08)', 
-                        border: activeFingerKey === 'middle' ? '1px solid #3b82f6' : '1px solid rgba(59,130,246, 0.15)',
+                        background: activeFingerKey === 'middle' ? 'linear-gradient(to top, rgba(29,78,216,0.3), #1d4ed8)' : 'rgba(29,78,216, 0.08)', 
+                        border: activeFingerKey === 'middle' ? '1px solid #1d4ed8' : '1px solid rgba(29,78,216, 0.15)',
                         borderRadius: '10px 10px 0 0', 
-                        boxShadow: activeFingerKey === 'middle' ? '0 0 15px rgba(59,130,246,0.2)' : 'none',
+                        boxShadow: activeFingerKey === 'middle' ? '0 0 15px rgba(29,78,216,0.2)' : 'none',
                         transition: 'all 0.3s'
                       }} 
                     />
-                    <Typography variant="caption" sx={{ color: activeFingerKey === 'middle' ? '#3b82f6' : 'rgba(255,255,255,0.4)', mt: 1, fontSize: '0.6rem', fontWeight: activeFingerKey === 'middle' ? 700 : 500 }}>Middle</Typography>
+                    <Typography variant="caption" sx={{ color: activeFingerKey === 'middle' ? '#1d4ed8' : 'rgba(255,255,255,0.4)', mt: 1, fontSize: '0.6rem', fontWeight: activeFingerKey === 'middle' ? 700 : 500 }}>Middle</Typography>
                   </Box>
 
                   {/* Index: Self-Consciousness */}
@@ -725,21 +815,21 @@ export default function GrainsPhilosophy() {
                     onClick={() => setActiveFingerKey('index')}
                     sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: 2, cursor: 'pointer' }}
                   >
-                    <Typography variant="caption" sx={{ color: '#ec4899', fontWeight: activeFingerKey === 'index' ? 900 : 600, fontSize: '0.65rem', mb: 1, textTransform: 'uppercase', opacity: activeFingerKey === 'index' ? 1 : 0.6 }}>
+                    <Typography variant="caption" sx={{ color: '#7c3aed', fontWeight: activeFingerKey === 'index' ? 900 : 600, fontSize: '0.65rem', mb: 1, textTransform: 'uppercase', opacity: activeFingerKey === 'index' ? 1 : 0.6 }}>
                       Self-C.
                     </Typography>
                     <Box 
                       sx={{ 
                         width: 22, 
                         height: 125, 
-                        background: activeFingerKey === 'index' ? 'linear-gradient(to top, rgba(236,72,153,0.3), #ec4899)' : 'rgba(236,72,153, 0.08)', 
-                        border: activeFingerKey === 'index' ? '1px solid #ec4899' : '1px solid rgba(236,72,153, 0.15)',
+                        background: activeFingerKey === 'index' ? 'linear-gradient(to top, rgba(124,58,237,0.3), #7c3aed)' : 'rgba(124,58,237, 0.08)', 
+                        border: activeFingerKey === 'index' ? '1px solid #7c3aed' : '1px solid rgba(124,58,237, 0.15)',
                         borderRadius: '10px 10px 0 0', 
-                        boxShadow: activeFingerKey === 'index' ? '0 0 15px rgba(236,72,153,0.2)' : 'none',
+                        boxShadow: activeFingerKey === 'index' ? '0 0 15px rgba(124,58,237,0.2)' : 'none',
                         transition: 'all 0.3s'
                       }} 
                     />
-                    <Typography variant="caption" sx={{ color: activeFingerKey === 'index' ? '#ec4899' : 'rgba(255,255,255,0.4)', mt: 1, fontSize: '0.6rem', fontWeight: activeFingerKey === 'index' ? 700 : 500 }}>Index</Typography>
+                    <Typography variant="caption" sx={{ color: activeFingerKey === 'index' ? '#7c3aed' : 'rgba(255,255,255,0.4)', mt: 1, fontSize: '0.6rem', fontWeight: activeFingerKey === 'index' ? 700 : 500 }}>Index</Typography>
                   </Box>
 
                   {/* Thumb: Super-Consciousness */}
@@ -747,21 +837,21 @@ export default function GrainsPhilosophy() {
                     onClick={() => setActiveFingerKey('thumb')}
                     sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: 2, cursor: 'pointer' }}
                   >
-                    <Typography variant="caption" sx={{ color: '#818cf8', fontWeight: activeFingerKey === 'thumb' ? 900 : 600, fontSize: '0.65rem', mb: 1, textTransform: 'uppercase', opacity: activeFingerKey === 'thumb' ? 1 : 0.6 }}>
+                    <Typography variant="caption" sx={{ color: '#7c3aed', fontWeight: activeFingerKey === 'thumb' ? 900 : 600, fontSize: '0.65rem', mb: 1, textTransform: 'uppercase', opacity: activeFingerKey === 'thumb' ? 1 : 0.6 }}>
                       Super-C.
                     </Typography>
                     <Box 
                       sx={{ 
                         width: 22, 
                         height: 80, 
-                        background: activeFingerKey === 'thumb' ? 'linear-gradient(to top, rgba(129,140,248,0.3), #818cf8)' : 'rgba(129,140,248, 0.08)', 
-                        border: activeFingerKey === 'thumb' ? '1px solid #818cf8' : '1px solid rgba(129,140,248, 0.15)',
+                        background: activeFingerKey === 'thumb' ? 'linear-gradient(to top, rgba(124,58,237,0.3), #7c3aed)' : 'rgba(124,58,237, 0.08)', 
+                        border: activeFingerKey === 'thumb' ? '1px solid #7c3aed' : '1px solid rgba(124,58,237, 0.15)',
                         borderRadius: '10px 10px 0 0', 
-                        boxShadow: activeFingerKey === 'thumb' ? '0 0 15px rgba(129,140,248,0.2)' : 'none',
+                        boxShadow: activeFingerKey === 'thumb' ? '0 0 15px rgba(124,58,237,0.2)' : 'none',
                         transition: 'all 0.3s'
                       }} 
                     />
-                    <Typography variant="caption" sx={{ color: activeFingerKey === 'thumb' ? '#818cf8' : 'rgba(255,255,255,0.4)', mt: 1, fontSize: '0.6rem', fontWeight: activeFingerKey === 'thumb' ? 700 : 500 }}>Thumb</Typography>
+                    <Typography variant="caption" sx={{ color: activeFingerKey === 'thumb' ? '#7c3aed' : 'rgba(255,255,255,0.4)', mt: 1, fontSize: '0.6rem', fontWeight: activeFingerKey === 'thumb' ? 700 : 500 }}>Thumb</Typography>
                   </Box>
                 </Box>
               </Box>
@@ -799,7 +889,7 @@ export default function GrainsPhilosophy() {
 
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <Box>
-                    <Typography variant="caption" sx={{ color: '#fbbf24', fontWeight: 600, display: 'block' }}>
+                    <Typography variant="caption" sx={{ color: activeFinger.color, fontWeight: 800, textTransform: 'uppercase', display: 'block' }}>
                       Recommended System Book
                     </Typography>
                     <Typography variant="body2" sx={{ color: '#ffffff', fontWeight: 850 }}>

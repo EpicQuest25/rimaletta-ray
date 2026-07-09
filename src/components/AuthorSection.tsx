@@ -5,6 +5,71 @@ import { LibraryMusic as LibraryMusicIcon, School as SchoolIcon } from '@mui/ico
 import authorPhoto from '../assets/downloaded/rimeletta_ray_profile_pic.jpg';
 
 export default function AuthorSection() {
+  const renderColorCodedText = (text: string) => {
+    const keywords = [
+      { pattern: /\b(Auto-Suggestive)\b/gi, color: '#dc2626', weight: 800 },
+      { pattern: /\b(Digital Cycle)\b/gi, color: '#1d4ed8', weight: 800 },
+      { pattern: /\b(Digital)\b/gi, color: '#1d4ed8', weight: 800 },
+      { pattern: /\b(Quantum Psychology)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(Quantum)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(body)\b/gi, color: '#16a34a', weight: 800 },
+      { pattern: /\b(physical)\b/gi, color: '#16a34a', weight: 800 },
+      { pattern: /\b(spirit)\b/gi, color: '#dc2626', weight: 800 },
+      { pattern: /\b(spiritual)\b/gi, color: '#dc2626', weight: 800 },
+      { pattern: /\b(emotional)\b/gi, color: '#dc2626', weight: 800 },
+      { pattern: /\b(mind)\b/gi, color: '#1d4ed8', weight: 800 },
+      { pattern: /\b(mental)\b/gi, color: '#1d4ed8', weight: 800 },
+      { pattern: /\b(self-consciousness)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(super-consciousness)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(universal)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(soul-symmetry)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(Soul-Symmetry)\b/gi, color: '#7c3aed', weight: 900 },
+      { pattern: /\b(Self-Ascension)\b/gi, color: '#7c3aed', weight: 900 },
+      { pattern: /\b(Self-Awareness)\b/gi, color: '#16a34a', weight: 800 },
+      { pattern: /\b(Self-Refining)\b/gi, color: '#dc2626', weight: 800 },
+      { pattern: /\b(Self-Installation)\b/gi, color: '#1d4ed8', weight: 800 },
+      { pattern: /\b(Self-Realization)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(Self-Salvation)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(Self-Resurrection)\b/gi, color: '#ed668c', weight: 800 },
+      { pattern: /\b(Literary Ecosystem)\b/gi, color: '#ed668c', weight: 800 }
+    ];
+
+    let parts: { text: string; color?: string; weight?: number }[] = [{ text }];
+
+    keywords.forEach((kw) => {
+      let newParts: typeof parts = [];
+      parts.forEach((p) => {
+        if (p.color) {
+          newParts.push(p);
+        } else {
+          const splitText = p.text.split(kw.pattern);
+          splitText.forEach((t, i) => {
+            if (i % 2 === 1) {
+              newParts.push({ text: t, color: kw.color, weight: kw.weight });
+            } else if (t) {
+              newParts.push({ text: t });
+            }
+          });
+        }
+      });
+      parts = newParts;
+    });
+
+    return (
+      <>
+        {parts.map((p, idx) => (
+          <Box
+            key={idx}
+            component="span"
+            sx={p.color ? { color: p.color, fontWeight: p.weight || 'bold' } : undefined}
+          >
+            {p.text}
+          </Box>
+        ))}
+      </>
+    );
+  };
+
   return (
     <Box
       id="author"
@@ -49,7 +114,7 @@ export default function AuthorSection() {
                 right: 0,
                 bottom: -40,
                 fontSize: '5rem',
-                color: '#6366f1',
+                color: '#ed668c',
                 opacity: 0.25,
                 fontFamily: 'serif',
               }
@@ -57,7 +122,7 @@ export default function AuthorSection() {
           >
             Don’t teach just a subject. Teach the whole person!
           </Typography>
-          <Typography variant="subtitle1" sx={{ color: '#818cf8', fontWeight: 800, mt: 2 }}>
+          <Typography variant="subtitle1" sx={{ color: '#ed668c', fontWeight: 800, mt: 2 }}>
             — LEO VYGOTSKY
           </Typography>
         </Box>
@@ -95,9 +160,21 @@ export default function AuthorSection() {
           </Grid>
 
           <Grid item xs={12} md={7}>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>
-              <SchoolIcon sx={{ color: '#22d3ee' }} />
-              <Typography variant="subtitle2" sx={{ color: '#22d3ee', fontWeight: 800, letterSpacing: '0.05em' }}>
+            <Box
+              sx={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 1.5,
+                px: 2,
+                py: 0.8,
+                borderRadius: '30px',
+                background: 'rgba(237, 102, 140, 0.08)',
+                border: '1px solid rgba(237, 102, 140, 0.25)',
+                mb: 3,
+              }}
+            >
+              <SchoolIcon sx={{ color: '#ed668c' }} />
+              <Typography variant="subtitle2" sx={{ color: '#ed668c', fontWeight: 800, letterSpacing: '0.05em' }}>
                 PROFESSORIAL BIOGRAPHY & SYSTÈMIC FOCUS
               </Typography>
             </Box>
@@ -108,7 +185,7 @@ export default function AuthorSection() {
                 fontFamily: '"Outfit", sans-serif',
                 fontWeight: 900,
                 mb: 3,
-                color: '#ffffff',
+                color: '#ed668c',
                 fontSize: { xs: '1.8rem', md: '2.4rem' }
               }}
             >
@@ -116,19 +193,16 @@ export default function AuthorSection() {
             </Typography>
 
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.5, color: '#cbd5e1' }}>
-              <Typography variant="body1" sx={{ lineHeight: 1.8, fontWeight: 500 }}>
+              <Typography variant="body1" sx={{ lineHeight: 1.8, fontWeight: 550 }}>
                 Dr. Rimaletta Ray is a former professor of Psycholinguistics who has taught at both the{' '}
                 <strong>University of Connecticut (UCONN)</strong> and <strong>Norwalk Community College</strong>.
                 She holds a Ph.D. from the prestigious Moscow Brain Research Institute.
               </Typography>
-              <Typography variant="body1" sx={{ lineHeight: 1.8, fontWeight: 500 }}>
-                Driven by an obsessive calling to help humanity retain its evolutionary edge, she has dedicated the last
-                30 years to orchestrating a complete **Literary Ecosystem** for self-resurrection.
+              <Typography variant="body1" sx={{ lineHeight: 1.8, fontWeight: 550 }}>
+                {renderColorCodedText('Driven by an obsessive calling to help humanity retain its evolutionary edge, she has dedicated the last 30 years to orchestrating a complete Literary Ecosystem for Self-Resurrection.')}
               </Typography>
-              <Typography variant="body1" sx={{ lineHeight: 1.8, fontWeight: 500 }}>
-                Her methods integrate psycholinguistic programming, auto-suggestive structure, and quantum frequencies
-                to help readers "decipher the AI black box," govern technology constructively, and build space-time
-                coherent human fractals.
+              <Typography variant="body1" sx={{ lineHeight: 1.8, fontWeight: 550 }}>
+                {renderColorCodedText('Her methods integrate psycholinguistic programming, auto-suggestive structure, and quantum frequencies to help readers "decipher the AI black box," govern technology constructively, and build space-time coherent human fractals.')}
               </Typography>
             </Box>
           </Grid>
@@ -143,7 +217,7 @@ export default function AuthorSection() {
               fontFamily: '"Outfit", sans-serif',
               fontWeight: 900,
               mb: 2,
-              color: '#ffffff',
+              color: '#ed668c',
               fontSize: { xs: '1.8rem', md: '2.4rem' }
             }}
           >
@@ -167,7 +241,7 @@ export default function AuthorSection() {
                   overflow: 'hidden',
                   background: 'rgba(15, 16, 38, 0.75)',
                   boxShadow: '0 10px 25px rgba(0,0,0,0.3)',
-                  border: '2px solid #3f51b5',
+                  border: '2px solid #ed668c',
                   height: '420px',
                 }}
               >
@@ -188,18 +262,18 @@ export default function AuthorSection() {
               <Box
                 sx={{
                   background: 'rgba(15, 16, 38, 0.75)',
-                  border: '2px solid #d97808',
+                  border: '2px solid #ed668c',
                   p: 5,
                   borderRadius: 4,
                   textAlign: 'center',
-                  boxShadow: '0 10px 25px rgba(217, 120, 8, 0.15)',
+                  boxShadow: '0 10px 25px rgba(237, 102, 140, 0.12)',
                 }}
               >
-                <LibraryMusicIcon sx={{ color: '#fbbf24', fontSize: '2.8rem', mb: 2 }} />
+                <LibraryMusicIcon sx={{ color: '#ed668c', fontSize: '2.8rem', mb: 2 }} />
                 <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#ffffff', mb: 1.5, fontSize: '1.4rem' }}>
                   Turn on the Sun of Your Soul.
                 </Typography>
-                <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#fbbf24', fontSize: '1.4rem' }}>
+                <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#ed668c', fontSize: '1.4rem' }}>
                   Be Happy and Whole!
                 </Typography>
               </Box>
@@ -213,10 +287,10 @@ export default function AuthorSection() {
             mt: 10,
             p: { xs: 4, md: 6 },
             borderRadius: 5,
-            background: 'linear-gradient(135deg, #d97808 0%, #fbbf24 100%)',
-            border: '3px solid #b45309',
+            backgroundColor: '#facc15',
+            border: '3px solid #eab308',
             textAlign: 'center',
-            boxShadow: '0 15px 35px rgba(217, 120, 8, 0.3)',
+            boxShadow: '0 15px 35px rgba(250, 204, 21, 0.35)',
           }}
         >
           <Typography
@@ -224,10 +298,9 @@ export default function AuthorSection() {
             sx={{
               fontFamily: '"Outfit", sans-serif',
               fontWeight: 900,
-              color: '#ffffff',
+              color: '#1d4ed8',
               mb: 2.5,
               fontSize: { xs: '1.8rem', sm: '2.2rem' },
-              textShadow: '0 2px 4px rgba(0,0,0,0.15)',
             }}
           >
             Develop Personal Magnetism
@@ -235,27 +308,30 @@ export default function AuthorSection() {
           <Typography
             variant="body1"
             sx={{
-              color: '#ffffff',
+              color: '#1e1b4b',
               fontSize: '1.2rem',
               fontWeight: 700,
               mb: 4,
               maxWidth: '800px',
               mx: 'auto',
               lineHeight: 1.6,
-              textShadow: '0 1px 3px rgba(0,0,0,0.1)',
             }}
           >
-            Develop personal magnetism physically, emotionally, mentally, spiritually, and universally in three cycles of our present day life.
+            Develop personal magnetism{' '}
+            <Box component="span" sx={{ color: '#16a34a', textShadow: '0 1px 2px rgba(255, 255, 255, 0.6)' }}>physically</Box>,{' '}
+            <Box component="span" sx={{ color: '#dc2626', textShadow: '0 1px 2px rgba(255, 255, 255, 0.6)' }}>emotionally</Box>,{' '}
+            <Box component="span" sx={{ color: '#1d4ed8', textShadow: '0 1px 2px rgba(255, 255, 255, 0.6)' }}>mentally</Box>,{' '}
+            <Box component="span" sx={{ color: '#7c3aed', textShadow: '0 1px 2px rgba(255, 255, 255, 0.6)' }}>spiritually</Box>, and{' '}
+            <Box component="span" sx={{ color: '#7c3aed', textShadow: '0 1px 2px rgba(255, 255, 255, 0.6)' }}>universally</Box> in three cycles of our present day life.
           </Typography>
           <Typography
             variant="h3"
             sx={{
               fontFamily: '"Outfit", sans-serif',
               fontWeight: 950,
-              color: '#ffffff',
+              color: '#dc2626',
               fontSize: { xs: '2.2rem', sm: '3.2rem' },
               letterSpacing: '0.02em',
-              textShadow: '0 3px 8px rgba(0,0,0,0.2)',
             }}
           >
             Wow! <Box component="span" sx={{ fontSize: '0.8em', textTransform: 'lowercase', fontWeight: 800 }}>we live</Box> Now!

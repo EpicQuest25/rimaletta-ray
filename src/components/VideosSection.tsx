@@ -109,6 +109,65 @@ export default function VideosSection() {
   const [activeVideoIndex, setActiveVideoIndex] = useState(0);
   const activeVideo = videosData[activeVideoIndex];
 
+  const renderColorCodedText = (text: string) => {
+    const keywords = [
+      { pattern: /\b(Auto-Suggestive)\b/gi, color: '#dc2626', weight: 800 },
+      { pattern: /\b(Digital Cycle)\b/gi, color: '#1d4ed8', weight: 800 },
+      { pattern: /\b(Digital)\b/gi, color: '#1d4ed8', weight: 800 },
+      { pattern: /\b(Quantum Psychology)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(Quantum)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(body)\b/gi, color: '#16a34a', weight: 800 },
+      { pattern: /\b(physical)\b/gi, color: '#16a34a', weight: 800 },
+      { pattern: /\b(spirit)\b/gi, color: '#dc2626', weight: 800 },
+      { pattern: /\b(spiritual)\b/gi, color: '#dc2626', weight: 800 },
+      { pattern: /\b(emotional)\b/gi, color: '#dc2626', weight: 800 },
+      { pattern: /\b(mind)\b/gi, color: '#1d4ed8', weight: 800 },
+      { pattern: /\b(mental)\b/gi, color: '#1d4ed8', weight: 800 },
+      { pattern: /\b(self-consciousness)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(super-consciousness)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(universal)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(soul-symmetry)\b/gi, color: '#7c3aed', weight: 800 },
+      { pattern: /\b(Self-Ascension)\b/gi, color: '#7c3aed', weight: 900 },
+      { pattern: /\b(I AM Free to Be the Best of Me!)\b/gi, color: '#16a34a', weight: 900 },
+      { pattern: /\b(Self-Resurrection)\b/gi, color: '#ed668c', weight: 800 }
+    ];
+
+    let parts: { text: string; color?: string; weight?: number }[] = [{ text }];
+
+    keywords.forEach((kw) => {
+      let newParts: typeof parts = [];
+      parts.forEach((p) => {
+        if (p.color) {
+          newParts.push(p);
+        } else {
+          const splitText = p.text.split(kw.pattern);
+          splitText.forEach((t, i) => {
+            if (i % 2 === 1) {
+              newParts.push({ text: t, color: kw.color, weight: kw.weight });
+            } else if (t) {
+              newParts.push({ text: t });
+            }
+          });
+        }
+      });
+      parts = newParts;
+    });
+
+    return (
+      <>
+        {parts.map((p, idx) => (
+          <Box
+            key={idx}
+            component="span"
+            sx={p.color ? { color: p.color, fontWeight: p.weight || 'bold' } : undefined}
+          >
+            {p.text}
+          </Box>
+        ))}
+      </>
+    );
+  };
+
   return (
     <Box
       id="videos"
@@ -132,19 +191,17 @@ export default function VideosSection() {
             fontSize: { xs: '2.2rem', md: '3rem' },
             fontWeight: 900,
             mb: 2,
-            background: 'linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
+            color: '#ed668c',
           }}
         >
-          Featured Promo Videos
+          Featured Promo Videos!
         </Typography>
         <Typography
           variant="body1"
           align="center"
           sx={{ color: '#cbd5e1', fontWeight: 600, maxWidth: '600px', mx: 'auto', mb: 8 }}
         >
-          Watch Dr. Rimaletta Ray introduce the key pillars of the Holistic System of Self-Resurrection.
+          Watch Dr. Rimaletta Ray introduce the key pillars of the <Box component="span" sx={{ color: '#ed668c', fontWeight: 700 }}>Holistic System of Self-Resurrection</Box>.
         </Typography>
 
         {/* Video Theatre Layout */}
@@ -217,10 +274,10 @@ export default function VideosSection() {
               </Box>
 
               {/* Video Info Overlay */}
-              <Box sx={{ p: 4, background: 'rgba(15, 16, 38, 0.75)', borderTop: '2px solid #0f766e' }}>
+              <Box sx={{ p: 4, background: 'rgba(15, 16, 38, 0.75)', borderTop: '2px solid #ed668c' }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1.5 }}>
-                  <SmartDisplayIcon sx={{ color: '#22d3ee' }} />
-                  <Typography variant="subtitle2" sx={{ color: '#22d3ee', fontWeight: 800, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                  <SmartDisplayIcon sx={{ color: '#ed668c' }} />
+                  <Typography variant="subtitle2" sx={{ color: '#ed668c', fontWeight: 800, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                     Now Playing
                   </Typography>
                 </Box>
@@ -228,7 +285,7 @@ export default function VideosSection() {
                   {activeVideo.title}
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#cbd5e1', fontWeight: 550, lineHeight: 1.7 }}>
-                  {activeVideo.description}
+                  {renderColorCodedText(activeVideo.description)}
                 </Typography>
                 <Button
                   variant="outlined"
@@ -285,10 +342,10 @@ export default function VideosSection() {
                         borderRadius: 3,
                         cursor: 'pointer',
                         transition: 'all 0.3s',
-                        background: isActive ? 'rgba(15, 118, 110, 0.15)' : 'transparent',
-                        border: isActive ? '2px solid #0f766e' : '1px solid transparent',
+                        background: isActive ? 'rgba(237, 102, 140, 0.12)' : 'transparent',
+                        border: isActive ? '2px solid #ed668c' : '1px solid transparent',
                         '&:hover': {
-                          background: isActive ? 'rgba(15, 118, 110, 0.2)' : 'rgba(255, 255, 255, 0.03)',
+                          background: isActive ? 'rgba(237, 102, 140, 0.18)' : 'rgba(255, 255, 255, 0.03)',
                         },
                       }}
                     >
@@ -333,7 +390,7 @@ export default function VideosSection() {
                           variant="subtitle2"
                           noWrap
                           sx={{
-                            color: isActive ? '#22d3ee' : '#ffffff',
+                            color: isActive ? '#ed668c' : '#ffffff',
                             fontWeight: 750,
                             mb: 0.5,
                           }}
@@ -353,7 +410,7 @@ export default function VideosSection() {
                             lineHeight: 1.4,
                           }}
                         >
-                          {video.description}
+                          {renderColorCodedText(video.description)}
                         </Typography>
                       </Box>
                     </Box>

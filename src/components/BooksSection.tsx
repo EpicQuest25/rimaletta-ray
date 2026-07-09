@@ -321,13 +321,13 @@ export default function BooksSection() {
   const getCycleColor = (cycle: string) => {
     switch (cycle) {
       case 'auto':
-        return '#d97706'; // Amber
+        return '#dc2626'; // Red
       case 'digital':
-        return '#0891b2'; // Cyan
+        return '#1d4ed8'; // Blue
       case 'quantum':
-        return '#7c3aed'; // Purple
+        return '#7c3aed'; // Violet
       case 'other':
-        return '#db2777'; // Pink/Rose
+        return '#ed668c'; // Pink
       default:
         return '#4f46e5';
     }
@@ -408,33 +408,34 @@ export default function BooksSection() {
           align="center"
           sx={{
             fontSize: { xs: '2.2rem', md: '3rem' },
-            fontWeight: 800,
+            fontWeight: 900,
             mb: 1,
-            color: '#ffffff',
+            color: '#ed668c',
           }}
         >
-          Inspirational psychology for self-ecology
+          Inspirational Psychology for Self-Ecology!
         </Typography>
         <Typography
           variant="h5"
           align="center"
           sx={{
             fontSize: { xs: '1.1rem', md: '1.3rem' },
-            fontWeight: 700,
-            color: '#cbd5e1',
+            fontWeight: 900,
             mb: 4,
             fontFamily: '"Outfit", sans-serif',
           }}
         >
-          (auto suggestive, digital, quantum cycles)
+          (<Box component="span" sx={{ color: '#dc2626' }}>Auto-Suggestive</Box>,{' '}
+          <Box component="span" sx={{ color: '#60a5fa' }}>Digital</Box>,{' '}
+          <Box component="span" sx={{ color: '#7c3aed' }}>Quantum Cycles</Box>)
         </Typography>
         <Typography
           variant="body1"
           align="center"
           sx={{ color: '#cbd5e1', fontWeight: 600, maxWidth: '700px', mx: 'auto', mb: 8 }}
         >
-          The system starts with <strong>“I Am Free to Be the Best of Me!”</strong> and culminates with{' '}
-          <strong>“Self-Ascension!”</strong>. Pick the realm of life you need to refine in any of the cycles.
+          The system starts with <Box component="span" sx={{ color: '#16a34a', fontWeight: 900 }}>“I Am Free to Be the Best of Me!”</Box> and culminates with{' '}
+          <Box component="span" sx={{ color: '#7c3aed', fontWeight: 900 }}>“Self-Ascension!”</Box>. Pick the realm of life you need to refine in any of the cycles.
         </Typography>
 
         {/* FEATURED BOOK: Self-Ascension */}
@@ -443,8 +444,8 @@ export default function BooksSection() {
             variant="h5"
             sx={{
               fontFamily: '"Outfit", sans-serif',
-              fontWeight: 700,
-              color: '#818cf8',
+              fontWeight: 900,
+              color: '#ed668c',
               mb: 3,
               display: 'flex',
               alignItems: 'center',
@@ -453,7 +454,7 @@ export default function BooksSection() {
               letterSpacing: '0.05em',
             }}
           >
-            <MenuBookIcon sx={{ color: '#818cf8' }} /> FEATURED CONCLUDING SYSTEM BOOK
+            <MenuBookIcon sx={{ color: '#ed668c' }} /> FEATURED CONCLUDING SYSTEM BOOK
           </Typography>
 
           <Grid
@@ -488,7 +489,7 @@ export default function BooksSection() {
             <Grid item xs={12} md={8}>
               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 2 }}>
                 <Chip label="Quantum Cycle" color="secondary" sx={{ fontWeight: 700, background: '#7c3aed', color: '#ffffff' }} />
-                <Chip label="Universal Dimension" variant="outlined" sx={{ color: '#818cf8', borderColor: 'rgba(124, 58, 237, 0.4)' }} />
+                <Chip label="Universal Dimension" variant="outlined" sx={{ color: '#7c3aed', borderColor: 'rgba(124, 58, 237, 0.4)' }} />
               </Box>
               <Typography
                 variant="h3"
@@ -503,10 +504,16 @@ export default function BooksSection() {
                 Self-Ascension
               </Typography>
               <Typography variant="body1" sx={{ color: '#cbd5e1', mb: 4, fontSize: '1.05rem', lineHeight: 1.7 }}>
-                Serving as the culminating volume of the Quantum Cycle and the overview of the entire Holistic System,
-                <strong> Self-Ascension</strong> presenting the final stage of self-actualization. It integrates
-                Auto-Suggestive, Digital, and Quantum Psychology to align body, spirit, mind, self-consciousness, and
-                super-consciousness to prepare humans for a cooperative evolutionary future alongside emerging AI.
+                Serving as the culminating volume of the Quantum Cycle and the overview of the entire Holistic System,{' '}
+                <Box component="span" sx={{ color: '#7c3aed', fontWeight: 900 }}>Self-Ascension</Box> presents the final stage of self-actualization. It integrates{' '}
+                <Box component="span" sx={{ color: '#dc2626', fontWeight: 700 }}>Auto-Suggestive</Box>,{' '}
+                <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 700 }}>Digital</Box>, and{' '}
+                <Box component="span" sx={{ color: '#7c3aed', fontWeight: 700 }}>Quantum Psychology</Box> to align{' '}
+                <Box component="span" sx={{ color: '#16a34a', fontWeight: 700 }}>body</Box>,{' '}
+                <Box component="span" sx={{ color: '#dc2626', fontWeight: 700 }}>spirit</Box>,{' '}
+                <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 700 }}>mind</Box>,{' '}
+                <Box component="span" sx={{ color: '#7c3aed', fontWeight: 700 }}>self-consciousness</Box>, and{' '}
+                <Box component="span" sx={{ color: '#7c3aed', fontWeight: 700 }}>super-consciousness</Box> to prepare humans for a cooperative evolutionary future alongside emerging AI.
               </Typography>
 
               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
@@ -528,7 +535,7 @@ export default function BooksSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   variant="outlined"
-                  sx={{ borderColor: '#818cf8', color: '#818cf8', '&:hover': { borderColor: '#7c3aed', background: 'rgba(124, 58, 237, 0.05)' } }}
+                  sx={{ borderColor: '#7c3aed', color: '#7c3aed', '&:hover': { borderColor: '#7c3aed', background: 'rgba(124, 58, 237, 0.05)' } }}
                 >
                   Buy Hardcover
                 </Button>
@@ -566,7 +573,7 @@ export default function BooksSection() {
                 fontFamily: '"Outfit", sans-serif',
                 fontWeight: 700,
                 fontSize: { xs: '0.8rem', sm: '1rem' },
-                color: activeTab === 0 ? '#d97706' : '#64748b',
+                color: activeTab === 0 ? '#dc2626' : '#64748b',
                 px: { xs: 1.5, sm: 3 },
                 minWidth: { xs: 'auto', sm: 120 },
               }}
@@ -577,7 +584,7 @@ export default function BooksSection() {
                 fontFamily: '"Outfit", sans-serif',
                 fontWeight: 700,
                 fontSize: { xs: '0.8rem', sm: '1rem' },
-                color: activeTab === 1 ? '#0891b2' : '#64748b',
+                color: activeTab === 1 ? '#1d4ed8' : '#64748b',
                 px: { xs: 1.5, sm: 3 },
                 minWidth: { xs: 'auto', sm: 120 },
               }}
@@ -599,7 +606,7 @@ export default function BooksSection() {
                 fontFamily: '"Outfit", sans-serif',
                 fontWeight: 700,
                 fontSize: { xs: '0.8rem', sm: '1rem' },
-                color: activeTab === 3 ? '#db2777' : '#64748b',
+                color: activeTab === 3 ? '#ed668c' : '#64748b',
                 px: { xs: 1.5, sm: 3 },
                 minWidth: { xs: 'auto', sm: 120 },
               }}
