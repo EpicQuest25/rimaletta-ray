@@ -91,7 +91,7 @@ export default function Hero() {
                   WebkitTextFillColor: 'transparent',
                 }}
               >
-                Self-Resurrection
+                <Box component="span" sx={{ color: '#dc2626', WebkitTextFillColor: '#dc2626', fontWeight: 900 }}>Self</Box>-Resurrection
               </Box>
             </Typography>
 
@@ -107,9 +107,9 @@ export default function Hero() {
               }}
             >
               In three time-pursuing cycles, presented by Dr. Ray as:{' '}
-              <Box component="span" sx={{ color: '#b45309', fontWeight: 900 }}>Auto-Suggestive</Box>,{' '}
+              <Box component="span" sx={{ color: '#dc2626', fontWeight: 900 }}>Auto-Suggestive</Box>,{' '}
               <Box component="span" sx={{ color: '#0369a1', fontWeight: 900 }}>Digital</Box>, and{' '}
-              <Box component="span" sx={{ color: '#6d28d9', fontWeight: 900 }}>Quantum Psychology</Box> for Self-Ecology.
+              <Box component="span" sx={{ color: '#3b0764', fontWeight: 900 }}>Quantum Psychology</Box> for Self-Ecology.
             </Typography>
 
             <Box
@@ -142,7 +142,7 @@ export default function Hero() {
                     WebkitTextFillColor: 'transparent',
                   }}
                 >
-                  Wow! <Box component="span" sx={{ fontSize: '0.8em', fontWeight: 800 }}>we Live</Box> Now!
+                  Wow! <Box component="span" sx={{ fontSize: '0.8em', fontWeight: 800 }}>We Live</Box> Now!
                 </Typography>
               </Box>
             </Box>
