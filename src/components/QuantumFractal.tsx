@@ -96,17 +96,17 @@ export default function QuantumFractal() {
             sx={{
               display: 'inline-flex',
               alignItems: 'center',
-              gap: 1.5,
-              px: 3,
-              py: 1,
-              borderRadius: '30px',
+              gap: 2,
+              px: 4.5,
+              py: 1.5,
+              borderRadius: '40px',
               background: 'rgba(237, 102, 140, 0.08)',
               border: '1px solid rgba(237, 102, 140, 0.25)',
               mb: 3,
             }}
           >
-            <AutoAwesomeIcon sx={{ color: '#ed668c', fontSize: '1.3rem' }} />
-            <Typography variant="subtitle1" sx={{ color: '#ed668c', fontWeight: 950, fontFamily: '"Outfit", sans-serif', letterSpacing: '0.05em' }}>
+            <AutoAwesomeIcon sx={{ color: '#ed668c', fontSize: '1.8rem' }} />
+            <Typography variant="subtitle1" sx={{ color: '#ed668c', fontWeight: 950, fontFamily: '"Outfit", sans-serif', fontSize: '1.45rem', letterSpacing: '0.05em' }}>
               DIGITIZED SELF-ACCULTURATION<Box component="span" sx={{ color: '#dc2626' }}>!</Box>
             </Typography>
           </Box>
@@ -118,10 +118,10 @@ export default function QuantumFractal() {
               fontSize: { xs: '2.2rem', md: '3rem' },
               fontWeight: 900,
               mb: 2,
-              color: '#ed668c',
+              color: '#facc15',
             }}
           >
-            Our Intellectually Spiritualized Human Fractal
+            Our Intellectually Spiritualized Human Fractal In Action
           </Typography>
           <Typography
             variant="body1"
