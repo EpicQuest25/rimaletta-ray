@@ -333,11 +333,6 @@ export default function BooksSection() {
     }
   };
 
-  const getBgGradient = (_cycle: string) => {
-    return '#070715';
-  };
-
-
   // Render a beautiful book cover fallback
   const renderFallbackCover = (book: Book) => {
     const color = getCycleColor(book.cycle);
