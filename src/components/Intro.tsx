@@ -24,11 +24,25 @@ export default function Intro() {
           sx={{
             fontSize: { xs: '2rem', md: '2.8rem' },
             fontWeight: 900,
-            mb: 2,
-            color: '#dc2626',
+            mb: 1,
+            color: '#ed668c',
           }}
         >
           The Quantum Shift of Self-Development
+        </Typography>
+        <Typography
+          variant="h5"
+          align="center"
+          sx={{
+            fontSize: { xs: '2rem', md: '2.8rem' },
+            fontWeight: 900,
+            mb: 2,
+            color: '#facc15',
+            letterSpacing: '0.06em',
+            fontFamily: '"Outfit", sans-serif',
+          }}
+        >
+          Holistic Psychology For Self Ecology!
         </Typography>
         <Typography
           variant="body1"
