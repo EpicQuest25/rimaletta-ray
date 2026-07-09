@@ -188,53 +188,53 @@ export default function Intro() {
         <Grid container spacing={3} sx={{ mb: 8 }}>
           {/* Rule A */}
           <Grid item xs={12} md={4}>
-            <Card sx={{ height: '100%', background: 'rgba(15, 16, 38, 0.75)', borderColor: '#1a73e8', borderStyle: 'solid', borderWidth: '2px', borderRadius: 4, boxShadow: '0 8px 24px rgba(26, 115, 232, 0.15)' }}>
-              <CardContent sx={{ p: 4, textAlign: 'center' }}>
-                <Box sx={{ width: 60, height: 60, borderRadius: '50%', background: 'rgba(99,102,241,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 3 }}>
-                  <PsychologyIcon sx={{ color: '#818cf8', fontSize: '2.2rem' }} />
+            <Box sx={{ height: '100%', backgroundColor: '#facc15', borderColor: '#eab308', borderStyle: 'solid', borderWidth: '2px', borderRadius: 4, boxShadow: '0 8px 32px rgba(250, 204, 21, 0.35)', p: 4, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <Box sx={{ textAlign: 'center' }}>
+                <Box sx={{ width: 60, height: 60, borderRadius: '50%', background: 'rgba(29, 78, 216, 0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 3 }}>
+                  <PsychologyIcon sx={{ color: '#1d4ed8', fontSize: '2.2rem' }} />
                 </Box>
-                <Typography variant="h5" sx={{ color: '#ffffff', mb: 2, fontWeight: 900 }}>
+                <Typography variant="h5" sx={{ color: '#1d4ed8', mb: 2, fontWeight: 900 }}>
                   A) Total Integration
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#94a3b8', fontWeight: 550, lineHeight: 1.6 }}>
+                <Typography variant="body2" sx={{ color: '#dc2626', fontWeight: 700, lineHeight: 1.6 }}>
                   Reality and us are totally integrated. Every pulse of the universe is mirrored within our human fractal.
                 </Typography>
-              </CardContent>
-            </Card>
+              </Box>
+            </Box>
           </Grid>
 
           {/* Rule B */}
           <Grid item xs={12} md={4}>
-            <Card sx={{ height: '100%', background: 'rgba(15, 16, 38, 0.75)', borderColor: '#d97808', borderStyle: 'solid', borderWidth: '2px', borderRadius: 4, boxShadow: '0 8px 24px rgba(217, 120, 8, 0.15)' }}>
-              <CardContent sx={{ p: 4, textAlign: 'center' }}>
-                <Box sx={{ width: 60, height: 60, borderRadius: '50%', background: 'rgba(251,191,36,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 3 }}>
-                  <ShieldIcon sx={{ color: '#fbbf24', fontSize: '2.2rem' }} />
+            <Box sx={{ height: '100%', backgroundColor: '#22d3ee', borderColor: '#0891b2', borderStyle: 'solid', borderWidth: '2px', borderRadius: 4, boxShadow: '0 8px 32px rgba(34, 211, 238, 0.35)', p: 4, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <Box sx={{ textAlign: 'center' }}>
+                <Box sx={{ width: 60, height: 60, borderRadius: '50%', background: 'rgba(220, 38, 38, 0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 3 }}>
+                  <ShieldIcon sx={{ color: '#dc2626', fontSize: '2.2rem' }} />
                 </Box>
-                <Typography variant="h5" sx={{ color: '#ffffff', mb: 2, fontWeight: 900 }}>
+                <Typography variant="h5" sx={{ color: '#dc2626', mb: 2, fontWeight: 900 }}>
                   B) Sense of Measure
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#94a3b8', fontWeight: 550, lineHeight: 1.6 }}>
+                <Typography variant="body2" sx={{ color: '#e84b9d', fontWeight: 700, lineHeight: 1.6 }}>
                   The sense of measure is our ultimate treasure. Harmonizing binary digits with natural human rhythms.
                 </Typography>
-              </CardContent>
-            </Card>
+              </Box>
+            </Box>
           </Grid>
 
           {/* Rule C */}
           <Grid item xs={12} md={4}>
-            <Card sx={{ height: '100%', background: 'rgba(15, 16, 38, 0.75)', borderColor: '#0891b2', borderStyle: 'solid', borderWidth: '2px', borderRadius: 4, boxShadow: '0 8px 24px rgba(8, 145, 178, 0.15)' }}>
-              <CardContent sx={{ p: 4, textAlign: 'center' }}>
-                <Box sx={{ width: 60, height: 60, borderRadius: '50%', background: 'rgba(34,211,238,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 3 }}>
-                  <MemoryIcon sx={{ color: '#22d3ee', fontSize: '2.2rem' }} />
+            <Box sx={{ height: '100%', backgroundColor: '#facc15', borderColor: '#eab308', borderStyle: 'solid', borderWidth: '2px', borderRadius: 4, boxShadow: '0 8px 32px rgba(250, 204, 21, 0.35)', p: 4, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <Box sx={{ textAlign: 'center' }}>
+                <Box sx={{ width: 60, height: 60, borderRadius: '50%', background: 'rgba(47, 177, 187, 0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 3 }}>
+                  <MemoryIcon sx={{ color: '#2fb1bb', fontSize: '2.2rem' }} />
                 </Box>
-                <Typography variant="h5" sx={{ color: '#ffffff', mb: 2, fontWeight: 900 }}>
+                <Typography variant="h5" sx={{ color: '#2fb1bb', mb: 2, fontWeight: 900, textShadow: '0 1px 2px rgba(30, 27, 75, 0.2)' }}>
                   C) Less is More!
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#94a3b8', fontWeight: 550, lineHeight: 1.6 }}>
+                <Typography variant="body2" sx={{ color: '#2fb1bb', fontWeight: 700, lineHeight: 1.6, textShadow: '0 1px 2px rgba(30, 27, 75, 0.2)' }}>
                   Simplifying information flow. Eliminating cognitive clutter to let deep, spiritual intelligence take root.
                 </Typography>
-              </CardContent>
-            </Card>
+              </Box>
+            </Box>
           </Grid>
         </Grid>
 
