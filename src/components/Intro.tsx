@@ -143,28 +143,28 @@ export default function Intro() {
                   flex: 1,
                   p: 4,
                   borderRadius: 4,
-                  background: 'linear-gradient(135deg, rgba(6, 182, 212, 0.12) 0%, rgba(15, 16, 38, 0.85) 100%)',
-                  border: '2px solid #00838f',
-                  boxShadow: '0 8px 32px rgba(0, 131, 143, 0.25)',
+                  background: '#facc15',
+                  border: '2px solid #eab308',
+                  boxShadow: '0 8px 32px rgba(250, 204, 21, 0.35)',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
                 }}
               >
-                <Typography variant="subtitle2" sx={{ color: '#22d3ee', fontWeight: 900, textTransform: 'uppercase', mb: 2, letterSpacing: '0.1em' }}>
+                <Typography variant="subtitle2" sx={{ color: '#1e1b4b', fontWeight: 900, textTransform: 'uppercase', mb: 2, letterSpacing: '0.1em', textShadow: '0 1px 2px rgba(255,255,255,0.5)' }}>
                   The Evolution Path
                 </Typography>
                 <Typography variant="h6" sx={{ mb: 2, fontWeight: 800, fontFamily: '"Outfit", sans-serif' }}>
-                  <Box component="span" sx={{ color: '#16a34a' }}>Self-Awareness</Box>
-                  {' → '}
-                  <Box component="span" sx={{ color: '#dc2626' }}>Soul-Refining</Box>
-                  {' → '}
-                  <Box component="span" sx={{ color: '#1d4ed8' }}>Self-Installation</Box>
-                  {' → '}
-                  <Box component="span" sx={{ color: '#7c3aed' }}>Self-Realization</Box>
+                  <Box component="span" sx={{ color: '#14532d', textShadow: '0 1px 3px rgba(255,255,255,0.6)' }}>Self-Awareness</Box>
+                  <Box component="span" sx={{ color: '#000000' }}>{' → '}</Box>
+                  <Box component="span" sx={{ color: '#7f1d1d', textShadow: '0 1px 3px rgba(255,255,255,0.6)' }}>Soul-Refining</Box>
+                  <Box component="span" sx={{ color: '#000000' }}>{' → '}</Box>
+                  <Box component="span" sx={{ color: '#1e3a8a', textShadow: '0 1px 3px rgba(255,255,255,0.6)' }}>Self-Installation</Box>
+                  <Box component="span" sx={{ color: '#000000' }}>{' → '}</Box>
+                  <Box component="span" sx={{ color: '#4c1d95', textShadow: '0 1px 3px rgba(255,255,255,0.6)' }}>Self-Realization</Box>
                 </Typography>
                 <Typography variant="h4" sx={{ fontWeight: 950, fontFamily: '"Outfit", sans-serif', textAlign: 'center' }}>
-                  <Box component="span" sx={{ color: '#7c3aed' }}>= SELF-SALVATION!</Box>
+                  <Box component="span" sx={{ color: '#3b0764', textShadow: '0 1px 3px rgba(255,255,255,0.6)' }}>= SELF-SALVATION!</Box>
                 </Typography>
               </Box>
             </Box>
@@ -179,7 +179,7 @@ export default function Intro() {
             fontSize: { xs: '1.6rem', md: '2.2rem' },
             fontWeight: 900,
             mb: 6,
-            color: '#ffffff',
+            color: '#ed668c',
           }}
         >
           Three Axioms of AI-Enhanced Self-Transformation
