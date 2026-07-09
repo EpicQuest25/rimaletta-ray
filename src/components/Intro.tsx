@@ -80,9 +80,17 @@ export default function Intro() {
                   </Box>
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#cbd5e1', mb: 3, fontWeight: 550 }}>
-                  The way we adjust to it now determines our future. We need to urgently prepare ourselves
-                  <strong> physically + emotionally + mentally + spiritually + universally</strong> in an integral
-                  fashion, rather than a step-by-step way.
+                  The way we adjust to it now determines our future. We need to urgently prepare ourselves{' '}
+                  <Box component="span" sx={{ color: '#16a34a', fontWeight: 800 }}>physically</Box>
+                  {' + '}
+                  <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>emotionally</Box>
+                  {' + '}
+                  <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 800 }}>mentally</Box>
+                  {' + '}
+                  <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>spiritually</Box>
+                  {' + '}
+                  <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>universally</Box>
+                  {' '}in an integral fashion, rather than a step-by-step way.
                 </Typography>
                 <Divider sx={{ my: 3, borderColor: 'rgba(46, 125, 50, 0.3)' }} />
                 <Typography variant="body1" sx={{ color: '#a5d6a7', fontWeight: 800 }}>
@@ -113,10 +121,18 @@ export default function Intro() {
                 <Typography variant="subtitle2" sx={{ color: '#a5b4fc', fontWeight: 900, textTransform: 'uppercase', mb: 2, letterSpacing: '0.1em' }}>
                   The Formula of Alignment
                 </Typography>
-                <Typography variant="h6" sx={{ color: '#ffffff', mb: 2, fontWeight: 800, fontFamily: '"Outfit", sans-serif' }}>
-                  Body + Spirit + Mind + Self-Consciousness + Super-Consciousness
+                <Typography variant="h6" sx={{ mb: 2, fontWeight: 800, fontFamily: '"Outfit", sans-serif' }}>
+                  <Box component="span" sx={{ color: '#16a34a' }}>Body</Box>
+                  {' + '}
+                  <Box component="span" sx={{ color: '#dc2626' }}>Spirit</Box>
+                  {' + '}
+                  <Box component="span" sx={{ color: '#1d4ed8' }}>Mind</Box>
+                  {' + '}
+                  <Box component="span" sx={{ color: '#7c3aed' }}>Self-Consciousness</Box>
+                  {' + '}
+                  <Box component="span" sx={{ color: '#7c3aed' }}>Super-Consciousness</Box>
                 </Typography>
-                <Typography variant="h4" sx={{ color: '#fbbf24', fontWeight: 950, textShadow: '0 0 15px rgba(251,191,36,0.5)', fontFamily: '"Outfit", sans-serif' }}>
+                <Typography variant="h4" sx={{ color: '#fbbf24', fontWeight: 950, textShadow: '0 0 15px rgba(251,191,36,0.5)', fontFamily: '"Outfit", sans-serif', textAlign: 'center' }}>
                   = SOUL-SYMMETRY!
                 </Typography>
               </Box>
@@ -138,11 +154,17 @@ export default function Intro() {
                 <Typography variant="subtitle2" sx={{ color: '#22d3ee', fontWeight: 900, textTransform: 'uppercase', mb: 2, letterSpacing: '0.1em' }}>
                   The Evolution Path
                 </Typography>
-                <Typography variant="h6" sx={{ color: '#ffffff', mb: 2, fontWeight: 800, fontFamily: '"Outfit", sans-serif' }}>
-                  Self-Awareness → Soul-Refining → Self-Installation → Self-Realization
+                <Typography variant="h6" sx={{ mb: 2, fontWeight: 800, fontFamily: '"Outfit", sans-serif' }}>
+                  <Box component="span" sx={{ color: '#16a34a' }}>Self-Awareness</Box>
+                  {' → '}
+                  <Box component="span" sx={{ color: '#dc2626' }}>Soul-Refining</Box>
+                  {' → '}
+                  <Box component="span" sx={{ color: '#1d4ed8' }}>Self-Installation</Box>
+                  {' → '}
+                  <Box component="span" sx={{ color: '#7c3aed' }}>Self-Realization</Box>
                 </Typography>
-                <Typography variant="h4" sx={{ color: '#22d3ee', fontWeight: 950, textShadow: '0 0 15px rgba(8, 145, 178, 0.5)', fontFamily: '"Outfit", sans-serif' }}>
-                  = SELF-SALVATION!
+                <Typography variant="h4" sx={{ fontWeight: 950, fontFamily: '"Outfit", sans-serif', textAlign: 'center' }}>
+                  <Box component="span" sx={{ color: '#7c3aed' }}>= SELF-SALVATION!</Box>
                 </Typography>
               </Box>
             </Box>

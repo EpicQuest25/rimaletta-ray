@@ -230,15 +230,15 @@ export default function Hero() {
                   whiteSpace: 'nowrap',
                 }}
               >
-                <Box component="span" sx={{ color: '#16a34a' }}>BODY</Box>
+                <Box component="span" sx={{ color: '#16a34a', fontWeight: 900 }}>BODY</Box>
                 {' + '}
-                <Box component="span" sx={{ color: '#dc2626' }}>SPIRIT</Box>
+                <Box component="span" sx={{ color: '#dc2626', fontWeight: 900 }}>SPIRIT</Box>
                 {' + '}
-                <Box component="span" sx={{ color: '#1d4ed8' }}>MIND</Box>
+                <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 900 }}>MIND</Box>
                 {' + '}
-                <Box component="span" sx={{ color: '#7c3aed' }}>SELF-CONSCIOUSNESS</Box>
+                <Box component="span" sx={{ color: '#7c3aed', fontWeight: 900 }}>SELF-CONSCIOUSNESS</Box>
                 {' + '}
-                <Box component="span" sx={{ color: '#3b0764' }}>SUPER-CONSCIOUSNESS</Box>
+                <Box component="span" sx={{ color: '#7c3aed', fontWeight: 900 }}>SUPER-CONSCIOUSNESS</Box>
               </Typography>
               <Typography
                 component="div"
@@ -248,6 +248,7 @@ export default function Hero() {
                   fontFamily: '"Outfit", sans-serif',
                   color: '#000000',
                   letterSpacing: '0.03em',
+                  textAlign: 'center',
                 }}
               >
                 = SOUL-SYMMETRY!
@@ -456,7 +457,7 @@ export default function Hero() {
                   whiteSpace: 'nowrap',
                 }}
               >
-                PHYSICAL + EMOTIONAL + MENTAL + SPIRITUAL + UNIVERSAL
+                PHYSICAL + EMOTIONAL + MENTAL + SPIRITUAL + UNIVERSAL DIMENSIONS!
               </Typography>
             </Box>
           </Grid>
