@@ -196,7 +196,7 @@ export default function Intro() {
                 <Typography variant="h5" sx={{ color: '#1d4ed8', mb: 2, fontWeight: 900 }}>
                   A) Total Integration
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#dc2626', fontWeight: 700, lineHeight: 1.6 }}>
+                <Typography variant="body2" sx={{ color: '#000000', fontWeight: 700, lineHeight: 1.6 }}>
                   Reality and us are totally integrated. Every pulse of the universe is mirrored within our human fractal.
                 </Typography>
               </Box>
@@ -213,7 +213,7 @@ export default function Intro() {
                 <Typography variant="h5" sx={{ color: '#dc2626', mb: 2, fontWeight: 900 }}>
                   B) Sense of Measure
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#e84b9d', fontWeight: 700, lineHeight: 1.6 }}>
+                <Typography variant="body2" sx={{ color: '#000000', fontWeight: 700, lineHeight: 1.6 }}>
                   The sense of measure is our ultimate treasure. Harmonizing binary digits with natural human rhythms.
                 </Typography>
               </Box>
