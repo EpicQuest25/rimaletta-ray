@@ -19,14 +19,14 @@ export default function Hero() {
         alignItems: 'center',
         justifyContent: 'center',
         paddingTop: '80px',
-        background: '#070715',
+        background: '#fce4ec',
         overflow: 'hidden',
       }}
     >
       {/* Dynamic Background Glows */}
-      <Box className="cosmic-glow-indigo" sx={{ top: '10%', left: '10%', opacity: 0.55 }} />
-      <Box className="cosmic-glow-cyan" sx={{ bottom: '15%', right: '5%', opacity: 0.55 }} />
-      <Box className="cosmic-glow-violet" sx={{ top: '40%', right: '15%', opacity: 0.55 }} />
+      <Box className="cosmic-glow-indigo" sx={{ top: '10%', left: '10%', opacity: 0.18 }} />
+      <Box className="cosmic-glow-cyan" sx={{ bottom: '15%', right: '5%', opacity: 0.18 }} />
+      <Box className="cosmic-glow-violet" sx={{ top: '40%', right: '15%', opacity: 0.18 }} />
 
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
         <Grid container spacing={4} alignItems="center">
@@ -40,13 +40,13 @@ export default function Hero() {
                   px: 2,
                   py: 0.8,
                   borderRadius: '30px',
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  border: '1px solid rgba(2, 132, 199, 0.3)',
-                  boxShadow: '0 4px 12px rgba(2, 132, 199, 0.08)',
+                  background: 'rgba(255, 255, 255, 0.55)',
+                  border: '1px solid rgba(2, 132, 199, 0.4)',
+                  boxShadow: '0 4px 12px rgba(2, 132, 199, 0.1)',
                 }}
               >
-                <AutoAwesomeIcon sx={{ color: '#00d8ff', fontSize: '1.1rem' }} />
-                <Typography variant="body2" sx={{ color: '#00d8ff', fontWeight: 800, letterSpacing: '0.05em' }}>
+                <AutoAwesomeIcon sx={{ color: '#0369a1', fontSize: '1.1rem' }} />
+                <Typography variant="body2" sx={{ color: '#0369a1', fontWeight: 800, letterSpacing: '0.05em' }}>
                   THE ODYSSEY OF SELF-RESURRECTION
                 </Typography>
               </Box>
@@ -59,13 +59,13 @@ export default function Hero() {
                   px: 2,
                   py: 0.8,
                   borderRadius: '30px',
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  border: '1px solid rgba(217, 119, 6, 0.3)',
-                  boxShadow: '0 4px 12px rgba(217, 119, 6, 0.08)',
+                  background: 'rgba(255, 255, 255, 0.55)',
+                  border: '1px solid rgba(217, 119, 6, 0.4)',
+                  boxShadow: '0 4px 12px rgba(217, 119, 6, 0.1)',
                 }}
               >
-                <Box component="span" sx={{ color: '#fbbf24', fontSize: '1rem', lineHeight: 1 }}>★</Box>
-                <Typography variant="body2" sx={{ color: '#fbbf24', fontWeight: 800, letterSpacing: '0.05em' }}>
+                <Box component="span" sx={{ color: '#b45309', fontSize: '1rem', lineHeight: 1 }}>★</Box>
+                <Typography variant="body2" sx={{ color: '#b45309', fontWeight: 800, letterSpacing: '0.05em' }}>
                   5-TIME AWARD-WINNING SCHOLAR & AUTHOR
                 </Typography>
               </Box>
@@ -78,19 +78,17 @@ export default function Hero() {
                 lineHeight: 1.1,
                 mb: 3,
                 fontWeight: 900,
-                background: 'linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
+                color: '#1e1b4b',
               }}
             >
-              Holistic System of <br />
+              <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 900 }}>Holistic</Box>{' '}
+              <Box component="span" sx={{ color: '#dc2626', fontWeight: 900 }}>System</Box>{' '}of{' '}<br />
               <Box
                 component="span"
                 sx={{
-                  background: 'linear-gradient(45deg, #818cf8 30%, #22d3ee 90%)',
+                  background: 'linear-gradient(45deg, #4f46e5 30%, #0891b2 90%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
-                  textShadow: '0 0 40px rgba(99, 102, 241, 0.25)',
                 }}
               >
                 Self-Resurrection
@@ -100,7 +98,7 @@ export default function Hero() {
             <Typography
               variant="h5"
               sx={{
-                color: '#cbd5e1',
+                color: '#374151',
                 fontWeight: 700,
                 fontSize: { xs: '1.1rem', sm: '1.25rem' },
                 lineHeight: 1.6,
@@ -109,19 +107,18 @@ export default function Hero() {
               }}
             >
               In three time-pursuing cycles, presented by Dr. Ray as:{' '}
-              <Box component="span" sx={{ color: '#fbbf24', fontWeight: 900 }}>Auto-Suggestive</Box>,{' '}
-              <Box component="span" sx={{ color: '#22d3ee', fontWeight: 900 }}>Digital</Box>, and{' '}
-              <Box component="span" sx={{ color: '#c084fc', fontWeight: 900 }}>Quantum Psychology</Box> for Self-Ecology.
+              <Box component="span" sx={{ color: '#b45309', fontWeight: 900 }}>Auto-Suggestive</Box>,{' '}
+              <Box component="span" sx={{ color: '#0369a1', fontWeight: 900 }}>Digital</Box>, and{' '}
+              <Box component="span" sx={{ color: '#6d28d9', fontWeight: 900 }}>Quantum Psychology</Box> for Self-Ecology.
             </Typography>
 
-            {/* Prominent slogan "Wow! we live Now!" */}
             <Box
               sx={{
                 display: 'inline-block',
                 mb: 5,
                 p: '2px',
                 borderRadius: '16px',
-                background: 'linear-gradient(45deg, #d97706, #ec4899, #4f46e5)',
+                background: 'linear-gradient(45deg, #b45309, #be185d, #4338ca)',
               }}
             >
               <Box
@@ -129,8 +126,8 @@ export default function Hero() {
                   px: 4,
                   py: 2,
                   borderRadius: '14px',
-                  background: 'rgba(7, 7, 21, 0.95)',
-                  boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+                  background: 'rgba(255, 255, 255, 0.85)',
+                  boxShadow: '0 10px 30px rgba(0,0,0,0.12)',
                 }}
               >
                 <Typography
@@ -139,14 +136,13 @@ export default function Hero() {
                     fontFamily: '"Outfit", sans-serif',
                     fontWeight: 900,
                     fontSize: { xs: '1.8rem', sm: '2.5rem' },
-                    color: '#ffffff',
                     letterSpacing: '0.02em',
-                    background: 'linear-gradient(45deg, #fbbf24 0%, #ec4899 50%, #818cf8 100%)',
+                    background: 'linear-gradient(45deg, #b45309 0%, #be185d 50%, #4338ca 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                   }}
                 >
-                  Wow! <Box component="span" sx={{ fontSize: '0.8em', textTransform: 'lowercase', fontWeight: 800 }}>we live</Box> Now!
+                  Wow! <Box component="span" sx={{ fontSize: '0.8em', fontWeight: 800 }}>we Live</Box> Now!
                 </Typography>
               </Box>
             </Box>
@@ -185,8 +181,8 @@ export default function Hero() {
                 onClick={() => handleScroll('#author')}
                 endIcon={<ArrowDownwardIcon />}
                 sx={{
-                  borderColor: 'rgba(255, 255, 255, 0.2)',
-                  color: '#ffffff',
+                  borderColor: '#1e1b4b',
+                  color: '#1e1b4b',
                   borderWidth: '2px',
                   px: 4,
                   py: 2,
@@ -195,9 +191,9 @@ export default function Hero() {
                   fontSize: '1rem',
                   textTransform: 'none',
                   '&:hover': {
-                    borderColor: '#ffffff',
+                    borderColor: '#1e1b4b',
                     borderWidth: '2px',
-                    background: 'rgba(255, 255, 255, 0.05)',
+                    background: 'rgba(30, 27, 75, 0.07)',
                   },
                 }}
               >
@@ -238,7 +234,7 @@ export default function Hero() {
                   height: '320px',
                   borderRadius: '50%',
                   background: 'radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, rgba(6, 182, 212, 0.01) 70%)',
-                  border: '1px solid rgba(255, 255, 255, 0.02)',
+                  border: '1px solid rgba(0, 0, 0, 0.12)',
                   pointerEvents: 'none',
                 }}
               />
@@ -283,7 +279,7 @@ export default function Hero() {
                   width: '320px',
                   height: '320px',
                   borderRadius: '50%',
-                  border: '1px dashed rgba(255, 255, 255, 0.12)',
+                  border: '1.5px dashed rgba(0, 0, 0, 0.35)',
                   animation: 'spin-orbit-outer 30s linear infinite',
                   '@keyframes spin-orbit-outer': {
                     '0%': { transform: 'rotate(0deg)' },
@@ -326,7 +322,7 @@ export default function Hero() {
                   width: '240px',
                   height: '240px',
                   borderRadius: '50%',
-                  border: '1px solid rgba(255, 255, 255, 0.05)',
+                  border: '1.5px solid rgba(0, 0, 0, 0.25)',
                   animation: 'spin-orbit-middle 22s linear infinite',
                   '@keyframes spin-orbit-middle': {
                     '0%': { transform: 'rotate(120deg)' },
@@ -369,7 +365,7 @@ export default function Hero() {
                   width: '240px',
                   height: '240px',
                   borderRadius: '50%',
-                  border: '1px solid rgba(255, 255, 255, 0.05)',
+                  border: '1.5px solid rgba(0, 0, 0, 0.25)',
                   animation: 'spin-orbit-inner 16s linear infinite',
                   '@keyframes spin-orbit-inner': {
                     '0%': { transform: 'rotate(240deg)' },
