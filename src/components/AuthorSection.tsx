@@ -292,7 +292,7 @@ export default function AuthorSection() {
               lineHeight: 1.6,
             }}
           >
-            develop personal magnetism physically, emotionally, mentally, spiritually, universally in three cycles of our present day life.
+            Develop personal magnetism physically, emotionally, mentally, spiritually, and universally in three cycles of our present day life.
           </Typography>
           <Typography
             variant="h3"
@@ -304,7 +304,7 @@ export default function AuthorSection() {
               letterSpacing: '0.02em',
             }}
           >
-            Wow, we live now!
+            Wow! <Box component="span" sx={{ fontSize: '0.8em', textTransform: 'lowercase', fontWeight: 800 }}>we live</Box> Now!
           </Typography>
         </Box>
       </Container>
