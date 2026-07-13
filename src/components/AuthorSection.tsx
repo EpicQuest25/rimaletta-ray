@@ -230,7 +230,7 @@ export default function AuthorSection() {
                 top: -20,
                 fontSize: '5rem',
                 color: '#ffffff',
-                opacity: 0.3,
+                opacity: 1,
                 fontFamily: 'serif',
               },
               '&::after': {
@@ -240,7 +240,7 @@ export default function AuthorSection() {
                 bottom: -40,
                 fontSize: '5rem',
                 color: '#ffffff',
-                opacity: 0.3,
+                opacity: 1,
                 fontFamily: 'serif',
               }
             }}
