@@ -142,7 +142,7 @@ export default function AuthorSection() {
             <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>religious</Box>
             {" diversity and exceptionality and directing AI’s uncontrolled gold rush industrialization toward governing "}
             <Box component="span" sx={{ fontWeight: 900, color: '#ffffff', display: 'block', mt: 1, letterSpacing: '0.05em' }}>
-              GLOBAL HUMAN EVOLUTION.
+              GLOBAL HUMAN EVOLUTION!
             </Box>
           </Typography>
 
