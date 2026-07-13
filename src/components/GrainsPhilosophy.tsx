@@ -723,17 +723,18 @@ export default function GrainsPhilosophy() {
                     display: 'flex',
                     justifyContent: 'space-around',
                     alignItems: 'flex-end',
-                    height: '200px',
+                    height: '240px',
                     position: 'relative',
-                    px: { xs: 2, sm: 6 },
+                    px: { xs: 1, sm: 4 },
                     mb: 3,
+                    pt: 5,
                     '&::after': {
                       content: '""',
                       position: 'absolute',
                       bottom: 0,
                       left: '50%',
                       transform: 'translateX(-50%)',
-                      width: '90%',
+                      width: '95%',
                       height: '20px',
                       borderRadius: '10px 10px 0 0',
                       background: 'rgba(255,255,255,0.03)',
@@ -742,15 +743,68 @@ export default function GrainsPhilosophy() {
                     }
                   }}
                 >
+                  {/* Floating Speech Bubble / Dialog */}
+                  <Box
+                    sx={{
+                      position: 'absolute',
+                      top: '10px',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      background: 'linear-gradient(135deg, #ed668c 0%, #db2777 100%)',
+                      color: '#ffffff',
+                      px: 2.5,
+                      py: 1,
+                      borderRadius: '30px',
+                      fontSize: '0.8rem',
+                      fontWeight: 850,
+                      whiteSpace: 'nowrap',
+                      boxShadow: '0 8px 25px rgba(237, 102, 140, 0.4)',
+                      animation: 'floatBubble 3s ease-in-out infinite',
+                      zIndex: 10,
+                      pointerEvents: 'none',
+                      '&::after': {
+                        content: '""',
+                        position: 'absolute',
+                        bottom: '-6px',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        borderWidth: '6px 6px 0',
+                        borderStyle: 'solid',
+                        borderColor: '#db2777 transparent transparent',
+                        display: 'block',
+                        width: 0,
+                      },
+                      '@keyframes floatBubble': {
+                        '0%, 100%': { transform: 'translateX(-50%) translateY(0)' },
+                        '50%': { transform: 'translateX(-50%) translateY(-6px)' },
+                      }
+                    }}
+                  >
+                    👉 Click a finger to align your life realms!
+                  </Box>
+
                   {/* Pinky: Body */}
                   <Box 
                     onClick={() => setActiveFingerKey('pinky')}
-                    sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: 2, cursor: 'pointer' }}
+                    sx={{ 
+                      display: 'flex', 
+                      flexDirection: 'column', 
+                      alignItems: 'center', 
+                      zIndex: 2, 
+                      cursor: 'pointer',
+                      '&:hover .finger-bar': {
+                        transform: 'scaleY(1.08)',
+                        transformOrigin: 'bottom',
+                        boxShadow: '0 0 20px rgba(22,163,74,0.4)',
+                        borderColor: '#16a34a',
+                      }
+                    }}
                   >
                     <Typography variant="caption" sx={{ color: '#16a34a', fontWeight: activeFingerKey === 'pinky' ? 900 : 600, fontSize: '0.65rem', mb: 1, textTransform: 'uppercase', opacity: activeFingerKey === 'pinky' ? 1 : 0.6 }}>
                       Body
                     </Typography>
                     <Box 
+                      className="finger-bar"
                       sx={{ 
                         width: 22, 
                         height: 100, 
@@ -758,7 +812,15 @@ export default function GrainsPhilosophy() {
                         border: activeFingerKey === 'pinky' ? '1px solid #16a34a' : '1px solid rgba(22,163,74, 0.15)',
                         borderRadius: '10px 10px 0 0', 
                         boxShadow: activeFingerKey === 'pinky' ? '0 0 15px rgba(22,163,74,0.2)' : 'none',
-                        transition: 'all 0.3s'
+                        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                        animation: 'bounceUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both',
+                        animationDelay: '0ms',
+                        '@keyframes bounceUp': {
+                          '0%': { transform: 'scaleY(0)', transformOrigin: 'bottom' },
+                          '60%': { transform: 'scaleY(1.1)', transformOrigin: 'bottom' },
+                          '80%': { transform: 'scaleY(0.95)', transformOrigin: 'bottom' },
+                          '100%': { transform: 'scaleY(1)', transformOrigin: 'bottom' }
+                        }
                       }} 
                     />
                     <Typography variant="caption" sx={{ color: activeFingerKey === 'pinky' ? '#16a34a' : 'rgba(255,255,255,0.4)', mt: 1, fontSize: '0.6rem', fontWeight: activeFingerKey === 'pinky' ? 700 : 500 }}>Pinky</Typography>
@@ -767,12 +829,25 @@ export default function GrainsPhilosophy() {
                   {/* Ring: Spirit */}
                   <Box 
                     onClick={() => setActiveFingerKey('ring')}
-                    sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: 2, cursor: 'pointer' }}
+                    sx={{ 
+                      display: 'flex', 
+                      flexDirection: 'column', 
+                      alignItems: 'center', 
+                      zIndex: 2, 
+                      cursor: 'pointer',
+                      '&:hover .finger-bar': {
+                        transform: 'scaleY(1.08)',
+                        transformOrigin: 'bottom',
+                        boxShadow: '0 0 20px rgba(220,38,38,0.4)',
+                        borderColor: '#dc2626',
+                      }
+                    }}
                   >
                     <Typography variant="caption" sx={{ color: '#dc2626', fontWeight: activeFingerKey === 'ring' ? 900 : 600, fontSize: '0.65rem', mb: 1, textTransform: 'uppercase', opacity: activeFingerKey === 'ring' ? 1 : 0.6 }}>
                       Spirit
                     </Typography>
                     <Box 
+                      className="finger-bar"
                       sx={{ 
                         width: 22, 
                         height: 130, 
@@ -780,7 +855,15 @@ export default function GrainsPhilosophy() {
                         border: activeFingerKey === 'ring' ? '1px solid #dc2626' : '1px solid rgba(220,38,38, 0.15)',
                         borderRadius: '10px 10px 0 0', 
                         boxShadow: activeFingerKey === 'ring' ? '0 0 15px rgba(220,38,38,0.2)' : 'none',
-                        transition: 'all 0.3s'
+                        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                        animation: 'bounceUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both',
+                        animationDelay: '100ms',
+                        '@keyframes bounceUp': {
+                          '0%': { transform: 'scaleY(0)', transformOrigin: 'bottom' },
+                          '60%': { transform: 'scaleY(1.1)', transformOrigin: 'bottom' },
+                          '80%': { transform: 'scaleY(0.95)', transformOrigin: 'bottom' },
+                          '100%': { transform: 'scaleY(1)', transformOrigin: 'bottom' }
+                        }
                       }} 
                     />
                     <Typography variant="caption" sx={{ color: activeFingerKey === 'ring' ? '#dc2626' : 'rgba(255,255,255,0.4)', mt: 1, fontSize: '0.6rem', fontWeight: activeFingerKey === 'ring' ? 700 : 500 }}>Ring</Typography>
@@ -789,12 +872,25 @@ export default function GrainsPhilosophy() {
                   {/* Middle: Mind */}
                   <Box 
                     onClick={() => setActiveFingerKey('middle')}
-                    sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: 2, cursor: 'pointer' }}
+                    sx={{ 
+                      display: 'flex', 
+                      flexDirection: 'column', 
+                      alignItems: 'center', 
+                      zIndex: 2, 
+                      cursor: 'pointer',
+                      '&:hover .finger-bar': {
+                        transform: 'scaleY(1.08)',
+                        transformOrigin: 'bottom',
+                        boxShadow: '0 0 20px rgba(29,78,216,0.4)',
+                        borderColor: '#1d4ed8',
+                      }
+                    }}
                   >
                     <Typography variant="caption" sx={{ color: '#1d4ed8', fontWeight: activeFingerKey === 'middle' ? 900 : 600, fontSize: '0.65rem', mb: 1, textTransform: 'uppercase', opacity: activeFingerKey === 'middle' ? 1 : 0.6 }}>
                       Mind
                     </Typography>
                     <Box 
+                      className="finger-bar"
                       sx={{ 
                         width: 22, 
                         height: 150, 
@@ -802,7 +898,15 @@ export default function GrainsPhilosophy() {
                         border: activeFingerKey === 'middle' ? '1px solid #1d4ed8' : '1px solid rgba(29,78,216, 0.15)',
                         borderRadius: '10px 10px 0 0', 
                         boxShadow: activeFingerKey === 'middle' ? '0 0 15px rgba(29,78,216,0.2)' : 'none',
-                        transition: 'all 0.3s'
+                        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                        animation: 'bounceUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both',
+                        animationDelay: '200ms',
+                        '@keyframes bounceUp': {
+                          '0%': { transform: 'scaleY(0)', transformOrigin: 'bottom' },
+                          '60%': { transform: 'scaleY(1.1)', transformOrigin: 'bottom' },
+                          '80%': { transform: 'scaleY(0.95)', transformOrigin: 'bottom' },
+                          '100%': { transform: 'scaleY(1)', transformOrigin: 'bottom' }
+                        }
                       }} 
                     />
                     <Typography variant="caption" sx={{ color: activeFingerKey === 'middle' ? '#1d4ed8' : 'rgba(255,255,255,0.4)', mt: 1, fontSize: '0.6rem', fontWeight: activeFingerKey === 'middle' ? 700 : 500 }}>Middle</Typography>
@@ -811,12 +915,25 @@ export default function GrainsPhilosophy() {
                   {/* Index: Self-Consciousness */}
                   <Box 
                     onClick={() => setActiveFingerKey('index')}
-                    sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: 2, cursor: 'pointer' }}
+                    sx={{ 
+                      display: 'flex', 
+                      flexDirection: 'column', 
+                      alignItems: 'center', 
+                      zIndex: 2, 
+                      cursor: 'pointer',
+                      '&:hover .finger-bar': {
+                        transform: 'scaleY(1.08)',
+                        transformOrigin: 'bottom',
+                        boxShadow: '0 0 20px rgba(237,102,140,0.4)',
+                        borderColor: '#ed668c',
+                      }
+                    }}
                   >
                     <Typography variant="caption" sx={{ color: '#ed668c', fontWeight: activeFingerKey === 'index' ? 900 : 600, fontSize: '0.55rem', mb: 1, textTransform: 'uppercase', opacity: activeFingerKey === 'index' ? 1 : 0.6 }}>
                       Self-Consciousness
                     </Typography>
                     <Box 
+                      className="finger-bar"
                       sx={{ 
                         width: 22, 
                         height: 125, 
@@ -824,7 +941,15 @@ export default function GrainsPhilosophy() {
                         border: activeFingerKey === 'index' ? '1px solid #ed668c' : '1px solid rgba(237,102,140, 0.15)',
                         borderRadius: '10px 10px 0 0', 
                         boxShadow: activeFingerKey === 'index' ? '0 0 15px rgba(237,102,140,0.2)' : 'none',
-                        transition: 'all 0.3s'
+                        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                        animation: 'bounceUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both',
+                        animationDelay: '300ms',
+                        '@keyframes bounceUp': {
+                          '0%': { transform: 'scaleY(0)', transformOrigin: 'bottom' },
+                          '60%': { transform: 'scaleY(1.1)', transformOrigin: 'bottom' },
+                          '80%': { transform: 'scaleY(0.95)', transformOrigin: 'bottom' },
+                          '100%': { transform: 'scaleY(1)', transformOrigin: 'bottom' }
+                        }
                       }} 
                     />
                     <Typography variant="caption" sx={{ color: activeFingerKey === 'index' ? '#ed668c' : 'rgba(255,255,255,0.4)', mt: 1, fontSize: '0.6rem', fontWeight: activeFingerKey === 'index' ? 700 : 500 }}>Index</Typography>
@@ -833,12 +958,25 @@ export default function GrainsPhilosophy() {
                   {/* Thumb: Super-Consciousness */}
                   <Box 
                     onClick={() => setActiveFingerKey('thumb')}
-                    sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: 2, cursor: 'pointer' }}
+                    sx={{ 
+                      display: 'flex', 
+                      flexDirection: 'column', 
+                      alignItems: 'center', 
+                      zIndex: 2, 
+                      cursor: 'pointer',
+                      '&:hover .finger-bar': {
+                        transform: 'scaleY(1.08)',
+                        transformOrigin: 'bottom',
+                        boxShadow: '0 0 20px rgba(237,102,140,0.4)',
+                        borderColor: '#ed668c',
+                      }
+                    }}
                   >
                     <Typography variant="caption" sx={{ color: '#ed668c', fontWeight: activeFingerKey === 'thumb' ? 900 : 600, fontSize: '0.55rem', mb: 1, textTransform: 'uppercase', opacity: activeFingerKey === 'thumb' ? 1 : 0.6 }}>
                       Super-Consciousness
                     </Typography>
                     <Box 
+                      className="finger-bar"
                       sx={{ 
                         width: 22, 
                         height: 80, 
@@ -846,7 +984,15 @@ export default function GrainsPhilosophy() {
                         border: activeFingerKey === 'thumb' ? '1px solid #ed668c' : '1px solid rgba(237,102,140, 0.15)',
                         borderRadius: '10px 10px 0 0', 
                         boxShadow: activeFingerKey === 'thumb' ? '0 0 15px rgba(237,102,140,0.2)' : 'none',
-                        transition: 'all 0.3s'
+                        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                        animation: 'bounceUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both',
+                        animationDelay: '400ms',
+                        '@keyframes bounceUp': {
+                          '0%': { transform: 'scaleY(0)', transformOrigin: 'bottom' },
+                          '60%': { transform: 'scaleY(1.1)', transformOrigin: 'bottom' },
+                          '80%': { transform: 'scaleY(0.95)', transformOrigin: 'bottom' },
+                          '100%': { transform: 'scaleY(1)', transformOrigin: 'bottom' }
+                        }
                       }} 
                     />
                     <Typography variant="caption" sx={{ color: activeFingerKey === 'thumb' ? '#ed668c' : 'rgba(255,255,255,0.4)', mt: 1, fontSize: '0.6rem', fontWeight: activeFingerKey === 'thumb' ? 700 : 500 }}>Thumb</Typography>
