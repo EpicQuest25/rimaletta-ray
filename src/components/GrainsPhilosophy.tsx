@@ -717,7 +717,7 @@ export default function GrainsPhilosophy() {
                   Our hands serve as a physical model representing the integration of the five life realms. Click any finger to explore.
                 </Typography>
                 <Typography variant="body2" sx={{ color: '#ffffff', fontWeight: 700, mb: 3, fontStyle: 'italic', fontSize: '0.95rem', px: { xs: 2, md: 4 }, lineHeight: 1.6 }}>
-                  “If we squeeze All the fingers into a fist. . we can visually hit any problem into the solid plexus, like they do it in MARTIAL ARTS.   !”
+                  “If we squeeze all the fingers into a fist, we can visually hit any problem into the solar plexus, like they do it in MARTIAL ARTS.”
                 </Typography>
 
                 {/* Hand Vector CSS Visualization */}
