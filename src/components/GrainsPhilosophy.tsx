@@ -723,7 +723,7 @@ export default function GrainsPhilosophy() {
                     display: 'flex',
                     justifyContent: 'space-around',
                     alignItems: 'flex-end',
-                    height: '240px',
+                    height: '260px',
                     position: 'relative',
                     px: { xs: 1, sm: 4 },
                     mb: 3,
@@ -747,7 +747,7 @@ export default function GrainsPhilosophy() {
                   <Box
                     sx={{
                       position: 'absolute',
-                      top: '10px',
+                      top: '-15px',
                       left: '50%',
                       transform: 'translateX(-50%)',
                       background: 'linear-gradient(135deg, #ed668c 0%, #db2777 100%)',
