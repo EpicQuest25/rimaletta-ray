@@ -132,7 +132,7 @@ const fingersData: Record<string, FingerDetails> = {
     booster: 'Soul refining is life elevating!',
     book: 'Self-Taming!',
     link: 'https://www.amazon.com/Self-Taming-Inspirational-Psychology-Life-Gaining-Taming/dp/B0F7KG64K6/',
-    color: '#7c3aed', // violet
+    color: '#ed668c', // pink
     height: 125,
   },
   thumb: {
@@ -142,7 +142,7 @@ const fingersData: Record<string, FingerDetails> = {
     booster: 'Cosmic alignment is self-salvation!',
     book: 'Self-Ascension',
     link: 'https://www.amazon.com/Self-Ascension-Rimaletta-S-Ray-Ph-D-ebook/dp/B0GZS9QQ4C/',
-    color: '#7c3aed', // violet
+    color: '#ed668c', // pink
     height: 80,
   },
 };
@@ -176,9 +176,9 @@ export default function GrainsPhilosophy() {
       case 1: return '#16a34a'; // green
       case 2: return '#dc2626'; // red
       case 3: return '#1d4ed8'; // blue
-      case 4: return '#7c3aed'; // violet
-      case 5: return '#7c3aed'; // violet
-      default: return '#7c3aed';
+      case 4: return '#ed668c'; // pink
+      case 5: return '#ed668c'; // pink
+      default: return '#ed668c';
     }
   };
   const renderColorCodedText = (text: string) => {
@@ -813,21 +813,21 @@ export default function GrainsPhilosophy() {
                     onClick={() => setActiveFingerKey('index')}
                     sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: 2, cursor: 'pointer' }}
                   >
-                    <Typography variant="caption" sx={{ color: '#7c3aed', fontWeight: activeFingerKey === 'index' ? 900 : 600, fontSize: '0.65rem', mb: 1, textTransform: 'uppercase', opacity: activeFingerKey === 'index' ? 1 : 0.6 }}>
-                      Self-C.
+                    <Typography variant="caption" sx={{ color: '#ed668c', fontWeight: activeFingerKey === 'index' ? 900 : 600, fontSize: '0.55rem', mb: 1, textTransform: 'uppercase', opacity: activeFingerKey === 'index' ? 1 : 0.6 }}>
+                      Self-Consciousness
                     </Typography>
                     <Box 
                       sx={{ 
                         width: 22, 
                         height: 125, 
-                        background: activeFingerKey === 'index' ? 'linear-gradient(to top, rgba(124,58,237,0.3), #7c3aed)' : 'rgba(124,58,237, 0.08)', 
-                        border: activeFingerKey === 'index' ? '1px solid #7c3aed' : '1px solid rgba(124,58,237, 0.15)',
+                        background: activeFingerKey === 'index' ? 'linear-gradient(to top, rgba(237,102,140,0.3), #ed668c)' : 'rgba(237,102,140, 0.08)', 
+                        border: activeFingerKey === 'index' ? '1px solid #ed668c' : '1px solid rgba(237,102,140, 0.15)',
                         borderRadius: '10px 10px 0 0', 
-                        boxShadow: activeFingerKey === 'index' ? '0 0 15px rgba(124,58,237,0.2)' : 'none',
+                        boxShadow: activeFingerKey === 'index' ? '0 0 15px rgba(237,102,140,0.2)' : 'none',
                         transition: 'all 0.3s'
                       }} 
                     />
-                    <Typography variant="caption" sx={{ color: activeFingerKey === 'index' ? '#7c3aed' : 'rgba(255,255,255,0.4)', mt: 1, fontSize: '0.6rem', fontWeight: activeFingerKey === 'index' ? 700 : 500 }}>Index</Typography>
+                    <Typography variant="caption" sx={{ color: activeFingerKey === 'index' ? '#ed668c' : 'rgba(255,255,255,0.4)', mt: 1, fontSize: '0.6rem', fontWeight: activeFingerKey === 'index' ? 700 : 500 }}>Index</Typography>
                   </Box>
 
                   {/* Thumb: Super-Consciousness */}
@@ -835,21 +835,21 @@ export default function GrainsPhilosophy() {
                     onClick={() => setActiveFingerKey('thumb')}
                     sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: 2, cursor: 'pointer' }}
                   >
-                    <Typography variant="caption" sx={{ color: '#7c3aed', fontWeight: activeFingerKey === 'thumb' ? 900 : 600, fontSize: '0.65rem', mb: 1, textTransform: 'uppercase', opacity: activeFingerKey === 'thumb' ? 1 : 0.6 }}>
-                      Super-C.
+                    <Typography variant="caption" sx={{ color: '#ed668c', fontWeight: activeFingerKey === 'thumb' ? 900 : 600, fontSize: '0.55rem', mb: 1, textTransform: 'uppercase', opacity: activeFingerKey === 'thumb' ? 1 : 0.6 }}>
+                      Super-Consciousness
                     </Typography>
                     <Box 
                       sx={{ 
                         width: 22, 
                         height: 80, 
-                        background: activeFingerKey === 'thumb' ? 'linear-gradient(to top, rgba(124,58,237,0.3), #7c3aed)' : 'rgba(124,58,237, 0.08)', 
-                        border: activeFingerKey === 'thumb' ? '1px solid #7c3aed' : '1px solid rgba(124,58,237, 0.15)',
+                        background: activeFingerKey === 'thumb' ? 'linear-gradient(to top, rgba(237,102,140,0.3), #ed668c)' : 'rgba(237,102,140, 0.08)', 
+                        border: activeFingerKey === 'thumb' ? '1px solid #ed668c' : '1px solid rgba(237,102,140, 0.15)',
                         borderRadius: '10px 10px 0 0', 
-                        boxShadow: activeFingerKey === 'thumb' ? '0 0 15px rgba(124,58,237,0.2)' : 'none',
+                        boxShadow: activeFingerKey === 'thumb' ? '0 0 15px rgba(237,102,140,0.2)' : 'none',
                         transition: 'all 0.3s'
                       }} 
                     />
-                    <Typography variant="caption" sx={{ color: activeFingerKey === 'thumb' ? '#7c3aed' : 'rgba(255,255,255,0.4)', mt: 1, fontSize: '0.6rem', fontWeight: activeFingerKey === 'thumb' ? 700 : 500 }}>Thumb</Typography>
+                    <Typography variant="caption" sx={{ color: activeFingerKey === 'thumb' ? '#ed668c' : 'rgba(255,255,255,0.4)', mt: 1, fontSize: '0.6rem', fontWeight: activeFingerKey === 'thumb' ? 700 : 500 }}>Thumb</Typography>
                   </Box>
                 </Box>
               </Box>
