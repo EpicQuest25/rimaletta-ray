@@ -713,8 +713,11 @@ export default function GrainsPhilosophy() {
                 <Typography variant="h5" sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 800, color: '#ffffff', mb: 1.5, fontSize: '1.4rem' }}>
                   The Hand Fractal of Self-Symmetry
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#cbd5e1', fontWeight: 600, mb: 3, fontSize: '0.9rem' }}>
+                <Typography variant="body2" sx={{ color: '#cbd5e1', fontWeight: 600, mb: 2, fontSize: '0.9rem' }}>
                   Our hands serve as a physical model representing the integration of the five life realms. Click any finger to explore.
+                </Typography>
+                <Typography variant="body2" sx={{ color: '#ffffff', fontWeight: 700, mb: 3, fontStyle: 'italic', fontSize: '0.95rem', px: { xs: 2, md: 4 }, lineHeight: 1.6 }}>
+                  “If we squeeze All the fingers into a fist. . we can visually hit any problem into the solid plexus, like they do it in MARTIAL ARTS.   !”
                 </Typography>
 
                 {/* Hand Vector CSS Visualization */}
@@ -1036,8 +1039,11 @@ export default function GrainsPhilosophy() {
                     <Typography variant="caption" sx={{ color: activeFinger.color, fontWeight: 800, textTransform: 'uppercase', display: 'block' }}>
                       Recommended System Book
                     </Typography>
-                    <Typography variant="body2" sx={{ color: '#ffffff', fontWeight: 850 }}>
+                    <Typography variant="body2" sx={{ color: '#ffffff', fontWeight: 850, mb: 0.5 }}>
                       {activeFinger.book}
+                    </Typography>
+                    <Typography variant="caption" sx={{ color: '#ed668c', fontWeight: 800, display: 'block', fontStyle: 'italic', fontSize: '0.75rem' }}>
+                      “Your Universal goal is to become fractally Whole”
                     </Typography>
                   </Box>
                   <Button
