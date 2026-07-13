@@ -85,6 +85,131 @@ export default function AuthorSection() {
       <Box className="cosmic-glow-indigo" sx={{ bottom: '15%', right: '-15%', opacity: 0.55 }} />
 
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
+        {/* Summary Section */}
+        <Box
+          sx={{
+            mb: 10,
+            p: { xs: 4, md: 6 },
+            borderRadius: 5,
+            background: 'rgba(15, 16, 38, 0.6)',
+            border: '1px solid rgba(255, 255, 255, 0.08)',
+            textAlign: 'center',
+            boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
+          }}
+        >
+          {/* Header line */}
+          <Typography
+            variant="h4"
+            sx={{
+              fontFamily: '"Outfit", sans-serif',
+              fontWeight: 900,
+              mb: 4,
+              lineHeight: 1.4,
+              fontSize: { xs: '1.6rem', sm: '2.2rem', md: '2.5rem' },
+            }}
+          >
+            <Box component="span" sx={{ color: '#dc2626', textDecoration: 'underline' }}>
+              In Summary
+            </Box>
+            {", let’s use AI technology for "}
+            <Box component="span" sx={{ textDecoration: 'underline', color: '#ffffff' }}>
+              Universal Exploration, not Human Subordination!
+            </Box>
+          </Typography>
+
+          {/* First Paragraph */}
+          <Typography
+            variant="body1"
+            sx={{
+              color: '#cbd5e1',
+              fontWeight: 600,
+              fontSize: { xs: '1.05rem', sm: '1.2rem' },
+              lineHeight: 1.8,
+              maxWidth: '900px',
+              mx: 'auto',
+              mb: 4,
+            }}
+          >
+            The system is about an urgent necessity to promote a unified global approach to controlling AI by unifying our world-wide{" "}
+            <Box component="span" sx={{ color: '#16a34a', fontWeight: 800 }}>human</Box>
+            {", "}
+            <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>psychological</Box>
+            {", "}
+            <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 800 }}>scientific</Box>
+            {", "}
+            <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>spiritual</Box>
+            {", and "}
+            <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>religious</Box>
+            {" diversity and exceptionality and directing AI’s uncontrolled gold rush industrialization toward governing "}
+            <Box component="span" sx={{ fontWeight: 900, color: '#ffffff', display: 'block', mt: 1, letterSpacing: '0.05em' }}>
+              GLOBAL HUMAN EVOLUTION.
+            </Box>
+          </Typography>
+
+          {/* Second Paragraph */}
+          <Typography
+            variant="body1"
+            sx={{
+              color: '#cbd5e1',
+              fontWeight: 600,
+              fontSize: { xs: '1.05rem', sm: '1.2rem' },
+              lineHeight: 1.8,
+              maxWidth: '900px',
+              mx: 'auto',
+              mb: 4,
+            }}
+          >
+            Our life should not be built on just AI enhanced abundance and longevity. AI’s global role is to help us revolutionize our{" "}
+            <Box component="span" sx={{ fontWeight: 900, color: '#ffffff' }}>HUMAN GROWTH</Box>
+            {" with "}
+            <Box component="span" sx={{ color: '#16a34a', fontWeight: 800 }}>personal freedom</Box>
+            {", "}
+            <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>altruism</Box>
+            {", "}
+            <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 800 }}>intelligence</Box>
+            {", "}
+            <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>spiritual dignity</Box>
+            {", and "}
+            <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>universal emancipation</Box>
+            {" "}
+            <Box component="span" sx={{ fontStyle: 'italic', color: '#94a3b8', fontSize: '0.95em' }}>
+              (physical + emotional + mental + spiritual + universal life dimensions in sync)
+            </Box>
+            {" on the basis of AI enhanced global unification for "}
+            <Box component="span" sx={{ color: '#dc2626', textDecoration: 'underline', fontWeight: 700 }}>
+              life’s technological exploration and humanity’s extra-terrestrial presentation.
+            </Box>
+          </Typography>
+
+          {/* Third Paragraph */}
+          <Typography
+            variant="body1"
+            sx={{
+              color: '#cbd5e1',
+              fontWeight: 600,
+              fontSize: { xs: '1.05rem', sm: '1.2rem' },
+              lineHeight: 1.8,
+              maxWidth: '900px',
+              mx: 'auto',
+            }}
+          >
+            So, let’s redirect our Aware Attention from robotic life’s im-personalization to{" "}
+            <Box
+              component="span"
+              sx={{
+                display: 'block',
+                fontFamily: '"Outfit", sans-serif',
+                fontWeight: 900,
+                color: '#ffffff',
+                mt: 1.5,
+                fontSize: { xs: '1.15rem', sm: '1.35rem' },
+              }}
+            >
+              Human Technological Expansion and Personal Individualization!
+            </Box>
+          </Typography>
+        </Box>
+
         {/* Vygotsky Quote */}
         <Box sx={{ mb: 10, textAlign: 'center' }}>
           <Typography
@@ -124,6 +249,19 @@ export default function AuthorSection() {
           </Typography>
           <Typography variant="subtitle1" sx={{ color: '#ed668c', fontWeight: 800, mt: 2 }}>
             — LEO VYGOTSKY
+          </Typography>
+          <Typography
+            variant="h5"
+            sx={{
+              fontFamily: '"Outfit", sans-serif',
+              fontWeight: 950,
+              mt: 4,
+              color: '#f6c915',
+              letterSpacing: '0.12em',
+              textShadow: '0 0 20px rgba(246, 201, 21, 0.4)',
+            }}
+          >
+            “THE BEST IS YET TO COME!”
           </Typography>
         </Box>
 
