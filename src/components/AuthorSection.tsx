@@ -229,8 +229,8 @@ export default function AuthorSection() {
                 left: 0,
                 top: -20,
                 fontSize: '5rem',
-                color: '#6366f1',
-                opacity: 0.25,
+                color: '#ffffff',
+                opacity: 0.3,
                 fontFamily: 'serif',
               },
               '&::after': {
@@ -239,8 +239,8 @@ export default function AuthorSection() {
                 right: 0,
                 bottom: -40,
                 fontSize: '5rem',
-                color: '#ed668c',
-                opacity: 0.25,
+                color: '#ffffff',
+                opacity: 0.3,
                 fontFamily: 'serif',
               }
             }}
