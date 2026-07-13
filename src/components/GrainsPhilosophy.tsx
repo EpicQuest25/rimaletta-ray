@@ -1042,7 +1042,7 @@ export default function GrainsPhilosophy() {
                     <Typography variant="body2" sx={{ color: '#ffffff', fontWeight: 850, mb: 0.5 }}>
                       {activeFinger.book}
                     </Typography>
-                    <Typography variant="caption" sx={{ color: '#ed668c', fontWeight: 800, display: 'block', fontStyle: 'italic', fontSize: '0.75rem' }}>
+                    <Typography variant="caption" sx={{ color: '#dc2626', fontWeight: 800, display: 'block', fontStyle: 'italic', fontSize: '0.75rem' }}>
                       “Your Universal goal is to become fractally Whole”
                     </Typography>
                   </Box>
