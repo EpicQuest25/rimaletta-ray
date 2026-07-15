@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Intro from './components/Intro';
 import QuantumFractal from './components/QuantumFractal';
+import IndustrialLandscape from './components/IndustrialLandscape';
 import BooksSection from './components/BooksSection';
 import VideosSection from './components/VideosSection';
 import GrainsPhilosophy from './components/GrainsPhilosophy';
@@ -25,6 +26,9 @@ function App() {
 
         {/* Digitized Self-Acculturation & Nvidia Parallel */}
         <QuantumFractal />
+
+        {/* Industrial Landscape & 3D Cross Visualization */}
+        <IndustrialLandscape />
 
         {/* Literary Ecosystem Books Section */}
         <BooksSection />
