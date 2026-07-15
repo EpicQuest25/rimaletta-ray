@@ -441,26 +441,32 @@ export default function AuthorSection() {
               fontSize: { xs: '1.8rem', sm: '2.2rem' },
             }}
           >
-            Develop Personal Magnetism
+            Developing Personal Magnetism with Quantum Consciousness Ascetism.
           </Typography>
           <Typography
-            variant="body1"
+            variant="h4"
             sx={{
-              color: '#1e1b4b',
-              fontSize: '1.2rem',
-              fontWeight: 700,
-              mb: 4,
-              maxWidth: '800px',
-              mx: 'auto',
-              lineHeight: 1.6,
+              fontFamily: '"Outfit", sans-serif',
+              fontWeight: 900,
+              color: '#1d4ed8',
+              mb: 3,
+              fontSize: { xs: '1.6rem', sm: '2rem' },
             }}
           >
-            Develop personal magnetism{' '}
-            <Box component="span" sx={{ color: '#16a34a', textShadow: '0 1px 2px rgba(255, 255, 255, 0.6)' }}>physically</Box>,{' '}
-            <Box component="span" sx={{ color: '#dc2626', textShadow: '0 1px 2px rgba(255, 255, 255, 0.6)' }}>emotionally</Box>,{' '}
-            <Box component="span" sx={{ color: '#1d4ed8', textShadow: '0 1px 2px rgba(255, 255, 255, 0.6)' }}>mentally</Box>,{' '}
-            <Box component="span" sx={{ color: '#7c3aed', textShadow: '0 1px 2px rgba(255, 255, 255, 0.6)' }}>spiritually</Box>, and{' '}
-            <Box component="span" sx={{ color: '#7c3aed', textShadow: '0 1px 2px rgba(255, 255, 255, 0.6)' }}>universally</Box> in three cycles of our present day life.
+            Human Life is a Precious Gift. Let's Cherish It!
+          </Typography>
+          <Typography
+            variant="h3"
+            sx={{
+              fontFamily: '"Outfit", sans-serif',
+              fontWeight: 950,
+              color: '#7c3aed',
+              fontSize: { xs: '2rem', sm: '2.8rem' },
+              letterSpacing: '0.02em',
+              mb: 2,
+            }}
+          >
+            LIVE WITH ZEST.
           </Typography>
           <Typography
             variant="h3"
@@ -468,11 +474,11 @@ export default function AuthorSection() {
               fontFamily: '"Outfit", sans-serif',
               fontWeight: 950,
               color: '#dc2626',
-              fontSize: { xs: '2.2rem', sm: '3.2rem' },
+              fontSize: { xs: '1.8rem', sm: '2.6rem' },
               letterSpacing: '0.02em',
             }}
           >
-            Wow! <Box component="span" sx={{ fontSize: '0.8em', textTransform: 'lowercase', fontWeight: 800 }}>we live</Box> Now!
+            FANTASTIC LIFE IS ABREAST!
           </Typography>
         </Box>
       </Container>

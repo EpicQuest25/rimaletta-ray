@@ -228,6 +228,29 @@ export default function Hero() {
                   lineHeight: 1.6,
                   fontFamily: '"Outfit", sans-serif',
                   whiteSpace: 'nowrap',
+                  mb: 1,
+                }}
+              >
+                <Box component="span" sx={{ color: '#16a34a', fontWeight: 900 }}>PHYSICAL</Box>
+                {' + '}
+                <Box component="span" sx={{ color: '#dc2626', fontWeight: 900 }}>EMOTIONAL</Box>
+                {' + '}
+                <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 900 }}>MENTAL</Box>
+                {' + '}
+                <Box component="span" sx={{ color: '#7c3aed', fontWeight: 900 }}>SPIRITUAL</Box>
+                {' + '}
+                <Box component="span" sx={{ color: '#7c3aed', fontWeight: 900 }}>UNIVERSAL</Box>
+                {' DIMENSIONS IN SYNC'}
+              </Typography>
+              <Typography
+                component="div"
+                sx={{
+                  fontWeight: 900,
+                  fontSize: { xs: '0.66rem', sm: '0.83rem', md: '0.9rem' },
+                  letterSpacing: '0.03em',
+                  lineHeight: 1.6,
+                  fontFamily: '"Outfit", sans-serif',
+                  whiteSpace: 'nowrap',
                 }}
               >
                 <Box component="span" sx={{ color: '#16a34a', fontWeight: 900 }}>BODY</Box>
@@ -444,22 +467,57 @@ export default function Hero() {
               </Box>
             </Box>
 
-            {/* Dimensions label below orbit */}
-            <Box sx={{ textAlign: 'center', mt: 1, width: '100%' }}>
+            {/* Stages of Self-Growth (below orbit) */}
+            <Box sx={{ textAlign: 'center', mt: 1.5, width: '100%' }}>
+              <Typography
+                component="div"
+                sx={{
+                  fontSize: { xs: '0.66rem', sm: '0.83rem', md: '0.9rem' },
+                  fontWeight: 700,
+                  color: '#1e1b4b',
+                  fontFamily: '"Inter", sans-serif',
+                  letterSpacing: '0.04em',
+                  mb: 0.5,
+                }}
+              >
+                The Stages of Self-Growth:
+              </Typography>
               <Typography
                 component="div"
                 sx={{
                   fontWeight: 900,
                   fontSize: { xs: '0.66rem', sm: '0.83rem', md: '0.9rem' },
                   letterSpacing: '0.03em',
-                  color: '#000000',
+                  lineHeight: 1.8,
                   fontFamily: '"Outfit", sans-serif',
-                  whiteSpace: 'nowrap',
+                  whiteSpace: { sm: 'nowrap', xs: 'normal' },
                 }}
               >
-                PHYSICAL + EMOTIONAL + MENTAL + SPIRITUAL + UNIVERSAL DIMENSIONS!
+                <Box component="span" sx={{ color: '#16a34a', fontWeight: 900 }}>Self-Awareness</Box>
+                {' → '}
+                <Box component="span" sx={{ color: '#dc2626', fontWeight: 900 }}>Soul-Refining</Box>
+                {' → '}
+                <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 900 }}>Self-Installation</Box>
+                {' → '}
+                <Box component="span" sx={{ color: '#7c3aed', fontWeight: 900 }}>Self-Realization</Box>
+                {' → '}
+                <Box component="span" sx={{ color: '#7c3aed', fontWeight: 900 }}>Self-Salvation</Box>
+              </Typography>
+              <Typography
+                component="div"
+                sx={{
+                  fontWeight: 900,
+                  fontSize: { xs: '1rem', sm: '1.2rem', md: '1.4rem' },
+                  fontFamily: '"Outfit", sans-serif',
+                  color: '#1e1b4b',
+                  letterSpacing: '0.03em',
+                  mt: 0.5,
+                }}
+              >
+                = Soul-Symmetry
               </Typography>
             </Box>
+
           </Grid>
         </Grid>
       </Container>

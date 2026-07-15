@@ -24,7 +24,7 @@ const levelsData: LevelInfo[] = [
     nvidiaLevel: 'Super Level',
     nvidiaCategory: 'Applications',
     description: 'Syncing with the Super-Consciousness and the cosmos. Moving beyond organic limitations into extra-terrestrial consciousness alignment.',
-    humanFactor: 'The ultimate apex of human spiritual evolutionary integration, ensuring we remain primary in the quantum reality.',
+    humanFactor: 'The ultimate apex of human spiritual evolutionary integration must ensure we remain primary in the quantum reality.',
   },
   {
     num: 4,
@@ -273,7 +273,8 @@ export default function QuantumFractal() {
                   {selectedLevel.description}
                 </Typography>
 
-                {/* NVIDIA AI Industry Parallel */}
+                {/* NVIDIA AI Industry Parallel — hidden for Level 5 */}
+                {selectedLevel.num !== 5 ? (
                 <Box
                   sx={{
                     background: 'rgba(255, 255, 255, 0.03)',
@@ -306,6 +307,32 @@ export default function QuantumFractal() {
                     </Grid>
                   </Grid>
                 </Box>
+                ) : (
+                <Box
+                  sx={{
+                    background: 'rgba(255, 255, 255, 0.03)',
+                    border: '1px solid rgba(255, 255, 255, 0.08)',
+                    borderRadius: 3,
+                    p: 3,
+                    mb: 4,
+                  }}
+                >
+                  <Typography variant="subtitle1" sx={{ color: '#7c3aed', fontWeight: 900, textTransform: 'uppercase', mb: 1.5, fontSize: '0.8rem', letterSpacing: '0.05em', display: 'flex', alignItems: 'center', gap: 1 }}>
+                    <Box component="span" sx={{ width: 8, height: 8, borderRadius: '50%', backgroundColor: '#7c3aed' }} />
+                    Industrial Landscape
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: '#cbd5e1', fontWeight: 600, lineHeight: 1.7 }}>
+                    The system is about an urgent necessity to promote a unified global approach to controlling AI by unifying our world-wide{' '}
+                    <Box component="span" sx={{ color: '#16a34a', fontWeight: 800 }}>human</Box>,{' '}
+                    <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>psychological</Box>,{' '}
+                    <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 800 }}>scientific</Box>,{' '}
+                    <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>spiritual</Box>, and{' '}
+                    <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>religious</Box>{' '}
+                    diversity and exceptionality and directing AI's uncontrolled gold rush industrialization toward governing{' '}
+                    <Box component="span" sx={{ fontWeight: 900, color: '#ffffff' }}>GLOBAL HUMAN EVOLUTION!</Box>
+                  </Typography>
+                </Box>
+                )}
 
                 {/* The Human Factor */}
                 <Typography variant="subtitle1" sx={{ color: selectedLevel.color, fontWeight: 900, textTransform: 'uppercase', mb: 1, fontSize: '0.8rem', letterSpacing: '0.05em' }}>
@@ -318,8 +345,20 @@ export default function QuantumFractal() {
 
               <Box sx={{ mt: 4 }}>
                 <Divider sx={{ mb: 2, borderColor: 'rgba(255,255,255,0.08)' }} />
-                <Typography variant="caption" sx={{ color: '#94a3b8', fontWeight: 700, display: 'block', textAlign: 'center' }}>
-                  *The unity of the physical, emotional, mental, spiritual, and universal is not reversible!
+                <Typography variant="caption" sx={{ fontWeight: 700, display: 'block', textAlign: 'center' }}>
+                  <Box component="span" sx={{ color: '#94a3b8' }}>*The unity of the </Box>
+                  <Box component="span" sx={{ color: '#16a34a', fontWeight: 800 }}>physical</Box>
+                  <Box component="span" sx={{ color: '#94a3b8' }}> + </Box>
+                  <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>emotional</Box>
+                  <Box component="span" sx={{ color: '#94a3b8' }}> + </Box>
+                  <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 800 }}>mental</Box>
+                  <Box component="span" sx={{ color: '#94a3b8' }}> + </Box>
+                  <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>spiritual</Box>
+                  <Box component="span" sx={{ color: '#94a3b8' }}> + </Box>
+                  <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>universal</Box>
+                  <Box component="span" sx={{ color: '#94a3b8' }}> = </Box>
+                  <Box component="span" sx={{ color: '#fbbf24', fontWeight: 900 }}>Soul-Symmetry</Box>
+                  <Box component="span" sx={{ color: '#94a3b8' }}> is not reversible!</Box>
                 </Typography>
               </Box>
             </Card>

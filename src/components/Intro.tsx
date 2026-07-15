@@ -70,7 +70,7 @@ export default function Intro() {
             >
               <CardContent sx={{ p: 0 }}>
                 <Typography variant="h5" sx={{ color: '#ffffff', mb: 3, fontWeight: 900 }}>
-                  Navigating the Singularity
+                  Navigating Singularity (Ray Kurzweil)
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#cbd5e1', mb: 3, fontWeight: 550 }}>
                   Each generation needs its own strategy for self-development, its own timeline, and its own advocacy.
@@ -93,9 +93,14 @@ export default function Intro() {
                   {' '}in an integral fashion, rather than a step-by-step way.
                 </Typography>
                 <Divider sx={{ my: 3, borderColor: 'rgba(46, 125, 50, 0.3)' }} />
-                <Typography variant="body1" sx={{ color: '#a5d6a7', fontWeight: 800 }}>
-                  Our scientifically, technologically, and spiritually intellectualized vector of life must be primary.
-                  The goal of this system is to prove our primary nature in the battle for supremacy with AI, and prepare ourselves for future extra-terrestrial endeavors.
+                <Typography variant="body1" sx={{ fontWeight: 800 }}>
+                  <Box component="span" sx={{ color: '#dc2626' }}>
+                    Our scientifically, technologically, and spiritually intellectualized vector of life must be primary.
+                  </Box>
+                  {' '}
+                  <Box component="span" sx={{ color: '#a5d6a7' }}>
+                    The goal of this system is to prove our primary nature in the battle for supremacy with AI, and prepare ourselves for future extra-terrestrial endeavors.
+                  </Box>
                 </Typography>
               </CardContent>
             </Card>
