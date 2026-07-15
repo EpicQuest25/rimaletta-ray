@@ -208,7 +208,7 @@ export default function QuantumFractal() {
                       >
                         {level.title}
                       </Typography>
-                      <Typography variant="caption" sx={{ color: '#a855f7', fontWeight: 800 }}>
+                      <Typography variant="caption" sx={{ color: level.color, fontWeight: 800 }}>
                         {level.dimension} — ({level.realm})
                       </Typography>
                     </Box>
