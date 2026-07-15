@@ -231,19 +231,105 @@ export default function IndustrialLandscape() {
           {' '}integration of manufacturing AI systems,
         </Typography>
 
-        {/* ===== 3D ELLIPTICAL RING SEPARATOR ===== */}
-        <Box sx={{ width: { xs: '260px', sm: '380px', md: '480px' }, height: { xs: '40px', sm: '55px', md: '65px' }, mx: 'auto', mb: 6, perspective: '600px' }}>
+        {/* ===== 3D INFINITY SYMBOL SEPARATOR ===== */}
+        <Box
+          sx={{
+            width: { xs: '280px', sm: '380px', md: '480px' },
+            height: { xs: '100px', sm: '130px', md: '160px' },
+            mx: 'auto',
+            mb: 6,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'relative',
+          }}
+        >
+          {/* Glow backdrop */}
           <Box
             sx={{
-              width: '100%',
-              height: '100%',
+              position: 'absolute',
+              width: '80%',
+              height: '60%',
               borderRadius: '50%',
-              border: '3px solid rgba(99, 102, 241, 0.45)',
-              transform: 'rotateX(80deg)',
-              boxShadow: '0 0 35px rgba(99, 102, 241, 0.35), inset 0 0 20px rgba(99, 102, 241, 0.1)',
-              background: 'radial-gradient(ellipse, rgba(99, 102, 241, 0.06) 0%, transparent 70%)',
+              background: 'radial-gradient(ellipse, rgba(99, 102, 241, 0.15) 0%, transparent 70%)',
+              filter: 'blur(20px)',
             }}
           />
+          <svg
+            viewBox="0 0 200 80"
+            style={{ width: '100%', height: '100%', overflow: 'visible' }}
+          >
+            <defs>
+              <linearGradient id="infinityGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#7c3aed" />
+                <stop offset="25%" stopColor="#6366f1" />
+                <stop offset="50%" stopColor="#06b6d4" />
+                <stop offset="75%" stopColor="#6366f1" />
+                <stop offset="100%" stopColor="#7c3aed" />
+              </linearGradient>
+              <filter id="infinityGlow">
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+              <linearGradient id="infinityHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="rgba(200, 180, 255, 0.6)" />
+                <stop offset="50%" stopColor="rgba(99, 102, 241, 0.8)" />
+                <stop offset="100%" stopColor="rgba(30, 20, 60, 0.9)" />
+              </linearGradient>
+            </defs>
+            {/* Shadow layer */}
+            <path
+              d="M100,40 C100,15 135,5 155,15 C175,25 180,55 160,65 C140,75 110,55 100,40 C90,25 60,5 40,15 C20,25 25,55 45,65 C65,75 100,55 100,40 Z"
+              fill="none"
+              stroke="rgba(0,0,0,0.4)"
+              strokeWidth="8"
+              strokeLinecap="round"
+              style={{ filter: 'blur(6px)', transform: 'translate(0px, 3px)' }}
+            />
+            {/* Main thick stroke (body) */}
+            <path
+              d="M100,40 C100,15 135,5 155,15 C175,25 180,55 160,65 C140,75 110,55 100,40 C90,25 60,5 40,15 C20,25 25,55 45,65 C65,75 100,55 100,40 Z"
+              fill="none"
+              stroke="url(#infinityHighlight)"
+              strokeWidth="7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            {/* Top highlight stroke */}
+            <path
+              d="M100,40 C100,15 135,5 155,15 C175,25 180,55 160,65 C140,75 110,55 100,40 C90,25 60,5 40,15 C20,25 25,55 45,65 C65,75 100,55 100,40 Z"
+              fill="none"
+              stroke="url(#infinityGradient)"
+              strokeWidth="3.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              filter="url(#infinityGlow)"
+            >
+              <animate
+                attributeName="stroke-dasharray"
+                values="0,1000;500,500;0,1000"
+                dur="6s"
+                repeatCount="indefinite"
+              />
+              <animate
+                attributeName="stroke-dashoffset"
+                values="0;-1000"
+                dur="6s"
+                repeatCount="indefinite"
+              />
+            </path>
+            {/* Bright specular line */}
+            <path
+              d="M100,40 C100,15 135,5 155,15 C175,25 180,55 160,65 C140,75 110,55 100,40 C90,25 60,5 40,15 C20,25 25,55 45,65 C65,75 100,55 100,40 Z"
+              fill="none"
+              stroke="rgba(255,255,255,0.15)"
+              strokeWidth="1"
+              strokeLinecap="round"
+            />
+          </svg>
         </Box>
 
         {/* ===== NVIDIA/XAI INTEGRATION TEXT ===== */}
