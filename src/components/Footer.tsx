@@ -9,6 +9,7 @@ import {
   Twitter as TwitterIcon,
   YouTube as YouTubeIcon,
 } from '@mui/icons-material';
+import recentPhoto from '../assets/downloaded/rimeletta_ray_recent.jpg';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -36,35 +37,8 @@ export default function Footer() {
     >
       <Container maxWidth="lg">
         <Grid container spacing={6}>
-          {/* Brand/Affiliation Info */}
-          <Grid item xs={12} md={4}>
-            <Typography
-              variant="h6"
-              sx={{
-                fontFamily: '"Outfit", sans-serif',
-                fontWeight: 900,
-                mb: 2.5,
-                fontSize: '1.45rem',
-                letterSpacing: '0.05em',
-                background: 'linear-gradient(45deg, #fbbf24 30%, #f59e0b 90%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-              }}
-            >
-              DR. RIMALETTA RAY
-            </Typography>
-            <Typography variant="body2" sx={{ mb: 3, lineHeight: 1.8, color: '#f1f5f9', fontWeight: 650 }}>
-              University of Connecticut / UCONN <br />
-              Norwalk Community College <br />
-              Professor of Psycholinguistics
-            </Typography>
-            <Typography variant="body2" sx={{ mb: 3, lineHeight: 1.8, color: '#94a3b8', fontWeight: 500 }}>
-              Synthesizing science, linguistics, and quantum consciousness to build a coherent path for personal sovereignty in the digital era.
-            </Typography>
-          </Grid>
-
           {/* Contact Details */}
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={3}>
             <Typography
               variant="subtitle1"
               sx={{
@@ -102,7 +76,7 @@ export default function Footer() {
           </Grid>
 
           {/* Core Websites */}
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={3}>
             <Typography
               variant="subtitle1"
               sx={{
@@ -141,6 +115,54 @@ export default function Footer() {
                 </Link>
               </Box>
             </Box>
+          </Grid>
+
+          {/* Small Version of Most Recent Picture on the right */}
+          <Grid item xs={12} sm={6} md={2} sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' }, alignItems: 'flex-start', mt: { xs: 2, md: 0 } }}>
+            <Box
+              sx={{
+                width: '100px',
+                height: '140px',
+                borderRadius: '8px',
+                overflow: 'hidden',
+                border: '1.5px solid rgba(255, 255, 255, 0.15)',
+                boxShadow: '0 8px 20px rgba(0,0,0,0.4)',
+                background: 'rgba(0, 0, 0, 0.2)',
+              }}
+            >
+              <img
+                src={recentPhoto}
+                alt="Dr. Rimaletta Ray Recent Portrait"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+            </Box>
+          </Grid>
+
+          {/* Brand/Affiliation Info */}
+          <Grid item xs={12} md={4}>
+            <Typography
+              variant="h6"
+              sx={{
+                fontFamily: '"Outfit", sans-serif',
+                fontWeight: 900,
+                mb: 2.5,
+                fontSize: '1.45rem',
+                letterSpacing: '0.05em',
+                background: 'linear-gradient(45deg, #fbbf24 30%, #f59e0b 90%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              DR. RIMALETTA RAY
+            </Typography>
+            <Typography variant="body2" sx={{ mb: 3, lineHeight: 1.8, color: '#f1f5f9', fontWeight: 650 }}>
+              University of Connecticut / UCONN <br />
+              Norwalk Community College <br />
+              Professor of Psycholinguistics
+            </Typography>
+            <Typography variant="body2" sx={{ mb: 3, lineHeight: 1.8, color: '#94a3b8', fontWeight: 500 }}>
+              Synthesizing science, linguistics, and quantum consciousness to build a coherent path for personal sovereignty in the digital era.
+            </Typography>
           </Grid>
         </Grid>
 

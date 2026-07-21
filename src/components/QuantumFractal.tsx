@@ -130,7 +130,7 @@ export default function QuantumFractal() {
           >
             A crucial mapping of how the <strong>System of Holistic Self-Resurrection</strong> integrates directly into our AI-generated infrastructure. 
             Dr. Ray aligns the five stages of human multi-dimensional growth with the structural layers of advanced AI industry 
-            (such as NVIDIA) to ensure human consciousness remains the primary, not secondary, aspect of digital singularity.
+            ( <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>SPACE X and NVIDIA</Box> ) to ensure human consciousness remains the primary, not secondary, aspect of digital singularity.
           </Typography>
         </Box>
 

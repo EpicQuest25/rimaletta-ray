@@ -614,7 +614,7 @@ export default function GrainsPhilosophy() {
                   sx={{
                     fontFamily: '"Outfit", sans-serif',
                     fontWeight: 850,
-                    color: '#ffffff',
+                    color: '#dc2626',
                     mb: 2.5,
                     fontSize: '1.4rem',
                     display: 'flex',
@@ -638,7 +638,7 @@ export default function GrainsPhilosophy() {
                   <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>universal</Box> realms of life, while safeguarding human rights against mass surveillance. Mutual respect and bilateral consideration are our obligation!
                 </Typography>
                 <Typography variant="caption" sx={{ color: '#ed668c', fontWeight: 700, fontStyle: 'italic', display: 'block', mb: 3 }}>
-                  — Extract from the Book “Light is me. Light is My Philosophy!”
+                  — Extract from the Book “Light is Me. Light is My Philosophy!”
                 </Typography>
 
                 {/* Interactive Decipherment of AI Black Box Toggle */}

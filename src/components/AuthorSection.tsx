@@ -210,6 +210,186 @@ export default function AuthorSection() {
           </Typography>
         </Box>
 
+        {/* Finality Section */}
+        <Box sx={{ mb: 10, textAlign: 'center' }}>
+          <Typography
+            variant="h4"
+            sx={{
+              fontFamily: '"Outfit", sans-serif',
+              fontWeight: 900,
+              color: '#ffffff',
+              mb: 3,
+              fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' },
+            }}
+          >
+            HUMAN EXCEPTIONALITY IS NO BANALITY!
+          </Typography>
+
+          <Typography
+            variant="body1"
+            sx={{
+              color: '#cbd5e1',
+              fontWeight: 550,
+              fontSize: { xs: '1.05rem', sm: '1.15rem' },
+              lineHeight: 1.8,
+              maxWidth: '850px',
+              mx: 'auto',
+              mb: 3,
+            }}
+          >
+            <strong>Human Morality</strong> must be derived from “pure reason”{' '}
+            <Box component="span" sx={{ fontStyle: 'italic' }}>
+              (Immanuel Kant)
+            </Box>
+            , rather than from materialistic desires, potential prosperity and longevity. Moral Laws are spiritually
+            devised for humans to thrive not to die in a battle with heartless, indifferent machine beings.{' '}
+            <Box
+              component="span"
+              sx={{ color: '#dc2626', fontWeight: 800, textDecoration: 'underline' }}
+            >
+              In the wrong hands, AI may be dangerously misused, and our global mission is not to allow such
+              actions admission!
+            </Box>{' '}
+            <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 800 }}>
+              Pure rationality is not
+            </Box>{' '}
+            in <strong>HUMAN vs. AI DUALITY.</strong>
+          </Typography>
+
+          <Typography
+            variant="h5"
+            sx={{
+              fontFamily: '"Outfit", sans-serif',
+              fontWeight: 800,
+              color: '#ffffff',
+              textDecoration: 'underline',
+              mb: 4,
+              fontSize: { xs: '1.2rem', sm: '1.4rem', md: '1.6rem' },
+            }}
+          >
+            It is in Integrity and Universal Multi-Dimensional Unanimity!
+          </Typography>
+
+          <Typography
+            variant="body1"
+            sx={{
+              color: '#cbd5e1',
+              fontStyle: 'italic',
+              mb: 2,
+              fontWeight: 500,
+            }}
+          >
+            ( see the book “Digital Binary + Human Refinery = Super-Human!” )
+          </Typography>
+
+          <Typography
+            variant="body1"
+            sx={{
+              color: '#94a3b8',
+              textDecoration: 'line-through',
+              fontStyle: 'italic',
+              mb: 3,
+              fontWeight: 500,
+              fontSize: '1.1rem',
+            }}
+          >
+            AIs should dominate and subordinate us.
+          </Typography>
+
+          <Typography
+            variant="h4"
+            sx={{
+              fontFamily: '"Outfit", sans-serif',
+              fontWeight: 900,
+              color: '#dc2626', // Red
+              mb: 3,
+              fontSize: { xs: '1.4rem', sm: '1.8rem', md: '2rem' },
+            }}
+          >
+            WE ARE GOD-CREATED, NOT MACHINE MIND MANDATED!
+          </Typography>
+
+          <Typography
+            variant="body1"
+            sx={{
+              color: '#cbd5e1',
+              fontWeight: 550,
+              lineHeight: 1.8,
+              maxWidth: '800px',
+              mx: 'auto',
+              mb: 4,
+            }}
+          >
+            . Robots and Humanoids must emanate new possibilities, jobs, and abilities. They are secondary in Earth’s
+            Evolution and should primarily serve
+          </Typography>
+
+          <Typography
+            variant="h5"
+            sx={{
+              fontFamily: '"Outfit", sans-serif',
+              fontWeight: 900,
+              color: '#ffffff',
+              mb: 2,
+              fontSize: { xs: '1.3rem', sm: '1.6rem' },
+            }}
+          >
+            HUMAN FACTOR’S SOLUTION!
+          </Typography>
+
+          <Typography
+            variant="h5"
+            sx={{
+              fontFamily: '"Outfit", sans-serif',
+              fontWeight: 900,
+              color: '#1d4ed8', // Blue
+              mb: 4,
+              fontSize: { xs: '1.2rem', sm: '1.5rem' },
+            }}
+          >
+            Our Main Enemy is Ignorance, not AI’s Impersonality and Indifference!
+          </Typography>
+
+          <Typography
+            variant="body1"
+            sx={{
+              color: '#cbd5e1',
+              fontWeight: 550,
+              mb: 2,
+            }}
+          >
+            Our Earthly Being must be determined by
+          </Typography>
+
+          <Typography
+            variant="h4"
+            sx={{
+              fontFamily: '"Outfit", sans-serif',
+              fontWeight: 900,
+              color: '#dc2626', // Red
+              textDecoration: 'underline',
+              mb: 1,
+              fontSize: { xs: '1.4rem', sm: '1.8rem' },
+            }}
+          >
+            Our Raised Self-Consciousness and
+          </Typography>
+
+          <Typography
+            variant="h4"
+            sx={{
+              fontFamily: '"Outfit", sans-serif',
+              fontWeight: 900,
+              color: '#ffffff',
+              textDecoration: 'underline',
+              mb: 6,
+              fontSize: { xs: '1.5rem', sm: '2rem' },
+            }}
+          >
+            GLOBAL EVOLUTIONARY RENAISSANCE!
+          </Typography>
+        </Box>
+
         {/* Vygotsky Quote */}
         <Box sx={{ mb: 10, textAlign: 'center' }}>
           <Typography

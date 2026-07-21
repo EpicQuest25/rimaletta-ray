@@ -85,6 +85,7 @@ const booksData: Book[] = [
     dimension: 'Mental Dimension',
     cycle: 'auto',
     cover: livingIntellImg,
+    award: 'Award',
     description: 'A transformative guide to expanding intelligence, raising consciousness, and achieving self-realization. Explores physical, emotional, mental, spiritual, and universal intelligence in an increasingly digitalized world.',
     links: {
       kindle: 'https://www.amazon.com/Living-Intelligence-Becoming-Inspirational-Auto-Suggestive-ebook/dp/B0793Q2NFG',
@@ -182,7 +183,7 @@ const booksData: Book[] = [
     }
   },
   {
-    title: 'Digital Binary + Human Refinery = Super-Human!',
+    title: 'Digital Binary+ Human Refinery+ Super-Human!',
     dimension: 'Mental Dimension',
     cycle: 'digital',
     cover: digitalBinaryImg,
@@ -515,6 +516,18 @@ export default function BooksSection() {
                 <Box component="span" sx={{ color: '#7c3aed', fontWeight: 700 }}>self-consciousness</Box>, and{' '}
                 <Box component="span" sx={{ color: '#7c3aed', fontWeight: 700 }}>super-consciousness</Box> to prepare humans for a cooperative evolutionary future alongside emerging AI.
               </Typography>
+
+              <Box sx={{ mb: 4, pl: 3, borderLeft: '3px solid #7c3aed' }}>
+                <Typography variant="h6" sx={{ fontStyle: 'italic', color: '#ffffff', fontWeight: 700, mb: 1 }}>
+                  “Real technology is inside a man.”
+                </Typography>
+                <Typography variant="subtitle1" sx={{ color: '#c084fc', fontWeight: 800, mb: 2 }}>
+                  — Nikola Tesla
+                </Typography>
+                <Typography variant="body2" sx={{ color: '#a78bfa', fontWeight: 600 }}>
+                  — Dr. Ray with her Self-Coaching say:
+                </Typography>
+              </Box>
 
               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
                 <Button
@@ -869,12 +882,12 @@ export default function BooksSection() {
                 fontSize: { xs: '1.6rem', md: '2rem' }
               }}
             >
-              The Acquisition Case for Traditional Publishers
+              Acquisition Case for Traditional Publishers
             </Typography>
           </Box>
           
           <Typography variant="body1" sx={{ color: '#cbd5e1', fontWeight: 550, mb: 4, fontSize: '1.05rem', lineHeight: 1.7 }}>
-            Dr. Ray’s works represent a pre-assembled, commercially powerful literary ecosystem designed to address the deep cognitive and spiritual challenges of the digital Renaissance. 
+            Dr. Ray’s works represent a pre-assembled, commercially powerful literary ecosystem designed to address deep cognitive and spiritual challenges of <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>Digital Renaissance</Box>. 
             Traditional publishers are not just acquiring single books; they are acquiring a lifetime curriculum with immense backend value and multi-format appeal.
           </Typography>
 

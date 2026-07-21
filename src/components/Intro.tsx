@@ -92,6 +92,152 @@ export default function Intro() {
                   <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>universally</Box>
                   {' '}in an integral fashion, rather than a step-by-step way.
                 </Typography>
+
+                <Typography variant="body1" sx={{ color: '#cbd5e1', mb: 3, fontWeight: 550, lineHeight: 1.7 }}>
+                  The movement for{' '}
+                  <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>
+                    digital identification
+                  </Box>{' '}
+                  and the control of{' '}
+                  <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>
+                    Super-Intelligent AI
+                  </Box>{' '}
+                  predicted to merge with human intelligence and surpass it in 2030{' '}
+                  <Box component="span" sx={{ fontStyle: 'italic' }}>
+                    (Ray Kurzweil)
+                  </Box>{' '}
+                  or by 2045{' '}
+                  <Box component="span" sx={{ fontStyle: 'italic' }}>
+                    (Sam Altman)
+                  </Box>{' '}
+                  is lost by us in the mental dimension.
+                </Typography>
+
+                <Typography variant="body1" sx={{ color: '#cbd5e1', mb: 3, fontWeight: 550, lineHeight: 1.7 }}>
+                  However, the appearance of{' '}
+                  <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>
+                    Super Intelligent AI
+                  </Box>{' '}
+                  should not scare us!{' '}
+                  <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>
+                    It is a natural evolutionary process
+                  </Box>{' '}
+                  that is beyond our control on its informationally and actionably AI monitored, unbeatable basis.{' '}
+                  <Box component="span" sx={{ textDecoration: 'underline' }}>
+                    We are not in the battle for information optimization and its use for our development in every
+                    field of knowledge, starting with the physical realm.{' '}
+                    <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>
+                      Super Intelligent AI
+                    </Box>{' '}
+                    is on top of the{' '}
+                    <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 800 }}>
+                      Mezzo
+                    </Box>{' '}
+                    stage of planetary development, and our amazing tech geniuses know that.
+                  </Box>{' '}
+                  (See{' '}
+                  <Box component="span" sx={{ color: '#16a34a', fontWeight: 800 }}>
+                    mini
+                  </Box>{' '}
+                  +{' '}
+                  <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>
+                    meta
+                  </Box>{' '}
+                  +{' '}
+                  <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 800 }}>
+                    mezzo
+                  </Box>{' '}
+                  +{' '}
+                  <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>
+                    macro
+                  </Box>{' '}
+                  +{' '}
+                  <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>
+                    super
+                  </Box>{' '}
+                  levels.)
+                </Typography>
+
+                <Typography variant="body1" sx={{ color: '#cbd5e1', mb: 3, fontWeight: 550, lineHeight: 1.7 }}>
+                  Fortunately, our{' '}
+                  <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>
+                    meta
+                  </Box>{' '}
+                  <Box component="span" sx={{ fontStyle: 'italic' }}>
+                    (emotional level)
+                  </Box>
+                  ,{' '}
+                  <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>
+                    macro
+                  </Box>{' '}
+                  <Box component="span" sx={{ fontStyle: 'italic' }}>
+                    (spiritual)
+                  </Box>
+                  , and{' '}
+                  <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>
+                    super
+                  </Box>{' '}
+                  <Box component="span" sx={{ fontStyle: 'italic' }}>
+                    (universal realms of life)
+                  </Box>{' '}
+                  remain unsurmountable for AI, and{' '}
+                  <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 800 }}>
+                    we need to prioritize our superiority on these levels with the help of new AI models and
+                    applications
+                  </Box>{' '}
+                  engineered to upgrade and internalize our ethical and moral upheaval, authentic faith, and
+                  intellectually spiritualized sync with Super Consciousness that will eventually integrate us into
+                  Space Community.{' '}
+                  <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>
+                    It is our intuitive knowing that transcends rational thought!
+                  </Box>
+                </Typography>
+
+                <Box sx={{ my: 4, textAlign: 'center' }}>
+                  <Typography variant="h5" sx={{ color: '#1d4ed8', fontWeight: 800, mb: 1, fontFamily: '"Outfit", sans-serif' }}>
+                    “The Silver Thread of such connection has always existed.”
+                  </Typography>
+                  <Typography variant="subtitle2" sx={{ color: '#cbd5e1', fontStyle: 'italic' }}>
+                    (Helena Blavatsky)
+                  </Typography>
+                </Box>
+
+                <Typography variant="body1" sx={{ color: '#cbd5e1', mb: 3, fontWeight: 550, lineHeight: 1.7 }}>
+                  On this path of{' '}
+                  <Box component="span" sx={{ color: '#dc2626', fontWeight: 800, textDecoration: 'underline' }}>
+                    global human consciousness evolution
+                  </Box>
+                  , upgraded with AI mental assistance, we will develop LIBERATION FROM EMOTIONAL REACTIVITY,{' '}
+                  <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 800 }}>
+                    inner unshakable psychic stability, religious inclusivity, and universal luminous forbearance
+                  </Box>
+                  .
+                </Typography>
+
+                <Box sx={{ my: 4, textAlign: 'center', display: 'flex', flexDirection: 'column', gap: 1.5 }}>
+                  <Typography
+                    variant="h5"
+                    sx={{
+                      color: '#1d4ed8',
+                      fontWeight: 800,
+                      textDecoration: 'underline',
+                      fontFamily: '"Outfit", sans-serif',
+                    }}
+                  >
+                    So, Don't Scare AI. Be More Globally AI Aware!
+                  </Typography>
+                  <Typography
+                    variant="h5"
+                    sx={{
+                      color: '#dc2626',
+                      fontWeight: 800,
+                      fontFamily: '"Outfit", sans-serif',
+                    }}
+                  >
+                    HUMAN SELF-RENAISSANCE IS OUR EVOLUTIONARY STANCE!
+                  </Typography>
+                </Box>
+
                 <Divider sx={{ my: 3, borderColor: 'rgba(46, 125, 50, 0.3)' }} />
                 <Typography variant="body1" sx={{ fontWeight: 800 }}>
                   <Box component="span" sx={{ color: '#dc2626' }}>

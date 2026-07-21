@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import MethodologySection from './components/MethodologySection';
 import Intro from './components/Intro';
 import QuantumFractal from './components/QuantumFractal';
 import IndustrialLandscape from './components/IndustrialLandscape';
@@ -20,6 +21,9 @@ function App() {
       <Box component="main" sx={{ flexGrow: 1 }}>
         {/* Home/Hero Section */}
         <Hero />
+
+        {/* AI Enhanced Methodology for Self-Ecology */}
+        <MethodologySection />
 
         {/* Quantum Shift Intro Section */}
         <Intro />
