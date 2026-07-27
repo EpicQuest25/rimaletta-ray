@@ -87,7 +87,7 @@ export default function MethodologySection() {
             textShadow: '1px 1px 0 #1e1b4b, -1px 1px 0 #1e1b4b, 1px -1px 0 #1e1b4b, -1px -1px 0 #1e1b4b, 0 3px 10px rgba(0, 0, 0, 0.55)',
           }}
         >
-          OUR GOAL IS TO BECOME WHOLE
+          OUR GOAL IS TO BECOME WHOLE!
         </Typography>
 
         {/* Divider */}

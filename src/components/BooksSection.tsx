@@ -474,8 +474,8 @@ export default function BooksSection() {
               <Box
                 className="book-cover-container"
                 sx={{
-                  width: 230,
-                  height: 340,
+                  width: 290,
+                  height: 430,
                   transition: 'transform 0.4s',
                   '&:hover': { transform: 'scale(1.05) rotate(2deg)' },
                 }}
@@ -521,10 +521,10 @@ export default function BooksSection() {
                 <Typography variant="h6" sx={{ fontStyle: 'italic', color: '#ffffff', fontWeight: 700, mb: 1 }}>
                   “Real technology is inside a man.”
                 </Typography>
-                <Typography variant="subtitle1" sx={{ color: '#c084fc', fontWeight: 800, mb: 2 }}>
+                <Typography variant="subtitle1" sx={{ color: '#ffffff', fontWeight: 800, mb: 2 }}>
                   — Nikola Tesla
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#a78bfa', fontWeight: 600 }}>
+                <Typography variant="body2" sx={{ color: '#ffffff', fontWeight: 600 }}>
                   — Dr. Ray with her Self-Coaching say!
                 </Typography>
               </Box>
