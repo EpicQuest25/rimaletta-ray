@@ -414,10 +414,26 @@ export default function AuthorSection() {
               Only then can we link Self-Consciousness with Universal Consciousness and finally bury the materialistic
               perception of reality in which Artificial Intelligence is presumably beating Human Intelligence that is
               primary. It is vital, therefore, to conduct{' '}
-              <Box component="span" sx={{ fontWeight: 800 }}>SELF-ANALYSIS</Box> or{' '}
-              <Box component="span" sx={{ fontWeight: 800 }}>SELF-ASSESSMENT</Box> in five dimensions daily before
+              <Box component="span" sx={{ fontWeight: 800, color: '#facc15' }}>SELF-ANALYSIS</Box> or{' '}
+              <Box component="span" sx={{ fontWeight: 800, color: '#facc15' }}>SELF-ASSESSMENT</Box> in five dimensions daily before
               falling asleep. We have no luxury to postpone life or to watch lazily how the technological hurricane
-              swipes us off the surface of life as useless biological trash.
+              swipes us off the surface of life as useless biological trash — we should follow the paradigm.
+            </Typography>
+            <Typography
+              sx={{
+                mt: 3,
+                textAlign: 'center',
+                fontFamily: '"Outfit", sans-serif',
+                fontWeight: 900,
+                fontSize: { xs: '1.05rem', sm: '1.25rem' },
+                letterSpacing: '0.04em',
+              }}
+            >
+              <Box component="span" sx={{ color: '#facc15' }}>SELF-SYNTHESIS</Box>
+              <Box component="span" sx={{ color: '#e2e8f0' }}> - </Box>
+              <Box component="span" sx={{ color: '#dc2626' }}>SELF-ANALYSIS</Box>
+              <Box component="span" sx={{ color: '#e2e8f0' }}> - </Box>
+              <Box component="span" sx={{ color: '#facc15' }}>SELF-SYNTHESIS</Box>
             </Typography>
           </Box>
 
