@@ -130,7 +130,7 @@ export default function Intro() {
                   align="center"
                   sx={{ color: '#ffffff', fontWeight: 900, mb: 3, fontFamily: '"Outfit", sans-serif' }}
                 >
-                  Human + Digital Identification
+                  Human + Digital Identification and Optimization
                 </Typography>
 
                 <Typography variant="body1" sx={{ color: '#cbd5e1', mb: 3, fontWeight: 550, lineHeight: 1.7 }}>
