@@ -165,7 +165,7 @@ export default function MethodologySection() {
             <Box component="span" sx={{ color: '#111827' }}>+</Box>
             <Box component="span" sx={{ color: '#7c3aed' }}>Self-Consciousness</Box>
             <Box component="span" sx={{ color: '#111827' }}>+</Box>
-            <Box component="span" sx={{ color: '#7c3aed' }}>Super-Consciousness</Box>
+            <Box component="span" sx={{ color: '#16a34a' }}>Super-Consciousness</Box>
           </Typography>
         </Box>
 

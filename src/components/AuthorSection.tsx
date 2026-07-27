@@ -217,7 +217,7 @@ export default function AuthorSection() {
             sx={{
               fontFamily: '"Outfit", sans-serif',
               fontWeight: 900,
-              color: '#ffffff',
+              color: '#dc2626', // Red
               mb: 3,
               fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' },
             }}
@@ -241,14 +241,20 @@ export default function AuthorSection() {
             <Box component="span" sx={{ fontStyle: 'italic' }}>
               (Immanuel Kant)
             </Box>
-            , rather than from materialistic desires, potential prosperity and longevity. Moral Laws are spiritually
-            devised for humans to thrive not to die in a battle with heartless, indifferent machine beings.{' '}
-            <Box
-              component="span"
-              sx={{ color: '#dc2626', fontWeight: 800, textDecoration: 'underline' }}
-            >
-              In the wrong hands, AI may be dangerously misused, and our global mission is not to allow such
-              actions admission!
+            , rather than from the change of physical needs{' '}
+            <Box component="span" sx={{ fontStyle: 'italic' }}>
+              (marriages with AI, like they already have them in Japan)
+            </Box>
+            , materialistic desires, potential prosperity and longevity.{' '}
+            <Box component="span" sx={{ fontStyle: 'italic', fontWeight: 700 }}>
+              Moral Laws are spiritually devised for humans to thrive, not to die in a battle with heartless,
+              indifferent machine beings.
+            </Box>{' '}
+            <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>
+              In the wrong hands, AI may be dangerously misused, and{' '}
+              <Box component="span" sx={{ textDecoration: 'underline' }}>
+                our global mission is not to allow such actions admission!
+              </Box>
             </Box>{' '}
             <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 800 }}>
               Pure rationality is not
@@ -263,7 +269,7 @@ export default function AuthorSection() {
               fontWeight: 800,
               color: '#ffffff',
               textDecoration: 'underline',
-              mb: 4,
+              mb: 3,
               fontSize: { xs: '1.2rem', sm: '1.4rem', md: '1.6rem' },
             }}
           >
@@ -273,40 +279,26 @@ export default function AuthorSection() {
           <Typography
             variant="body1"
             sx={{
+              color: '#94a3b8',
+              fontStyle: 'italic',
+              mb: 5,
+              fontWeight: 500,
+            }}
+          >
+            ( see the book “Digital Binary = Human Refinery = Super-Human!” )
+          </Typography>
+
+          <Typography
+            variant="h6"
+            sx={{
               color: '#cbd5e1',
               fontStyle: 'italic',
-              mb: 2,
-              fontWeight: 500,
-            }}
-          >
-            ( see the book “Digital Binary + Human Refinery = Super-Human!” )
-          </Typography>
-
-          <Typography
-            variant="body1"
-            sx={{
-              color: '#94a3b8',
-              textDecoration: 'line-through',
-              fontStyle: 'italic',
+              fontWeight: 700,
               mb: 3,
-              fontWeight: 500,
-              fontSize: '1.1rem',
+              fontSize: { xs: '1.15rem', sm: '1.3rem' },
             }}
           >
-            AIs should dominate and subordinate us.
-          </Typography>
-
-          <Typography
-            variant="h4"
-            sx={{
-              fontFamily: '"Outfit", sans-serif',
-              fontWeight: 900,
-              color: '#dc2626', // Red
-              mb: 3,
-              fontSize: { xs: '1.4rem', sm: '1.8rem', md: '2rem' },
-            }}
-          >
-            WE ARE GOD-CREATED, NOT MACHINE MIND MANDATED!
+            AIs should not dominate and subordinate us.
           </Typography>
 
           <Typography
@@ -315,12 +307,12 @@ export default function AuthorSection() {
               color: '#cbd5e1',
               fontWeight: 550,
               lineHeight: 1.8,
-              maxWidth: '800px',
+              maxWidth: '820px',
               mx: 'auto',
               mb: 4,
             }}
           >
-            . Robots and Humanoids must emanate new possibilities, jobs, and abilities. They are secondary in Earth’s
+            Robots and Humanoids must emanate new possibilities, jobs, and abilities. They are secondary in Earth’s
             Evolution and should primarily serve
           </Typography>
 
@@ -330,7 +322,7 @@ export default function AuthorSection() {
               fontFamily: '"Outfit", sans-serif',
               fontWeight: 900,
               color: '#ffffff',
-              mb: 2,
+              mb: 4,
               fontSize: { xs: '1.3rem', sm: '1.6rem' },
             }}
           >
@@ -355,7 +347,7 @@ export default function AuthorSection() {
             sx={{
               color: '#cbd5e1',
               fontWeight: 550,
-              mb: 2,
+              mb: 1,
             }}
           >
             Our Earthly Being must be determined by
@@ -380,13 +372,95 @@ export default function AuthorSection() {
             sx={{
               fontFamily: '"Outfit", sans-serif',
               fontWeight: 900,
-              color: '#ffffff',
+              color: '#dc2626', // Red
               textDecoration: 'underline',
-              mb: 6,
+              mb: 5,
               fontSize: { xs: '1.5rem', sm: '2rem' },
             }}
           >
             GLOBAL EVOLUTIONARY RENAISSANCE!
+          </Typography>
+
+          <Typography
+            variant="h5"
+            sx={{
+              fontFamily: '"Outfit", sans-serif',
+              fontWeight: 900,
+              color: '#ffffff',
+              mb: 4,
+              lineHeight: 1.5,
+              maxWidth: '820px',
+              mx: 'auto',
+              fontSize: { xs: '1.2rem', sm: '1.5rem' },
+            }}
+          >
+            It must be based on an urgent necessity TO TRAIN SELF-CONSCIOUSNESS THAT TRANSCENDS THE BRAIN!
+          </Typography>
+
+          <Box
+            sx={{
+              maxWidth: '820px',
+              mx: 'auto',
+              mb: 5,
+              px: { xs: 3, sm: 5 },
+              py: 3,
+              borderLeft: '3px solid #5e35b1',
+              borderRight: '3px solid #5e35b1',
+              borderRadius: '40px / 80px',
+              background: 'rgba(94, 53, 177, 0.08)',
+            }}
+          >
+            <Typography variant="body1" sx={{ color: '#e2e8f0', fontWeight: 550, lineHeight: 1.9 }}>
+              Only then can we link Self-Consciousness with Universal Consciousness and finally bury the materialistic
+              perception of reality in which Artificial Intelligence is presumably beating Human Intelligence that is
+              primary. It is vital, therefore, to conduct{' '}
+              <Box component="span" sx={{ fontWeight: 800 }}>SELF-ANALYSIS</Box> or{' '}
+              <Box component="span" sx={{ fontWeight: 800 }}>SELF-ASSESSMENT</Box> in five dimensions daily before
+              falling asleep. We have no luxury to postpone life or to watch lazily how the technological hurricane
+              swipes us off the surface of life as useless biological trash.
+            </Typography>
+          </Box>
+
+          <Typography
+            variant="h4"
+            sx={{
+              fontFamily: '"Outfit", sans-serif',
+              fontWeight: 900,
+              color: '#dc2626', // Red
+              mb: 3,
+              fontSize: { xs: '1.4rem', sm: '1.8rem', md: '2rem' },
+            }}
+          >
+            WE ARE GOD-CREATED, NOT MACHINE MIND MANDATED!
+          </Typography>
+
+          <Typography
+            variant="h5"
+            sx={{
+              fontFamily: '"Outfit", sans-serif',
+              fontWeight: 900,
+              color: '#1d4ed8', // Blue
+              mb: 5,
+              fontSize: { xs: '1.2rem', sm: '1.5rem' },
+            }}
+          >
+            Our main enemy is Ignorance, Not AI’s Impersonality and Indifference!
+          </Typography>
+
+          <Typography
+            variant="h3"
+            sx={{
+              fontFamily: '"Outfit", sans-serif',
+              fontWeight: 950,
+              color: '#ffffff',
+              textDecoration: 'underline',
+              lineHeight: 1.4,
+              maxWidth: '850px',
+              mx: 'auto',
+              fontSize: { xs: '1.6rem', sm: '2.2rem', md: '2.6rem' },
+            }}
+          >
+            Human Exceptionality is No Banality, and Let’s Prove It without Ignorant Vanity!
           </Typography>
         </Box>
 

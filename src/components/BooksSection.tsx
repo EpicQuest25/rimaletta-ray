@@ -183,7 +183,7 @@ const booksData: Book[] = [
     }
   },
   {
-    title: 'Digital Binary+ Human Refinery+ Super-Human!',
+    title: 'Digital Binary + Human Refinery + Super-Human!',
     dimension: 'Mental Dimension',
     cycle: 'digital',
     cover: digitalBinaryImg,
@@ -525,7 +525,7 @@ export default function BooksSection() {
                   — Nikola Tesla
                 </Typography>
                 <Typography variant="body2" sx={{ color: '#a78bfa', fontWeight: 600 }}>
-                  — Dr. Ray with her Self-Coaching say:
+                  — Dr. Ray with her Self-Coaching say!
                 </Typography>
               </Box>
 

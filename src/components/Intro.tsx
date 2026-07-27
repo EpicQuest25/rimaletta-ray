@@ -93,6 +93,46 @@ export default function Intro() {
                   {' '}in an integral fashion, rather than a step-by-step way.
                 </Typography>
 
+                {/* Quantum networking achievement (positioned after the 2nd paragraph) */}
+                <Box
+                  sx={{
+                    my: 4,
+                    px: { xs: 3, sm: 5 },
+                    py: 3,
+                    borderLeft: '3px solid #2e7d32',
+                    borderRight: '3px solid #2e7d32',
+                    borderRadius: '40px / 80px',
+                    background: 'rgba(46, 125, 50, 0.06)',
+                  }}
+                >
+                  <Typography variant="body1" sx={{ color: '#e2e8f0', fontWeight: 700, lineHeight: 1.85 }}>
+                    A great engineering achievement has occurred recently. Researchers at the{' '}
+                    <Box component="span" sx={{ fontWeight: 900 }}>Duke Quantum Center</Box> and quantum computing
+                    leader <Box component="span" sx={{ fontWeight: 900 }}>IonQ</Box> successfully connected three
+                    independent trapped-ion quantum computers across a network — not with wires, but with{' '}
+                    <Box component="span" sx={{ color: '#fbbf24', fontWeight: 900 }}>LIGHT</Box> simultaneously,{' '}
+                    <Box component="span" sx={{ fontStyle: 'italic', fontWeight: 800 }}>
+                      making all quantum computers work as a system.
+                    </Box>{' '}…
+                  </Typography>
+                </Box>
+                <Typography
+                  variant="h5"
+                  align="center"
+                  sx={{ color: '#dc2626', fontWeight: 900, mb: 4, fontFamily: '"Outfit", sans-serif' }}
+                >
+                  Quantum Entanglement Has Become Manageable!
+                </Typography>
+
+                <Divider sx={{ my: 4, borderColor: 'rgba(46, 125, 50, 0.3)' }} />
+                <Typography
+                  variant="h5"
+                  align="center"
+                  sx={{ color: '#ffffff', fontWeight: 900, mb: 3, fontFamily: '"Outfit", sans-serif' }}
+                >
+                  Human + Digital Identification
+                </Typography>
+
                 <Typography variant="body1" sx={{ color: '#cbd5e1', mb: 3, fontWeight: 550, lineHeight: 1.7 }}>
                   The movement for{' '}
                   <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>
@@ -113,19 +153,20 @@ export default function Intro() {
                   is lost by us in the mental dimension.
                 </Typography>
 
-                <Typography variant="body1" sx={{ color: '#cbd5e1', mb: 3, fontWeight: 550, lineHeight: 1.7 }}>
+                <Typography variant="body1" sx={{ color: '#cbd5e1', mb: 3, fontWeight: 700, lineHeight: 1.7 }}>
                   However, the appearance of{' '}
                   <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>
-                    Super Intelligent AI
+                    Super Intelligent AI should not scare us!
                   </Box>{' '}
-                  should not scare us!{' '}
                   <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>
                     It is a natural evolutionary process
                   </Box>{' '}
                   that is beyond our control on its informationally and actionably AI monitored, unbeatable basis.{' '}
                   <Box component="span" sx={{ textDecoration: 'underline' }}>
-                    We are not in the battle for information optimization and its use for our development in every
-                    field of knowledge, starting with the physical realm.{' '}
+                    We are not in the battle for information optimization
+                  </Box>{' '}
+                  and its use for our development in every field of knowledge, starting with the physical realm.{' '}
+                  <Box component="span" sx={{ textDecoration: 'underline' }}>
                     <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>
                       Super Intelligent AI
                     </Box>{' '}
@@ -134,61 +175,47 @@ export default function Intro() {
                       Mezzo
                     </Box>{' '}
                     stage of planetary development, and our amazing tech geniuses know that.
-                  </Box>{' '}
-                  (See{' '}
-                  <Box component="span" sx={{ color: '#16a34a', fontWeight: 800 }}>
-                    mini
-                  </Box>{' '}
-                  +{' '}
-                  <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>
-                    meta
-                  </Box>{' '}
-                  +{' '}
-                  <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 800 }}>
-                    mezzo
-                  </Box>{' '}
-                  +{' '}
-                  <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>
-                    macro
-                  </Box>{' '}
-                  +{' '}
-                  <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>
-                    super
-                  </Box>{' '}
-                  levels.)
+                  </Box>
+                </Typography>
+                <Typography variant="body1" align="center" sx={{ color: '#cbd5e1', mb: 3, fontWeight: 800 }}>
+                  ( See{' '}
+                  <Box component="span" sx={{ color: '#16a34a' }}>Mini</Box> +{' '}
+                  <Box component="span" sx={{ color: '#dc2626' }}>Meta</Box> +{' '}
+                  <Box component="span" sx={{ color: '#1d4ed8' }}>Mezzo</Box> +{' '}
+                  <Box component="span" sx={{ color: '#dc2626' }}>Macro</Box> +{' '}
+                  <Box component="span" sx={{ color: '#7c3aed' }}>Super</Box>{' '}
+                  <Box component="span" sx={{ color: '#7c3aed' }}>philosophical</Box> levels.)
                 </Typography>
 
                 <Typography variant="body1" sx={{ color: '#cbd5e1', mb: 3, fontWeight: 550, lineHeight: 1.7 }}>
-                  Fortunately, our{' '}
-                  <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>
-                    meta
+                  Fortunately, the{' '}
+                  <Box component="span" sx={{ fontWeight: 900 }}>QUANTUM RACE</Box> will have to embrace our{' '}
+                  <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>meta</Box>{' '}
+                  <Box component="span" sx={{ fontStyle: 'italic' }}>(emotional level)</Box>,{' '}
+                  <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>macro</Box>{' '}
+                  <Box component="span" sx={{ fontStyle: 'italic' }}>(spiritual)</Box>, and{' '}
+                  <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>super</Box>{' '}
+                  <Box component="span" sx={{ fontStyle: 'italic' }}>(universal)</Box> realms of life that will remain
+                  unsurmountable for AI. We will inevitably reach{' '}
+                  <Box component="span" sx={{ color: '#dc2626', fontWeight: 800, textDecoration: 'underline' }}>
+                    the point of no return
                   </Box>{' '}
-                  <Box component="span" sx={{ fontStyle: 'italic' }}>
-                    (emotional level)
+                  <Box component="span" sx={{ fontStyle: 'italic', fontWeight: 800 }}>
+                    when we will be obligated by the threat of human survival to prioritize our superiority on these
+                    levels.
                   </Box>
-                  ,{' '}
-                  <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>
-                    macro
+                </Typography>
+                <Typography variant="body1" sx={{ color: '#cbd5e1', mb: 3, fontWeight: 550, lineHeight: 1.7 }}>
+                  Thus, with the help of new AI{' '}
+                  <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 800 }}>models and applications,</Box>{' '}
+                  engineered specifically to{' '}
+                  <Box component="span" sx={{ fontWeight: 900 }}>INTELLECTUALLY SPIRITUALIZE</Box>, upgrade, and
+                  internalize our ethical and moral upheaval and authentic faith,{' '}
+                  <Box component="span" sx={{ fontStyle: 'italic', fontWeight: 800 }}>
+                    we will inevitably sync with Super Consciousness
                   </Box>{' '}
-                  <Box component="span" sx={{ fontStyle: 'italic' }}>
-                    (spiritual)
-                  </Box>
-                  , and{' '}
-                  <Box component="span" sx={{ color: '#7c3aed', fontWeight: 800 }}>
-                    super
-                  </Box>{' '}
-                  <Box component="span" sx={{ fontStyle: 'italic' }}>
-                    (universal realms of life)
-                  </Box>{' '}
-                  remain unsurmountable for AI, and{' '}
-                  <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 800 }}>
-                    we need to prioritize our superiority on these levels with the help of new AI models and
-                    applications
-                  </Box>{' '}
-                  engineered to upgrade and internalize our ethical and moral upheaval, authentic faith, and
-                  intellectually spiritualized sync with Super Consciousness that will eventually integrate us into
-                  Space Community.{' '}
-                  <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>
+                  that will integrate us into Space Community.{' '}
+                  <Box component="span" sx={{ color: '#dc2626', fontWeight: 800, textDecoration: 'underline' }}>
                     It is our intuitive knowing that transcends rational thought!
                   </Box>
                 </Typography>
@@ -207,12 +234,24 @@ export default function Intro() {
                   <Box component="span" sx={{ color: '#dc2626', fontWeight: 800, textDecoration: 'underline' }}>
                     global human consciousness evolution
                   </Box>
-                  , upgraded with AI mental assistance, we will develop LIBERATION FROM EMOTIONAL REACTIVITY,{' '}
-                  <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 800 }}>
-                    inner unshakable psychic stability, religious inclusivity, and universal luminous forbearance
+                  , upgraded with AI's{' '}
+                  <Box component="span" sx={{ color: '#1d4ed8', fontWeight: 800, textDecoration: 'underline' }}>
+                    transhuman assistance
                   </Box>
-                  .
+                  , we will develop{' '}
+                  <Box component="span" sx={{ color: '#dc2626', fontWeight: 800 }}>
+                    LIBERATION FROM EMOTIONAL REACTIVITY,
+                  </Box>{' '}
+                  inner unshakable psychic stability, religious inclusivity, and universal luminous forbearance.
                 </Typography>
+                <Box sx={{ mb: 3, textAlign: 'center' }}>
+                  <Typography variant="h6" sx={{ color: '#1d4ed8', fontWeight: 800, fontStyle: 'italic', fontFamily: '"Outfit", sans-serif' }}>
+                    “We are People of the Light!”{' '}
+                    <Box component="span" sx={{ color: '#cbd5e1', fontStyle: 'italic', fontWeight: 600, fontSize: '0.85rem' }}>
+                      (Nikola Tesla)
+                    </Box>
+                  </Typography>
+                </Box>
 
                 <Box sx={{ my: 4, textAlign: 'center', display: 'flex', flexDirection: 'column', gap: 1.5 }}>
                   <Typography
@@ -224,7 +263,7 @@ export default function Intro() {
                       fontFamily: '"Outfit", sans-serif',
                     }}
                   >
-                    So, Don't Scare AI. Be More Globally AI Aware!
+                    So, Don't AI Scare. Be More Globally AI Aware!
                   </Typography>
                   <Typography
                     variant="h5"
