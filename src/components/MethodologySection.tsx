@@ -74,18 +74,20 @@ export default function MethodologySection() {
           Let's defocus our AWARE ATTENTION from technological impersonalization to human individualization !
         </Typography>
 
-        {/* There is No System without Structure! */}
+        {/* Our Goal is to Become Whole */}
         <Typography
           variant="h5"
           sx={{
             fontFamily: '"Outfit", sans-serif',
             fontWeight: 900,
-            color: '#1d4ed8', // Blue
-            mb: 3,
-            fontSize: { xs: '1.25rem', sm: '1.5rem', md: '1.8rem' },
+            color: '#facc15', // Yellow
+            mb: 4,
+            fontSize: { xs: '1.3rem', sm: '1.6rem', md: '1.9rem' },
+            letterSpacing: '0.03em',
+            textShadow: '1px 1px 0 #1e1b4b, -1px 1px 0 #1e1b4b, 1px -1px 0 #1e1b4b, -1px -1px 0 #1e1b4b, 0 3px 10px rgba(0, 0, 0, 0.55)',
           }}
         >
-          There is No System without Structure!
+          OUR GOAL IS TO BECOME WHOLE
         </Typography>
 
         {/* Divider */}

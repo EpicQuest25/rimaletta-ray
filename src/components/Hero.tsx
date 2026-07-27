@@ -220,6 +220,18 @@ export default function Hero() {
             {/* Soul-Symmetry Formula */}
             <Box sx={{ textAlign: 'center', mb: 3, width: '100%' }}>
               <Typography
+                sx={{
+                  fontFamily: '"Outfit", sans-serif',
+                  fontWeight: 900,
+                  color: '#1d4ed8',
+                  fontSize: { xs: '1.05rem', sm: '1.2rem', md: '1.35rem' },
+                  lineHeight: 1.25,
+                  mb: 1.5,
+                }}
+              >
+                There is No System without Structure!
+              </Typography>
+              <Typography
                 component="div"
                 sx={{
                   fontWeight: 900,
